@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXORDIUM // Mobilidade Urbana & Frota Metropolitana</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dialogs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <div class="logo-symbol">EX</div>
+      <div class="brand-title">
+        <span class="title">EXORDIUM</span>
+        <span class="subtitle">SISTEMA METROPOLITANO // SPRF</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Visão Geral</a></li>
+        <li><a href="profissoes.html">Árvore de Carreiras</a></li>
+        <li><a href="minigames.html">Minigames</a></li>
+        <li><a href="transportes.html" class="active">Mobilidade & Frota</a></li>
+        <li><a href="penalidades.html">Leis & Penalidades</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section-header">
+      <div class="eyebrow">Engenharia de Tráfego & Mobilidade · Cidade de SPRF</div>
+      <h1 class="section-title">O Sistema de Transportes de SPRF</h1>
+      <p class="section-subtitle">
+        Uma rede viva onde carros não andam em círculos para sempre: eles têm um destino, motoristas dentro,
+        dão seta, param em semáforos com cruzamentos Shibuya e estacionam fisicamente em vagas de meio-fio ou prédios-garagem.
+      </p>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 1. O MONOTRILHO SUSPENSO (SKYTRAIN) -->
+    <!-- ========================================== -->
+    <section class="card" style="border-left: 5px solid var(--accent-gold); margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: var(--accent-gold);">Transporte Ferroviário Aéreo</span>
+          <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">O Monotrilho Suspenso (SkyTrain)</h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="tag tag-amber">4 Trens em Circulação</span>
+          <span class="tag tag-amber">72 km/h nos Trilhos</span>
+          <span class="tag tag-amber">05:00 à Meia-Noite</span>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 15px; margin-top: 10px;">
+        Inspirado nos monotrilhos suspensos do Japão (como Shonan e Chiba), o trem corre pendurado em vigas de concreto 
+        sustentadas por pilares em T no canteiro central da Avenida Principal. Os vagões são brancos com faixas na cor 
+        <strong>amarelo-ipê</strong> e friso verde, celebrando a arborização de Campo Grande.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px;">
+        <div class="card" style="padding: 16px;">
+          <div class="card-img-wrap">
+            <img src="assets/img/monorail_doors.png" alt="Portas de Plataforma Japonesas">
+          </div>
+          <h4 style="color: #fff; font-size: 17px; margin-top: 8px;">Portas de Plataforma (Screen Doors)</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Vidro na altura da cintura estilo japonês. Abrem e fecham sincronizadas com os vagões. 
+            O trem espera passageiros embarcarem e não permite quedas nos trilhos.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 16px;">
+          <div class="card-img-wrap">
+            <img src="assets/img/monorail_inside.png" alt="Interior do Monotrilho">
+          </div>
+          <h4 style="color: #fff; font-size: 17px; margin-top: 8px;">Interior com Bancos Longitudinais</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Vidros fumê (escuros por fora, claros por dentro), corrimãos e teto iluminado.
+            Uma viagem completa pelo loop de 2.796m dura 137 minutos de jogo.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 16px;">
+          <div class="card-img-wrap">
+            <img src="assets/img/viaduct.png" alt="Travessia Elevada por Cima do Viaduto">
+          </div>
+          <h4 style="color: #fff; font-size: 17px; margin-top: 8px;">Voo Sobre os Viadutos a 15,5 Metros</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Ao cruzar os viadutos rodoviários, a viga sobe a rampas suaves de até 10%, 
+            passando quase 5 metros acima do asfalto das avenidas com carros correndo embaixo!
+          </p>
+        </div>
+      </div>
+
+      <!-- Cápsula de Diálogo do Monotrilho -->
+      <div class="dialog-capsule" style="margin-top: 20px; border-left: 4px solid var(--accent-gold);">
+        <div class="dialog-avatar" style="border-color: var(--accent-gold);">
+          <img src="assets/img/badge_monorail.png" alt="Monotrilho SPRF">
+          <span class="status-indicator" style="background: #fbbf24;"></span>
+        </div>
+        <div class="dialog-body">
+          <div class="dialog-meta">
+            <div class="speaker-info">
+              <span class="speaker-name">Centro de Controle Operacional (CCO)</span>
+              <span class="speaker-role">Metrô Aéreo SPRF</span>
+            </div>
+            <span class="dialog-time">SISTEMA AUTOMATIZADO 24H</span>
+          </div>
+          <div class="dialog-bubble">
+            <p class="speech-text">
+              "O monotrilho é 100% automatizado por computador central. Como ninguém trabalha mais de 5 dias por semana na cidade, 
+              escalar maquinistas para 4 trens rodando das 05h à meia-noite exigiria turnos impossíveis. 
+              <strong>Ele só para se faltar energia elétrica</strong> — o que é um dos prenúncios da atividade alienígena!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. A REDE DE ÔNIBUS & FAIXA AZUL -->
+    <!-- ========================================== -->
+    <section class="card" style="border-left: 5px solid var(--accent-blue); margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: var(--accent-blue);">Transporte Coletivo de Superfície</span>
+          <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">A Rede de Ônibus & A Faixa Azul</h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="tag tag-blue">3 Linhas Planejadas</span>
+          <span class="tag tag-blue">2 Terminais de Quadra</span>
+          <span class="tag tag-blue">Intervalos de 40 min</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px;">
+        <div>
+          <h3 style="color: #fff; font-size: 19px; margin-bottom: 12px;">As Três Linhas Canônicas</h3>
+          <ul style="color: #cbd5e1; font-size: 14.5px; display: grid; gap: 10px; padding-left: 20px;">
+            <li><strong>Linha 101 (Centro – Avenida Sul):</strong> A linha transversal que conecta o Terminal Sudoeste, a Prefeitura no centro, o Terminal Nordeste e a Avenida Sul.</li>
+            <li><strong>Linha 202 (Centro – Leste):</strong> Atende os bairros residenciais de classe média e a ponta leste da metrópole.</li>
+            <li><strong>Linha 303 (Centro – Oeste / Trabalhadores):</strong> <em>A linha vital do jogador!</em> Passa a meros 45 metros da sua casa alugada na periferia simples e o deixa na porta da empresa de sensores no centro.</li>
+          </ul>
+
+          <div style="margin-top: 20px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-sm); padding: 14px;">
+            <h4 style="color: #60a5fa; font-family: var(--font-display); font-size: 15px;">🚌 A Regra das 02:00 da Madrugada</h4>
+            <p style="color: var(--text-muted); font-size: 13.5px; margin-top: 4px;">
+              Defini com rigor absoluto uma regra para a cidade: <em>nenhum ônibus pode estar rodando às duas da manhã</em>. 
+              A última viagem sai à 01:00 para recolher no terminal, e o serviço só reinicia às 04:00.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="card-img-wrap" style="aspect-ratio: 16/10;">
+            <img src="assets/img/bus_blue_lane.png" alt="Faixa Azul Exclusiva na Rua">
+          </div>
+          <h4 style="color: #fff; font-size: 17px; margin-top: 10px;">A Faixa Azul Exclusiva</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Pintada no asfalto ao lado do meio-fio nas vias troncais. Uso estritamente reservado 
+            para ônibus urbanos, viaturas da polícia, ambulâncias do SAMU e caminhões de bombeiros.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. CORPO DE BOMBEIROS & GATO MASCOTE -->
+    <!-- ========================================== -->
+    <section class="card" style="border-left: 5px solid #f97316; margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: #f97316;">Força de Resgate · Defesa Civil</span>
+          <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">Corpo de Bombeiros (VTRs) & O Mascote Canônico</h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="tag" style="background: rgba(249,115,22,0.15); color: #fb923c; border-color: rgba(249,115,22,0.3);">4 Quarteis Estratégicos</span>
+          <span class="tag" style="background: rgba(249,115,22,0.15); color: #fb923c; border-color: rgba(249,115,22,0.3);">Auto-Escada Mecânica</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+        <div>
+          <img src="assets/img/fire_ladder.png" alt="Caminhão dos Bombeiros" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <h4 style="color: #fff; font-size: 17px; margin-top: 10px;">A Escada de 23 Metros do Centro</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Apenas o quartel mais central possui a grande <em>Auto-Escada Mecânica</em>. 
+            A cada 4 horas a guarnição realiza simulações no pátio estendendo a escada giratória para o ar livre.
+          </p>
+        </div>
+
+        <div>
+          <img src="assets/img/badge_fire_cat.png" alt="O Gato Mascote Preto" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <h4 style="color: #fff; font-size: 17px; margin-top: 10px;">O Gato Preto de Olhos Verdes</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Minha regra de ouro para os quarteis: <strong>cada um dos 4 quarteis da cidade tem um gato preto de pé</strong> 
+            que caminha em animação flip-book charmosa pela baía dos armários dos bombeiros!
+          </p>
+        </div>
+
+        <div>
+          <img src="assets/img/condo_alphaville.png" alt="Quartel Norte junto ao Alphaville" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <h4 style="color: #fff; font-size: 17px; margin-top: 10px;">Caminhões com Cesto Aéreo</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Alocados nos postos Norte (mansões) e Leste para cobrir a cidade com podas de árvores de risco 
+            e eliminação com fumaça de enxames de vespas e abelhas nas copas de 18 metros.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. CONCESSIONÁRIAS E VEÍCULOS PRÓPRIOS -->
+    <!-- ========================================== -->
+    <section class="card" style="border-left: 5px solid var(--brand-teal);">
+      <span class="eyebrow">Mercado Automotivo em Mundo Aberto</span>
+      <h2 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">Comprando seu Carro ou Bicicleta</h2>
+      <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 8px;">
+        Ao juntar dinheiro nos empregos, visite as lojas integradas diretamente ao mapa, sem telas de carregamento:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px;">
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Concessionárias</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">Motorama & Central Motors</span>
+          <span style="font-size: 13px; color: #34d399;">Sedã Completo: $ 12.000</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Comprado com fade suave já sentado no volante!</span>
+        </div>
+
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Bicicletaria</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">Spoke Cycles (Avenida Leste)</span>
+          <span style="font-size: 13px; color: #34d399;">Bicicleta Esportiva: $ 600</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Ideal para entregas rápidas fugindo do trânsito.</span>
+        </div>
+
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Garagens Cobertas</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">2 Edifícios-Garagem (5 Andares)</span>
+          <span style="font-size: 13px; color: #38bdf8;">Estacionamento Pago</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Com rampas, escadarias e vagas demarcadas.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 18px; color: #fff;">EXORDIUM</div>
+        <p>Rede de Trânsito & Mobilidade · Engenharia Urbana Canônica de SPRF</p>
+      </div>
+      <div class="footer-quote">
+        "Arborize! Campo Grande é uma cidade verde."
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Lightbox -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+      <img id="modalImage" src="" alt="Ampliação" style="width: 100%; border-radius: var(--radius-sm); display: block; border: 1px solid var(--border-subtle);">
+      <p id="modalCaption" style="font-family: var(--font-mono); font-size: 13px; color: var(--brand-teal); margin-top: 12px;"></p>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

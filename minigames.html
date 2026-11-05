@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXORDIUM // Minigames & Simulação de Trabalho</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dialogs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    kbd {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      background: #172120;
+      border: 1px solid rgba(45, 212, 191, 0.3);
+      border-bottom: 3px solid rgba(45, 212, 191, 0.5);
+      border-radius: 4px;
+      padding: 3px 7px;
+      color: #2dd4bf;
+      white-space: nowrap;
+    }
+    .rules-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14.5px;
+    }
+    .rules-table th, .rules-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      text-align: left;
+    }
+    .rules-table th {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--brand-teal);
+      background: rgba(20, 184, 166, 0.08);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <div class="logo-symbol">EX</div>
+      <div class="brand-title">
+        <span class="title">EXORDIUM</span>
+        <span class="subtitle">SISTEMA METROPOLITANO // SPRF</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Visão Geral</a></li>
+        <li><a href="profissoes.html">Árvore de Carreiras</a></li>
+        <li><a href="minigames.html" class="active">Minigames</a></li>
+        <li><a href="transportes.html">Mobilidade & Frota</a></li>
+        <li><a href="penalidades.html">Leis & Penalidades</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section-header">
+      <div class="eyebrow">Simulação em Primeira Pessoa · Rigor Técnico & Consequências</div>
+      <h1 class="section-title">Os Minigames de Cada Trabalho</h1>
+      <p class="section-subtitle">
+        Em EXORDIUM, o trabalho não é um RPG de texto dos anos 80: você se senta na mesa, 
+        interage com clientes reais que entram na loja, atende à fila e opera telas com interfaces modernas.
+        Conheça as regras extraídas diretamente do código-fonte do jogo.
+      </p>
+    </section>
+
+    <!-- GUIA DE ATALHOS RÁPIDOS DA EMPRESA -->
+    <div class="callout-banner" style="margin-top: 10px;">
+      <h4>📍 Como Iniciar o Turno na Empresa de Sensores</h4>
+      <p style="color: var(--text-muted); font-size: 14.5px;">
+        Entre na recepção do prédio na Avenida Principal e aproxime-se de uma das três mesas com <kbd>E</kbd>:
+      </p>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px;">
+        <span class="tag tag-teal">[E] Mesa de Suporte: <strong>Inbox Shift</strong></span>
+        <span class="tag tag-amber">[E] Mesa Comercial: <strong>Spec & Deal</strong></span>
+        <span class="tag tag-crimson">[E] Mesa Financeira: <strong>Closing Day</strong></span>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- 1. INBOX: SUPORTE TÉCNICO -->
+    <!-- ========================================== -->
+    <section class="card" style="margin-top: 40px; border-left: 5px solid var(--brand-teal);">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow">Departamento de Suporte · Service Desk</span>
+          <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">Minigame: Inbox</h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="tag tag-teal">2 min 30 s de Turno</span>
+          <span class="tag tag-teal">SLA: 45–75 s</span>
+          <span class="tag tag-teal">Até 8 E-mails na Caixa</span>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 15px; margin-top: 10px;">
+        E-mails chegam sem parar com barras de prazo regressivo (verde para vermelho). Classifique com as teclas 
+        <kbd>1</kbd> a <kbd>5</kbd> em um painel arcade. Solicitações de garantia de 24 meses exigem decisão imediata:
+        Aprovar (<kbd>A</kbd>), Negar (<kbd>D</kbd>) ou Escalar para Engenharia (<kbd>E</kbd>).
+      </p>
+
+      <!-- Tabela de Categorias -->
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th>Tecla</th>
+            <th>Categoria</th>
+            <th>Padrão de Reconhecimento</th>
+            <th>Ação Exigida</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><kbd>1</kbd></td>
+            <td><strong>Pergunta Técnica</strong></td>
+            <td>Calibração de sensores ou mudança de saída analógica para 0–10 V</td>
+            <td>Resolvido na hora (+100 a +150 pts)</td>
+          </tr>
+          <tr>
+            <td><kbd>2</kbd></td>
+            <td><strong>Pedido de Garantia</strong></td>
+            <td>E-mails com "Warranty:" (leitura desviando, queima, alagamento)</td>
+            <td>Abre segunda etapa: <kbd>A</kbd>, <kbd>D</kbd> ou <kbd>E</kbd></td>
+          </tr>
+          <tr>
+            <td><kbd>3</kbd></td>
+            <td><strong>Reclamação</strong></td>
+            <td>"Terceiro e-mail sem resposta!", insatisfação com atraso</td>
+            <td>Priorizar antes do prazo estourar</td>
+          </tr>
+          <tr>
+            <td><kbd>4</kbd></td>
+            <td><strong>Lead de Vendas</strong></td>
+            <td>Orçamento de pacotes de 40 a 100 sensores industriais</td>
+            <td>Encaminha ao setor comercial</td>
+          </tr>
+          <tr>
+            <td><kbd>5</kbd></td>
+            <td><strong>Spam / Phishing</strong></td>
+            <td>"URGENTE: caixa de correio será fechada" com link fraudulento</td>
+            <td>Passe o mouse: tooltip mostra URL falsa!</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Regra de Ouro das Garantias -->
+      <div style="background: rgba(20, 184, 166, 0.08); border: 1px solid var(--border-active); border-radius: var(--radius-sm); padding: 16px; margin-top: 10px;">
+        <h4 style="color: #2dd4bf; font-family: var(--font-display); font-size: 16px;">⚠️ A Regra das Garantias (Custo Crítico)</h4>
+        <ul style="color: #cbd5e1; font-size: 14px; margin-top: 6px; padding-left: 20px; line-height: 1.5;">
+          <li><strong>Danos por Água:</strong> Somente cobertos se o sensor for <strong>IP68</strong> (submersível). Apenas a <strong>câmera CAM-4</strong> possui essa proteção. Aprovar água para o transmissor PT-200 (IP65) custa <strong>$ 420</strong> de prejuízo à empresa!</li>
+          <li><strong>Sobretensão e Tempestades:</strong> Danos elétricos NUNCA são cobertos pela garantia (<kbd>D</kbd> sempre).</li>
+          <li><strong>Desvio Lento de Leitura (~2% por semana):</strong> Problema sutil da física do sensor. Escalar para a engenharia (<kbd>E</kbd> sempre).</li>
+        </ul>
+      </div>
+
+      <!-- Cápsula de Diálogo do Suporte -->
+      <div class="dialog-capsule capsule-office" style="margin-top: 20px;">
+        <div class="dialog-avatar">
+          <img src="assets/img/job_inbox.png" alt="Tela de Suporte">
+          <span class="status-indicator"></span>
+        </div>
+        <div class="dialog-body">
+          <div class="dialog-meta">
+            <div class="speaker-info">
+              <span class="speaker-name">Ben · Colega de Suporte</span>
+              <span class="speaker-role">Service Desk</span>
+            </div>
+            <span class="dialog-time">DICA TÁTICA #01</span>
+          </div>
+          <div class="dialog-bubble">
+            <p class="speech-text">
+              "Na dúvida entre aprovar e negar, a pior perda é aprovar a câmera submersível CAM-4 por engano: custa <strong>$ 950</strong> direto da nossa nota de fechamento! Olhe sempre a barrinha vermelha do SLA!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. SPEC & DEAL: VENDAS INDUSTRIAIS -->
+    <!-- ========================================== -->
+    <section class="card" style="margin-top: 40px; border-left: 5px solid var(--accent-amber);">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: var(--accent-amber);">Departamento Comercial</span>
+          <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">Minigame: Spec & Deal</h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="tag tag-amber">3 Clientes / Sessão</span>
+          <span class="tag tag-amber">Paciência: 3 Tentativas</span>
+          <span class="tag tag-amber">Comissão: 3%</span>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 15px; margin-top: 10px;">
+        Um comprador industrial liga descrevendo o que precisa medir (temperatura de fluido, pressão de caldeira, luminosidade) 
+        e o tipo de sinal que seu PLC lê (4–20 mA, 0–10 V ou digital). Escolha o sensor certo no catálogo e negocie o preço 
+        oferecendo descontos (<kbd>1</kbd> a <kbd>5</kbd>: 0%, 5%, 10%, 15% ou 20%) antes que a paciência dele acabe.
+      </p>
+
+      <!-- O Perigo Canônico -->
+      <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: var(--radius-sm); padding: 16px; margin-top: 14px;">
+        <h4 style="color: #fbbf24; font-family: var(--font-display); font-size: 16px;">🔥 Atenção Crítica: Caro Não Significa Adequado!</h4>
+        <p style="color: #cbd5e1; font-size: 14px; margin-top: 6px; line-height: 1.5;">
+          O catálogo inclui produtos caros supostamente "premium" que não atendem às condições solicitadas pelo cliente.
+          <strong>Exemplo real da nossa física:</strong> Se o fluido do cliente opera a 80 °C e você vender um sensor barato 
+          que só aguenta até 45 °C e <em>começa a derreter acima de 70 °C</em>, o sensor falha, a garantia é negada por mau uso induzido pelo vendedor, 
+          o cliente processa judicialmente a empresa e você pode ser <strong>demitido por justa causa</strong>!
+        </p>
+      </div>
+
+      <!-- Cápsula de Diálogo de Vendas -->
+      <div class="dialog-capsule" style="margin-top: 20px; border-left: 4px solid var(--accent-amber);">
+        <div class="dialog-avatar" style="border-color: var(--accent-amber);">
+          <img src="assets/img/job_deal.png" alt="Mesa de Negociação">
+          <span class="status-indicator" style="background: #fbbf24;"></span>
+        </div>
+        <div class="dialog-body">
+          <div class="dialog-meta">
+            <div class="speaker-info">
+              <span class="speaker-name">Comprador Industrial</span>
+              <span class="speaker-role">Fábrica de Celulose SPRF</span>
+            </div>
+            <span class="dialog-time">NEGOCIAÇÃO EM ANDAMENTO</span>
+          </div>
+          <div class="dialog-bubble">
+            <p class="speech-text">
+              "Meu orçamento é de <strong>$ 900</strong> para 5 transmissores de pressão 0–16 bar com saída 4–20 mA. Se você me cobrar mais de $ 1.100 sem desconto, encerro a ligação agora!"
+            </p>
+            <div class="dialog-media">
+              <img src="assets/img/job_deal.png" alt="Catálogo e Margem de Preço">
+              <div class="media-caption">
+                <span>Catálogo de Sensores Industriais e Barganha de Preço</span>
+                <span class="media-badge">SPEC & DEAL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. CLOSING DAY: O FECHAMENTO SEMANAL -->
+    <!-- ========================================== -->
+    <section class="card" style="margin-top: 40px; border-left: 5px solid var(--accent-crimson);">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: var(--accent-crimson);">Financeiro & Diretoria</span>
+          <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">Minigame: Closing Day</h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="tag tag-crimson">5 min de Prazo Real</span>
+          <span class="tag tag-crimson">Medidor Don't Get Fired</span>
+          <span class="tag tag-crimson">Interação [E] 1.9m</span>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 15px; margin-top: 10px;">
+        Acontece uma vez por semana. Uma verdadeira gincana em primeira pessoa dentro do escritório. 
+        O medidor <strong>"Don't Get Fired"</strong> começa em 100 e cai a <em>−0,18/s</em> (−54 pontos em 5 minutos!).
+        Se chegar a zero, você é demitido sumariamente.
+      </p>
+
+      <!-- Cronograma Rígido -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 16px;">
+        <div class="panel-stat-card" style="border-left: 3px solid #ef4444;">
+          <span class="panel-stat-label">Relógio em 5:00</span>
+          <span style="font-size: 14px; color: #fff; font-weight: 600;">Início</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Ana está no almoço (só atende após 4:00).</span>
+        </div>
+        <div class="panel-stat-card" style="border-left: 3px solid #f59e0b;">
+          <span class="panel-stat-label">Relógio em 3:20</span>
+          <span style="font-size: 14px; color: #fff; font-weight: 600;">Café do Chefe</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Leve o café antes das 3:20 ou perde −10 pts.</span>
+        </div>
+        <div class="panel-stat-card" style="border-left: 3px solid #3b82f6;">
+          <span class="panel-stat-label">Relógio em 2:30</span>
+          <span style="font-size: 14px; color: #fff; font-weight: 600;">Reunião do Diretor</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Ele sai e só volta às 1:40. Sem assinatura: −20 pts.</span>
+        </div>
+        <div class="panel-stat-card" style="border-left: 3px solid #10b981;">
+          <span class="panel-stat-label">Passo Crítico</span>
+          <span style="font-size: 14px; color: #fff; font-weight: 600;">Impressora Emperrada</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Bata [E] 5 vezes na impressora para destravar o recibo!</span>
+        </div>
+      </div>
+
+      <!-- Cápsula de Diálogo do Closing Day -->
+      <div class="dialog-capsule capsule-police" style="margin-top: 20px;">
+        <div class="dialog-avatar">
+          <img src="assets/img/closing_day_boss.png" alt="Diretor Cobrando Fechamento">
+          <span class="status-indicator"></span>
+        </div>
+        <div class="dialog-body">
+          <div class="dialog-meta">
+            <div class="speaker-info">
+              <span class="speaker-name">Dr. Roberto · Diretor</span>
+              <span class="speaker-role">Gabinete Presidencial</span>
+            </div>
+            <span class="dialog-time">CONFERÊNCIA DOS NÚMEROS</span>
+          </div>
+          <div class="dialog-bubble">
+            <p class="speech-text">
+              "Você me trouxe os recibos da Ana, do Ben e da Carla, mas uma linha do balancete está fraudada! 
+              Identifique qual linha está com valor incompatível com o total. Se errar, é <strong>−15 pontos no medidor</strong> e você corre risco de rua antes das cinco da tarde!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. OUTROS MINIGAMES: FARMÁCIA, RESTAURANTE E LIMPEZA -->
+    <!-- ========================================== -->
+    <section style="margin-top: 50px;">
+      <div class="section-header">
+        <div class="eyebrow">Outras Frentes de Trabalho</div>
+        <h2 class="section-title">Minigames na Farmácia, Restaurante e Limpeza</h2>
+      </div>
+
+      <div class="card-grid">
+        <!-- Farmácia -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="assets/img/job_pharmacy_rx.png" alt="Dispensação Farmacêutica">
+          </div>
+          <h3 style="color: #fff; font-size: 19px;">Dispensação & Sangria de Valores</h3>
+          <p style="color: var(--text-muted); font-size: 14px;">
+            Conferência rigorosa de receitas médicas com tarja preta e antibióticos. Farmacêuticos aplicam injeções 
+            e furam orelhas na salinha clínica. O supervisor recolhe sangria para o cofre e aciona o carro-forte.
+          </p>
+          <span class="tag tag-cyan">PARÓDIA ANVISA · CARRO-FORTE</span>
+        </div>
+
+        <!-- Restaurantes -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="assets/img/job_restaurant_fancy.png" alt="Restaurante À La Carte">
+          </div>
+          <h3 style="color: #fff; font-size: 19px;">Buffet, Cubas & Adega de Vinhos</h3>
+          <p style="color: var(--text-muted); font-size: 14px;">
+            Reposição contínua de cubas térmicas de aço no buffet livre. No À La Carte refinado, atenda chamadas de mesa,
+            acesse a adega refrigerada para buscar rótulos selecionados e evite confundir números de mesa.
+          </p>
+          <span class="tag tag-amber">PRATOS COM MANCHAS ORGÂNICAS</span>
+        </div>
+
+        <!-- Faxina -->
+        <div class="card">
+          <div class="card-img-wrap">
+            <img src="assets/img/job_cleaning_plants.png" alt="Faxina e Cuidados">
+          </div>
+          <h3 style="color: #fff; font-size: 19px;">Piso Molhado & Cuidados com Plantas</h3>
+          <p style="color: var(--text-muted); font-size: 14px;">
+            Ao lavar o chão, manchas azuis de água incomodam clientes se demorar para secar com o rodo (<kbd>E</kbd>).
+            Plantas com sede ficam verde-escuras e revivem para verde-claro ao serem regadas. 5 dias perfeitos = +$200!
+          </p>
+          <span class="tag tag-teal">SPOTLESS LTD. VS CLEAN FAMILY</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 18px; color: #fff;">EXORDIUM</div>
+        <p>Documentação dos Minigames em Primeira Pessoa · Fiel ao Código Canônico</p>
+      </div>
+      <div class="footer-quote">
+        "No retro in everyday things" — Interfaces limpas, modernas e diegéticas.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Lightbox -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+      <img id="modalImage" src="" alt="Ampliação" style="width: 100%; border-radius: var(--radius-sm); display: block; border: 1px solid var(--border-subtle);">
+      <p id="modalCaption" style="font-family: var(--font-mono); font-size: 13px; color: var(--brand-teal); margin-top: 12px;"></p>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

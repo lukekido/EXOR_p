@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXORDIUM // Leis, Trânsito, Ragdoll & Penalidades</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dialogs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <div class="logo-symbol">EX</div>
+      <div class="brand-title">
+        <span class="title">EXORDIUM</span>
+        <span class="subtitle">SISTEMA METROPOLITANO // SPRF</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Visão Geral</a></li>
+        <li><a href="profissoes.html">Árvore de Carreiras</a></li>
+        <li><a href="minigames.html">Minigames</a></li>
+        <li><a href="transportes.html">Mobilidade & Frota</a></li>
+        <li><a href="penalidades.html" class="active">Leis & Penalidades</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section-header">
+      <div class="eyebrow" style="color: var(--accent-crimson);">Código Penal & Física Punitiva · SPRF</div>
+      <h1 class="section-title">Crime, Castigo & Consequências Reais</h1>
+      <p class="section-subtitle">
+        Em EXORDIUM não existe polícia arcade que esquece seus crimes após você pintar o carro.
+        O sistema judicial é impiedoso: atropelamentos com física ragdoll realista, multiplicadores de multa de até 90x por evasão, 
+        buscas policiais no seu local de trabalho e o imponente Cubo da Prisão no extremo sul da cidade.
+      </p>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 1. A ESCALA JURÍDICA: DO ACIDENTE À PRISÃO -->
+    <!-- ========================================== -->
+    <section class="card" style="border-left: 5px solid var(--accent-crimson); margin-bottom: 40px;">
+      <div class="eyebrow" style="color: var(--accent-crimson);">Status Jurídico do Jogador</div>
+      <h2 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">A Escala Criminal em Tempo Real</h2>
+      <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 8px;">
+        As três etapas do código penal canônico após causar um incidente viário ou agressão:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 20px;">
+        <div class="panel-stat-card" style="border-top: 3px solid #eab308;">
+          <span class="tag tag-amber" style="width: fit-content;">FASE 1 · 10 a 30 SEGUNDOS</span>
+          <h3 style="color: #fff; font-size: 18px; margin-top: 8px;">[Potencial Criminoso]</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.45; margin-top: 4px;">
+            Atribuído imediatamente após a colisão ou atropelamento. Se a vítima sobreviver e você permanecer na cena 
+            aguardando o socorro do SAMU 192, você responde apenas por danos civis e seguro.
+          </p>
+        </div>
+
+        <div class="panel-stat-card" style="border-top: 3px solid #f97316;">
+          <span class="tag" style="background: rgba(249,115,22,0.2); color: #fb923c; border-color: rgba(249,115,22,0.4); width: fit-content;">FASE 2 · PRIMEIROS 2 DIAS</span>
+          <h3 style="color: #fff; font-size: 18px; margin-top: 8px;">[Fugitivo da Justiça]</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.45; margin-top: 4px;">
+            Acionado instantaneamente se você se afastar <strong>mais de 20 metros da vítima</strong> antes do socorro! 
+            Se passar mais de 4 segundos na visão de uma viatura policial, é preso em flagrante sem direito a fiança ou audiência de custódia!
+          </p>
+        </div>
+
+        <div class="panel-stat-card" style="border-top: 3px solid #ef4444;">
+          <span class="tag tag-crimson" style="width: fit-content;">FASE 3 · APÓS 2 DIAS</span>
+          <h3 style="color: #fff; font-size: 18px; margin-top: 8px;">[Procurado Judicial]</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.45; margin-top: 4px;">
+            A Justiça expede mandado de busca. <strong>A polícia vai revistar seu local de trabalho</strong>:
+            se for funcionário de escritório, policiais revistam os prédios comerciais nos horários de expediente. Apps de corrida são bloqueados!
+          </p>
+        </div>
+      </div>
+
+      <!-- Cápsula de Diálogo Judicial -->
+      <div class="dialog-capsule capsule-police" style="margin-top: 24px;">
+        <div class="dialog-avatar">
+          <img src="assets/img/badge_crash.png" alt="Delegacia de Trânsito">
+          <span class="status-indicator"></span>
+        </div>
+        <div class="dialog-body">
+          <div class="dialog-meta">
+            <div class="speaker-info">
+              <span class="speaker-name">Delegado Vasconcelos</span>
+              <span class="speaker-role">Polícia Civil de SPRF</span>
+            </div>
+            <span class="dialog-time">PROTOCOLO DE FUGA</span>
+          </div>
+          <div class="dialog-bubble">
+            <p class="speech-text">
+              "Você atropelou um cidadão no cruzamento e acelerou para fugir? Pois saiba que o sistema registrou o impacto: 
+              <strong>sua multa foi multiplicada por 90</strong>! As viaturas já receberam o alerta da placa e temos agentes vigiando o ponto da sua empresa no centro!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. FÍSICA DE IMPACTO & RAGDOLL REALISTA -->
+    <!-- ========================================== -->
+    <section class="card" style="border-left: 5px solid var(--accent-amber); margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: var(--accent-amber);">Simulação Balística e Dinâmica Corporal</span>
+          <h2 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">Atropelamento & Ragdoll Canônico</h2>
+        </div>
+        <span class="tag tag-amber">Física Real sem Dismemberment</span>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 8px;">
+        Desenvolvi a física de impacto corporal para ser visceral: <em>"A colisão dos pedestres e o arremesso sobre o capô entregam exatamente a sensação tátil e o peso que sempre busquei para o jogo!"</em>
+      </p>
+
+      <!-- Tabela de Faixas de Velocidade -->
+      <table class="rules-table">
+        <thead>
+          <tr>
+            <th>Velocidade Carro</th>
+            <th>Velocidade Bicicleta</th>
+            <th>Gravidade do Impacto</th>
+            <th>Dinâmica Corporal (Ragdoll)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Até 8 km/h</td>
+            <td>Até 20 km/h</td>
+            <td><span class="tag tag-teal">Esbarrão Leve</span></td>
+            <td>O pedestre tropeça, cambaleia e reclama em voz alta. Sem atendimento médico.</td>
+          </tr>
+          <tr>
+            <td>8 a 20 km/h</td>
+            <td>20 a 28 km/h</td>
+            <td><span class="tag tag-amber">Escoriações</span></td>
+            <td>Queda ao chão. Fica sentado por alguns segundos, sacode a poeira e levanta.</td>
+          </tr>
+          <tr>
+            <td>20 a 40 km/h</td>
+            <td>Acima de 28 km/h</td>
+            <td><span class="tag tag-crimson">Ferimento Moderado</span></td>
+            <td>Permanece caído no asfalto. O SAMU 192 é acionado e os socorristas prestam curativos no local.</td>
+          </tr>
+          <tr>
+            <td>40 a 60 km/h</td>
+            <td>—</td>
+            <td><span class="tag tag-crimson">Trauma Severo</span></td>
+            <td>O corpo é projetado por cima do capô e rola pelo teto. Remoção em maca para a emergência.</td>
+          </tr>
+          <tr>
+            <td>Acima de 60 km/h</td>
+            <td>—</td>
+            <td><span class="tag tag-crimson" style="background: red; color: #fff;">Fatal / Júri Popular</span></td>
+            <td>25% de óbito a 60 km/h e 100% certo aos 90 km/h. Sangue orgânico espirra no para-brisa e permanece por 3 dias!</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-sm); padding: 14px; margin-top: 10px;">
+        <h4 style="color: #f87171; font-family: var(--font-display); font-size: 15px;">🚗 Segundo Impacto & Passar por Cima</h4>
+        <p style="color: #cbd5e1; font-size: 13.5px; margin-top: 4px; line-height: 1.45;">
+          Se o corpo arremessado bater em um poste ou muro acima de 30 km/h, o trauma sobe um nível de gravidade. 
+          Se o motorista <strong>passar com o carro por cima da vítima caída a mais de 10 km/h</strong>, o óbito é instantâneo e o caso é remetido para Tribunal do Júri popular!
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. SAMU 192 E O GUINCHO -->
+    <!-- ========================================== -->
+    <section class="card" style="border-left: 5px solid var(--accent-cyan); margin-bottom: 40px;">
+      <span class="eyebrow" style="color: var(--accent-cyan);">Emergência e Desobstrução de Vias</span>
+      <h2 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">O Socorro do SAMU 192 e o Guincho do Pátio</h2>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px;">
+        <div>
+          <div class="card-img-wrap">
+            <img src="assets/img/samu_ambulance.png" alt="SAMU 192 Atendendo Vítima">
+          </div>
+          <h4 style="color: #fff; font-size: 18px; margin-top: 10px;">As Ambulâncias Vermelhas 192</h4>
+          <p style="color: var(--text-muted); font-size: 14px; margin-top: 4px; line-height: 1.5;">
+            Três ambulâncias de prontidão no Hospital Regional. Com a sirene ligada, furam sinais vermelhos e passam por cima de calçadas se necessário. 
+            Os motoristas civis desviam assustados para abrir passagem. Os socorristas descem com maca, estabilizam a vítima por 45 segundos e retornam com urgência.
+          </p>
+        </div>
+
+        <div>
+          <div class="card-img-wrap">
+            <img src="assets/img/tow_truck.png" alt="Caminhão Guincho Plataforma">
+          </div>
+          <h4 style="color: #fff; font-size: 18px; margin-top: 10px;">O Caminhão Guincho do DETRAN</h4>
+          <p style="color: var(--text-muted); font-size: 14px; margin-top: 4px; line-height: 1.5;">
+            Assim que o SAMU libera o local de um acidente ou pane mecânica, o guincho plataforma entra pela borda da cidade. 
+            Embarca os carros destruídos e os transporta para o pátio de custódia na zona externa da metrópole.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. O CUBO DA PRISÃO -->
+    <!-- ========================================== -->
+    <section class="card" style="border-left: 5px solid #a855f7;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: #c084fc;">Sistema Penitenciário de SPRF</span>
+          <h2 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">O Cubo da Prisão (Inspirado em Hard Time)</h2>
+        </div>
+        <span class="tag tag-purple">Rotina Carcerária Jogável</span>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 8px;">
+        Situado no extremo sul do mapa, após as casas simples da periferia, ergue-se o imponente Cubo da Prisão:
+        uma fortaleza maciça de concreto de <strong>56 metros de lado e 36 metros de altura</strong> cercada por muros de 5 metros e holofotes.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 16px;">
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Inspiração de Gameplay</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">Hard Time (MDickie)</span>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+            A prisão não é apenas uma tela de "Game Over". O jogador cumpre sua rotina atrás das grades,
+            com dinâmica carcerária e possibilidade restrita e desafiadora de fuga.
+          </p>
+        </div>
+
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Consequência no Mundo</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">O Tempo Não Para</span>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+            Enquanto você está encarcerado, a Terra continua sob ameaça alienígena e o relógio das 24 semanas continua avançando implacavelmente!
+          </p>
+        </div>
+
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Registro Criminal</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">Mancha de 5 Anos</span>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+            Após solto, o histórico criminal bloqueia empregos de nível 2 ou superior até que o registro seja reabilitado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 18px; color: #fff;">EXORDIUM</div>
+        <p>Código Penal & Protocolos de Segurança Viária · Springfield (SPRF)</p>
+      </div>
+      <div class="footer-quote">
+        "Consequências reais: lei rigorosa, corpo que se desgasta, dinheiro que acaba."
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Lightbox -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+      <img id="modalImage" src="" alt="Ampliação" style="width: 100%; border-radius: var(--radius-sm); display: block; border: 1px solid var(--border-subtle);">
+      <p id="modalCaption" style="font-family: var(--font-mono); font-size: 13px; color: var(--brand-teal); margin-top: 12px;"></p>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

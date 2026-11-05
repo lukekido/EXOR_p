@@ -1,0 +1,315 @@
+/* ==========================================================================
+   EXORDIUM // CÁPSULAS DE CONTEÚDO & BALÕES DE DIÁLOGO
+   Micro-histórias, diálogos de gameplay, capturas de tela e dicas rápidas
+   ========================================================================== */
+
+.dialog-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.dialog-capsule {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 18px;
+  background: rgba(15, 23, 23, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.dialog-capsule:hover {
+  border-color: var(--border-active);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+/* Avatares dos Personagens */
+.dialog-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--brand-teal);
+  overflow: hidden;
+  position: relative;
+  background: #000;
+  box-shadow: 0 0 12px var(--brand-teal-glow);
+  flex-shrink: 0;
+}
+
+.dialog-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dialog-avatar .status-indicator {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #22c55e;
+  border: 2px solid #000;
+}
+
+/* Corpo da Cápsula */
+.dialog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dialog-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.speaker-info {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.speaker-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.speaker-role {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--brand-teal);
+  text-transform: uppercase;
+}
+
+.dialog-time {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* Balão com Efeito de Fala */
+.dialog-bubble {
+  background: rgba(22, 34, 33, 0.9);
+  border: 1px solid rgba(45, 212, 191, 0.25);
+  border-radius: var(--radius-sm) var(--radius-md) var(--radius-md) var(--radius-md);
+  padding: 14px 18px;
+  position: relative;
+}
+
+.dialog-bubble::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 8px solid rgba(45, 212, 191, 0.25);
+}
+
+.speech-text {
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #e6f3f0;
+}
+
+.speech-text strong {
+  color: #ffffff;
+}
+
+.speech-text em {
+  color: #5eead4;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Mídia Integrada (Captura de Tela no Balão) */
+.dialog-media {
+  margin-top: 12px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  cursor: pointer;
+  max-width: 540px;
+}
+
+.dialog-media img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.dialog-media:hover img {
+  transform: scale(1.03);
+}
+
+.media-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.85) 60%);
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.media-badge {
+  background: rgba(20, 184, 166, 0.3);
+  color: #2dd4bf;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+/* Cápsula de Destaque Rápido (Quick Bite Capsule) */
+.quick-bite-capsule {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.quick-bite-capsule:hover {
+  border-color: var(--border-active);
+  box-shadow: var(--shadow-glow);
+}
+
+.quick-bite-thumb {
+  width: 140px;
+  height: 100%;
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-bite-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quick-bite-content {
+  padding: 12px 18px 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.quick-bite-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.quick-bite-desc {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* Variações Temáticas */
+.capsule-office .dialog-avatar {
+  border-color: var(--brand-teal);
+}
+.capsule-office .speaker-role {
+  color: var(--brand-teal);
+}
+
+.capsule-police {
+  border-left: 4px solid var(--accent-crimson);
+}
+.capsule-police .dialog-avatar {
+  border-color: var(--accent-crimson);
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+}
+.capsule-police .speaker-role {
+  color: #f87171;
+}
+.capsule-police .dialog-bubble {
+  border-color: rgba(239, 68, 68, 0.3);
+}
+.capsule-police .dialog-bubble::before {
+  border-right-color: rgba(239, 68, 68, 0.3);
+}
+
+.capsule-samu {
+  border-left: 4px solid var(--accent-amber);
+}
+.capsule-samu .dialog-avatar {
+  border-color: var(--accent-amber);
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.4);
+}
+.capsule-samu .speaker-role {
+  color: #fbbf24;
+}
+
+.capsule-fire {
+  border-left: 4px solid #f97316;
+}
+.capsule-fire .dialog-avatar {
+  border-color: #f97316;
+}
+.capsule-fire .speaker-role {
+  color: #fb923c;
+}
+
+.capsule-alien {
+  border-left: 4px solid var(--accent-purple);
+  background: rgba(24, 15, 36, 0.85);
+}
+.capsule-alien .dialog-avatar {
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.4);
+}
+.capsule-alien .speaker-role {
+  color: #c084fc;
+}
+
+@media (max-width: 640px) {
+  .dialog-capsule {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .dialog-avatar {
+    width: 48px;
+    height: 48px;
+  }
+  .quick-bite-capsule {
+    grid-template-columns: 1fr;
+  }
+  .quick-bite-thumb {
+    width: 100%;
+    height: 140px;
+  }
+  .quick-bite-content {
+    padding: 12px 16px;
+  }
+}

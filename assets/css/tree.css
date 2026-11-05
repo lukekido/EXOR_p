@@ -1,0 +1,383 @@
+/* ==========================================================================
+   EXORDIUM // ÁRVORE INTERATIVA DE PROFISSÕES & CARREIRAS
+   Visual Cues, Nós de Progressão, Ramificações e Opções Especiais
+   ========================================================================== */
+
+.career-tree-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 30px 0;
+}
+
+/* Barra de Filtros & Visual Cues */
+.tree-controls {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.tree-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-btn:hover {
+  background: rgba(20, 184, 166, 0.1);
+  color: #fff;
+  border-color: var(--brand-teal);
+}
+
+.filter-btn.active {
+  background: var(--brand-teal);
+  color: #041210;
+  border-color: var(--brand-teal);
+  box-shadow: 0 0 14px var(--brand-teal-glow);
+}
+
+/* Legenda de Visual Cues */
+.visual-cue-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.cue-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cue-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.cue-dot.bonus { background: var(--accent-gold); box-shadow: 0 0 8px rgba(251, 191, 36, 0.6); }
+.cue-dot.crime { background: var(--accent-purple); box-shadow: 0 0 8px rgba(168, 85, 247, 0.6); }
+.cue-dot.danger { background: var(--accent-crimson); box-shadow: 0 0 8px rgba(239, 68, 68, 0.6); }
+.cue-dot.diploma { background: var(--accent-cyan); box-shadow: 0 0 8px rgba(6, 182, 212, 0.6); }
+.cue-dot.executive { background: #38bdf8; box-shadow: 0 0 8px rgba(56, 189, 248, 0.6); }
+
+/* Árvore / Grid Hierárquico */
+.tree-hierarchy-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+}
+
+.tree-level-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.level-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.level-badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 184, 166, 0.12);
+  color: var(--brand-teal);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.level-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.level-nodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+/* O Nó da Profissão */
+.tree-node {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.tree-node::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; width: 4px;
+  background: var(--border-subtle);
+  transition: background 0.25s ease;
+}
+
+.tree-node:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-active);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4), var(--shadow-glow);
+}
+
+.tree-node.selected {
+  border-color: var(--brand-teal);
+  background: rgba(20, 184, 166, 0.08);
+  box-shadow: 0 0 25px rgba(20, 184, 166, 0.3);
+}
+
+.tree-node.selected::before {
+  background: var(--brand-teal);
+}
+
+/* Estilos de Visual Cue em Nós Especiais */
+.tree-node[data-cue*="bonus"] {
+  border-color: rgba(251, 191, 36, 0.3);
+}
+.tree-node[data-cue*="bonus"]::before {
+  background: var(--accent-gold);
+}
+
+.tree-node[data-cue*="crime"] {
+  border-color: rgba(168, 85, 247, 0.3);
+}
+.tree-node[data-cue*="crime"]::before {
+  background: var(--accent-purple);
+}
+
+.tree-node[data-cue*="danger"] {
+  border-color: rgba(239, 68, 68, 0.35);
+  box-shadow: inset 0 0 15px rgba(239, 68, 68, 0.05);
+}
+.tree-node[data-cue*="danger"]::before {
+  background: var(--accent-crimson);
+}
+
+.tree-node[data-cue*="diploma"] {
+  border-color: rgba(6, 182, 212, 0.3);
+}
+.tree-node[data-cue*="diploma"]::before {
+  background: var(--accent-cyan);
+}
+
+.tree-node[data-cue*="executive"] {
+  border-color: rgba(56, 189, 248, 0.4);
+}
+.tree-node[data-cue*="executive"]::before {
+  background: #38bdf8;
+}
+
+.node-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.node-role-name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.node-branch-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.node-cues-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cue-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.pill-bonus {
+  background: rgba(251, 191, 36, 0.18);
+  color: #fde047;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+  animation: pulse-glow-gold 3s infinite alternate;
+}
+
+@keyframes pulse-glow-gold {
+  0% { box-shadow: 0 0 4px rgba(251, 191, 36, 0.2); }
+  100% { box-shadow: 0 0 12px rgba(251, 191, 36, 0.5); }
+}
+
+.pill-crime {
+  background: rgba(168, 85, 247, 0.18);
+  color: #d8b4fe;
+  border: 1px solid rgba(168, 85, 247, 0.4);
+}
+
+.pill-danger {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  animation: pulse-alert 2s infinite;
+}
+
+@keyframes pulse-alert {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.pill-diploma {
+  background: rgba(6, 182, 212, 0.18);
+  color: #67e8f9;
+  border: 1px solid rgba(6, 182, 212, 0.4);
+}
+
+.pill-executive {
+  background: rgba(56, 189, 248, 0.18);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.4);
+}
+
+.node-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.node-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+}
+
+.node-salary {
+  color: #34d399;
+  font-weight: 700;
+}
+
+.node-hours {
+  color: var(--text-muted);
+}
+
+/* Painel de Detalhes da Profissão Selecionada (Drawer / Raio-X) */
+.career-detail-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-active);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5), var(--shadow-glow);
+  position: relative;
+  scroll-margin-top: 80px;
+}
+
+.panel-header-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.panel-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.panel-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.panel-stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.panel-stat-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.panel-stat-val {
+  font-family: var(--font-display);
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.panel-stat-val.salary-highlight {
+  color: #34d399;
+}
