@@ -107,29 +107,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 3. MODAL LIGHTBOX PARA IMAGENS E CÁPSULAS ---
+    // --- 3. MODAL LIGHTBOX PARA TODAS AS IMAGENS ---
   const modalOverlay = document.getElementById('modalOverlay');
   const modalImg = document.getElementById('modalImage');
   const modalCaption = document.getElementById('modalCaption');
   const modalClose = document.getElementById('modalCloseBtn');
+  const zoomBtn = document.getElementById('zoomToggleBtn');
 
   function openModal(src, captionText) {
-    if (!modalOverlay) return;
+    if (!modalOverlay || !modalImg) return;
     modalImg.src = src;
-    modalCaption.textContent = captionText || 'Registro de Campo · SPRF';
+    modalImg.classList.remove('is-original-size');
+    if (zoomBtn) zoomBtn.textContent = '🔍 Tamanho 100%';
+    if (modalCaption) modalCaption.textContent = captionText || 'Registro Canônico de EXORDIUM';
     modalOverlay.classList.add('open');
-    SFX.select();
+    if (typeof SFX !== 'undefined') SFX.select();
   }
 
   function closeModal() {
     if (!modalOverlay) return;
     modalOverlay.classList.remove('open');
-    SFX.click();
+    if (typeof SFX !== 'undefined') SFX.click();
   }
 
-  if (modalClose) {
-    modalClose.addEventListener('click', closeModal);
+  function toggleZoom() {
+    if (!modalImg) return;
+    modalImg.classList.toggle('is-original-size');
+    if (zoomBtn) {
+      zoomBtn.textContent = modalImg.classList.contains('is-original-size') ? '📐 Ajustar à Tela' : '🔍 Tamanho 100%';
+    }
   }
+
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+  if (zoomBtn) zoomBtn.addEventListener('click', toggleZoom);
+  if (modalImg) modalImg.addEventListener('click', toggleZoom);
 
   if (modalOverlay) {
     modalOverlay.addEventListener('click', (e) => {
@@ -143,12 +154,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Torna todas as imagens com classe .dialog-media clicáveis
-  document.querySelectorAll('.dialog-media, .clickable-image').forEach(wrap => {
-    wrap.addEventListener('click', () => {
-      const img = wrap.querySelector('img');
-      const caption = wrap.querySelector('.media-caption')?.textContent || img?.alt;
-      if (img) openModal(img.src, caption);
+  // Torna TODAS as imagens clicáveis em todas as páginas
+  function bindClickableImages() {
+    const clickableSelectors = [
+      '.card-img-wrap',
+      '.dialog-media',
+      '.quick-bite-thumb',
+      '.card img',
+      '.panel-stat-card img',
+      '.dialog-avatar img'
+    ];
+    document.querySelectorAll(clickableSelectors.join(', ')).forEach(el => {
+      el.style.cursor = 'zoom-in';
+      el.addEventListener('click', (e) => {
+        const img = el.tagName === 'IMG' ? el : el.querySelector('img');
+        if (!img || !img.src) return;
+        const caption = el.querySelector('.media-caption')?.textContent 
+          || el.closest('.card')?.querySelector('h3, h4')?.textContent 
+          || img.alt 
+          || 'Registro Canônico';
+        openModal(img.src, caption);
+        e.stopPropagation();
+      });
     });
-  });
+  }
+  bindClickableImages();
 });
+

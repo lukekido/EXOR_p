@@ -392,12 +392,20 @@
     </div>
   </footer>
 
-  <!-- Modal Lightbox -->
+    <!-- Modal Lightbox Expandido -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-content">
-      <button class="modal-close-btn" id="modalCloseBtn">✕</button>
-      <img id="modalImage" src="" alt="Ampliação" style="width: 100%; border-radius: var(--radius-sm); display: block; border: 1px solid var(--border-subtle);">
-      <p id="modalCaption" style="font-family: var(--font-mono); font-size: 13px; color: var(--brand-teal); margin-top: 12px;"></p>
+      <button class="modal-close-btn" id="modalCloseBtn" title="Fechar (Esc)">✕</button>
+      <div class="modal-image-container">
+        <img id="modalImage" src="" alt="Captura em Tamanho Ampliado">
+      </div>
+      <div class="modal-footer-bar">
+        <p id="modalCaption" class="modal-caption"></p>
+        <div class="modal-controls">
+          <button id="zoomToggleBtn" class="modal-action-btn" title="Alternar Tamanho Original">🔍 Tamanho 100%</button>
+          <span class="modal-hint">Esc para fechar</span>
+        </div>
+      </div>
     </div>
   </div>
 
