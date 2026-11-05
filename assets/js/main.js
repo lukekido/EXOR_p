@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-    // --- 3. MODAL LIGHTBOX PARA TODAS AS IMAGENS ---
+  // --- 3. MODAL LIGHTBOX PARA TODAS AS IMAGENS ---
   const modalOverlay = document.getElementById('modalOverlay');
   const modalImg = document.getElementById('modalImage');
   const modalCaption = document.getElementById('modalCaption');
@@ -118,8 +118,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!modalOverlay || !modalImg) return;
     modalImg.src = src;
     modalImg.classList.remove('is-original-size');
-    if (zoomBtn) zoomBtn.textContent = '🔍 Tamanho 100%';
-    if (modalCaption) modalCaption.textContent = captionText || 'Registro Canônico de EXORDIUM';
+    const baseCaption = captionText || 'Registro Canônico de EXORDIUM';
+    if (modalCaption) modalCaption.textContent = baseCaption;
+    if (zoomBtn) zoomBtn.textContent = '🔍 Ver em Tamanho Real (100%)';
+
+    modalImg.onload = () => {
+      const w = modalImg.naturalWidth;
+      const h = modalImg.naturalHeight;
+      if (modalCaption && w && h) {
+        modalCaption.textContent = `${baseCaption} · [${w} × ${h} px]`;
+      }
+    };
+
     modalOverlay.classList.add('open');
     if (typeof SFX !== 'undefined') SFX.select();
   }
@@ -132,9 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function toggleZoom() {
     if (!modalImg) return;
-    modalImg.classList.toggle('is-original-size');
+    const isOrig = modalImg.classList.toggle('is-original-size');
     if (zoomBtn) {
-      zoomBtn.textContent = modalImg.classList.contains('is-original-size') ? '📐 Ajustar à Tela' : '🔍 Tamanho 100%';
+      zoomBtn.textContent = isOrig ? '📐 Ajustar à Tela' : '🔍 Ver em Tamanho Real (100%)';
     }
   }
 
@@ -154,25 +164,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Torna TODAS as imagens clicáveis em todas as páginas
+  // Torna TODAS as imagens do site clicáveis para visualização ampliada
   function bindClickableImages() {
-    const clickableSelectors = [
-      '.card-img-wrap',
-      '.dialog-media',
-      '.quick-bite-thumb',
-      '.card img',
-      '.panel-stat-card img',
-      '.dialog-avatar img'
-    ];
-    document.querySelectorAll(clickableSelectors.join(', ')).forEach(el => {
-      el.style.cursor = 'zoom-in';
-      el.addEventListener('click', (e) => {
-        const img = el.tagName === 'IMG' ? el : el.querySelector('img');
-        if (!img || !img.src) return;
-        const caption = el.querySelector('.media-caption')?.textContent 
-          || el.closest('.card')?.querySelector('h3, h4')?.textContent 
+    document.querySelectorAll('img:not(#modalImage):not(.nav-logo)').forEach(img => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', (e) => {
+        if (!img.src) return;
+        const parentContainer = img.closest('.dialog-capsule, .card, .callout-banner, .panel-stat-card');
+        const caption = img.closest('.dialog-media')?.querySelector('.media-caption')?.textContent 
+          || parentContainer?.querySelector('h3, h4, h5')?.textContent 
           || img.alt 
-          || 'Registro Canônico';
+          || 'Registro Canônico de EXORDIUM';
         openModal(img.src, caption);
         e.stopPropagation();
       });

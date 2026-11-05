@@ -137,13 +137,57 @@
           <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">A Rede de Ônibus & A Faixa Azul</h2>
         </div>
         <div style="display: flex; gap: 8px;">
-          <span class="tag tag-blue">3 Linhas Planejadas</span>
+          <span class="tag tag-blue">3 Linhas Operacionais</span>
           <span class="tag tag-blue">2 Terminais de Quadra</span>
           <span class="tag tag-blue">Intervalos de 40 min</span>
         </div>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 20px;">
+      <!-- DESTAQUE MÁXIMO: COMPROVAÇÃO CANÔNICA DOS ÔNIBUS EM OPERAÇÃO REAL -->
+      <div style="margin-top: 24px; background: rgba(14, 28, 45, 0.75); border: 1px solid rgba(59, 130, 246, 0.4); border-radius: var(--radius-md); padding: 22px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;">
+          <div>
+            <span class="tag tag-blue">SIMULAÇÃO 100% FUNCIONAL · COMPROVAÇÃO IN-GAME</span>
+            <h3 style="color: #fff; font-size: 22px; margin-top: 6px;">O Ônibus em Operação Real: Do Ponto ao Desembarque</h3>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: #93c5fd; background: rgba(59, 130, 246, 0.15); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.3);">
+            INTERAÇÃO DIEGÉTICA: TECLA [E]
+          </span>
+        </div>
+
+        <div class="card-img-wrap" style="aspect-ratio: 16/9; max-height: 560px; border: 1px solid rgba(96, 165, 250, 0.35); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);">
+          <img src="assets/img/bus_grid.png" alt="Comprovação Canônica: Ônibus Funcionais em EXORDIUM — Tabela de Horários no Totem, Embarque [E], Salão de Passageiros em Movimento e Desembarque [E]">
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 18px;">
+          <div style="background: rgba(15, 23, 42, 0.65); padding: 14px 16px; border-radius: var(--radius-sm); border-left: 3px solid #60a5fa;">
+            <h5 style="color: #fff; font-size: 14.5px; margin-bottom: 4px;">1. Tabela de Horários no Totem</h5>
+            <p style="color: var(--text-muted); font-size: 13px; margin: 0; line-height: 1.5;">
+              No ponto da calçada, o totem de metal lista os horários exatos programados para o dia (ex: <em>Linha 101 às 08:50, 09:10, 09:30</em>).
+            </p>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.65); padding: 14px 16px; border-radius: var(--radius-sm); border-left: 3px solid #60a5fa;">
+            <h5 style="color: #fff; font-size: 14.5px; margin-bottom: 4px;">2. Embarque Físico [E]</h5>
+            <p style="color: var(--text-muted); font-size: 13px; margin: 0; line-height: 1.5;">
+              Quando o ônibus aproxima e abre as portas, surge o prompt <code>[E] Get on the bus</code>. O jogador sobe na hora, sem telas pretas de loading.
+            </p>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.65); padding: 14px 16px; border-radius: var(--radius-sm); border-left: 3px solid #60a5fa;">
+            <h5 style="color: #fff; font-size: 14.5px; margin-bottom: 4px;">3. Viagem no Salão em Tempo Real</h5>
+            <p style="color: var(--text-muted); font-size: 13px; margin: 0; line-height: 1.5;">
+              No salão com corrimãos amarelos, você acompanha os prédios e cruzamentos passarem enquanto o GPS mede a distância em metros até o trabalho.
+            </p>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.65); padding: 14px 16px; border-radius: var(--radius-sm); border-left: 3px solid #60a5fa;">
+            <h5 style="color: #fff; font-size: 14.5px; margin-bottom: 4px;">4. Desembarque no Destino [E]</h5>
+            <p style="color: var(--text-muted); font-size: 13px; margin: 0; line-height: 1.5;">
+              Ao chegar no ponto da empresa, a HUD avisa a parada e o prompt <code>[E] Get off here</code> libera a descida diretamente na calçada do destino.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 26px;">
         <div>
           <h3 style="color: #fff; font-size: 19px; margin-bottom: 12px;">As Três Linhas Canônicas</h3>
           <ul style="color: #cbd5e1; font-size: 14.5px; display: grid; gap: 10px; padding-left: 20px;">
@@ -169,6 +213,28 @@
           <p style="color: var(--text-muted); font-size: 13.5px;">
             Ônibus com dinâmica real de dois eixos e raio de giro físico. Nas vias troncais, a faixa azul exclusiva garante prioridade absoluta ao transporte coletivo e viaturas.
           </p>
+        </div>
+      </div>
+
+      <!-- Cápsula de Diálogo dos Ônibus -->
+      <div class="dialog-capsule" style="margin-top: 24px; border-left: 4px solid var(--accent-blue);">
+        <div class="dialog-avatar" style="border-color: var(--accent-blue);">
+          <img src="assets/img/bus_turning.png" alt="Motorista Linha 303">
+          <span class="status-indicator" style="background: #3b82f6;"></span>
+        </div>
+        <div class="dialog-body">
+          <div class="dialog-meta">
+            <div class="speaker-info">
+              <span class="speaker-name">Valdemir "Bigode"</span>
+              <span class="speaker-role">Motorista Efetivo · Linha 303 (Centro – Periferia Oeste)</span>
+            </div>
+            <span class="dialog-time">SEGUNDA-FEIRA · 08:21 · TURNO DA MANHÃ</span>
+          </div>
+          <div class="dialog-bubble">
+            <p class="speech-text">
+              "Aqui não tem teletransporte de joguinho preguiçoso não! Se você perder a viagem das 08:21, vai ter que esperar o próximo carro ou bater perna 400 metros a pé no sol quente. Entrou pela porta com [E], sentou e apreciou a cidade pela janela. E se o sinal fechar na Faixa Azul, a gente espera o verde abrir como manda a física!"
+            </p>
+          </div>
         </div>
       </div>
     </section>
