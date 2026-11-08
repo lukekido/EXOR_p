@@ -181,5 +181,42 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   bindClickableImages();
+
+  // --- 4. CONTROLE DO MENU MOBILE (DRAWER) ---
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+  const mobileDrawerClose = document.getElementById('mobileDrawerClose');
+  const mobileNavBackdrop = document.getElementById('mobileNavBackdrop');
+
+  function openMobileMenu() {
+    if (mobileNavDrawer) mobileNavDrawer.classList.add('open');
+    if (mobileNavBackdrop) mobileNavBackdrop.classList.add('open');
+    if (mobileMenuBtn) mobileMenuBtn.classList.add('open');
+    if (typeof SFX !== 'undefined') SFX.select();
+  }
+
+  function closeMobileMenu() {
+    if (mobileNavDrawer) mobileNavDrawer.classList.remove('open');
+    if (mobileNavBackdrop) mobileNavBackdrop.classList.remove('open');
+    if (mobileMenuBtn) mobileMenuBtn.classList.remove('open');
+  }
+
+  if (mobileMenuBtn) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (mobileNavDrawer && mobileNavDrawer.classList.contains('open')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+  }
+
+  if (mobileDrawerClose) mobileDrawerClose.addEventListener('click', closeMobileMenu);
+  if (mobileNavBackdrop) mobileNavBackdrop.addEventListener('click', closeMobileMenu);
+
+  document.querySelectorAll('.mobile-nav-list a').forEach(a => {
+    a.addEventListener('click', closeMobileMenu);
+  });
 });
 

@@ -34,8 +34,32 @@
 
     <div class="nav-actions">
       <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <!-- Menu Gaveta Mobile (Drawer) -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <span class="eyebrow" style="margin: 0;">Navegação Metropolitana</span>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar Menu">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class=""><span class="nav-icon">🏙️</span> Visão Geral</a></li>
+      <li><a href="profissoes.html" class=""><span class="nav-icon">💼</span> Árvore de Carreiras</a></li>
+      <li><a href="minigames.html" class=""><span class="nav-icon">🎮</span> Minigames</a></li>
+      <li><a href="transportes.html" class=""><span class="nav-icon">🚌</span> Mobilidade & Frota</a></li>
+      <li><a href="penalidades.html" class="active"><span class="nav-icon">⚖️</span> Leis & Penalidades</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <span>EXORDIUM // SPRF v0.9.4</span>
+    </div>
+  </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
 
   <main class="container">
 
@@ -243,7 +267,7 @@
           <span class="panel-stat-label">Consequência no Mundo</span>
           <span style="font-size: 16px; color: #fff; font-weight: 700;">O Tempo Não Para</span>
           <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
-            Enquanto você está encarcerado, a Terra continua sob ameaça alienígena e o relógio das 24 semanas continua avançando implacavelmente!
+            Enquanto você está encarcerado, o relógio das 24 semanas não perdoa: o tempo do mundo continua escorrendo implacavelmente rumo ao ponto de não retorno!
           </p>
         </div>
 
@@ -290,5 +314,28 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <!-- Dock de Navegação Inferior para Mobile -->
+  <nav class="mobile-bottom-dock" aria-label="Navegação Rápida Mobile">
+    <a href="index.html" class="dock-item ">
+      <span class="dock-icon">🏙️</span>
+      <span class="dock-label">Início</span>
+    </a>
+    <a href="profissoes.html" class="dock-item ">
+      <span class="dock-icon">💼</span>
+      <span class="dock-label">Carreiras</span>
+    </a>
+    <a href="minigames.html" class="dock-item ">
+      <span class="dock-icon">🎮</span>
+      <span class="dock-label">Minigames</span>
+    </a>
+    <a href="transportes.html" class="dock-item ">
+      <span class="dock-icon">🚌</span>
+      <span class="dock-label">Frota</span>
+    </a>
+    <a href="penalidades.html" class="dock-item active">
+      <span class="dock-icon">⚖️</span>
+      <span class="dock-label">Leis</span>
+    </a>
+  </nav>
 </body>
 </html>

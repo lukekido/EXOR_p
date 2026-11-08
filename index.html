@@ -34,8 +34,32 @@
 
     <div class="nav-actions">
       <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
+
+  <!-- Menu Gaveta Mobile (Drawer) -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <span class="eyebrow" style="margin: 0;">Navegação Metropolitana</span>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar Menu">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="active"><span class="nav-icon">🏙️</span> Visão Geral</a></li>
+      <li><a href="profissoes.html" class=""><span class="nav-icon">💼</span> Árvore de Carreiras</a></li>
+      <li><a href="minigames.html" class=""><span class="nav-icon">🎮</span> Minigames</a></li>
+      <li><a href="transportes.html" class=""><span class="nav-icon">🚌</span> Mobilidade & Frota</a></li>
+      <li><a href="penalidades.html" class=""><span class="nav-icon">⚖️</span> Leis & Penalidades</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <span>EXORDIUM // SPRF v0.9.4</span>
+    </div>
+  </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
 
   <main class="container">
 
@@ -50,8 +74,25 @@
         Em <strong>SPRF</strong> (Springfield, New Kansas), 
         você acorda em um domingo livre às 04:00 após um pesadelo cósmico. Enquanto enfrenta boletos, bate ponto, 
         destrava impressoras e negocia sensores industriais, entidades ancestrais (<strong>LOCUS</strong> e <strong>MEDIUS</strong>) 
-        oferecem poderes para combater uma invasão alienígena oculta. Mas cada poder cobra um preço fatal: seu próprio corpo.
+        oferecem um vislumbre além do véu, alertando para algo iminente que paira sobre a metrópole. Mas cada dom cobra um preço implacável: o seu próprio corpo.
       </p>
+
+      <!-- TRAILER OFICIAL (TEASER / TRAILER PT) -->
+      <div class="trailer-container">
+        <div class="trailer-video-wrap">
+          <video id="mainTrailerVideo" controls playsinline preload="metadata" poster="assets/img/trailer_poster.jpg">
+            <source src="assets/video/trailer_pt.mp4" type="video/mp4">
+            Seu navegador não suporta a reprodução direta deste vídeo.
+          </video>
+        </div>
+        <div class="trailer-meta-bar">
+          <div>
+            <span class="tag tag-teal" style="font-size: 11px;">TRAILER OFICIAL · 1080P</span>
+            <span style="color: #fff; font-family: var(--font-display); font-size: 15px; margin-left: 8px;">EXORDIUM: Teaser Cinemático Canônico</span>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">Áudio Diegético & Trilha Original AVTechNO!</span>
+        </div>
+      </div>
 
       <!-- Grade Rápida de Indicadores Diegéticos -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 30px;">
@@ -139,7 +180,7 @@
           <div class="eyebrow">Pilar 04</div>
           <h3 style="color: #fff; font-size: 20px;">O Extraordinário no Ordinário</h3>
           <p style="color: var(--text-muted); font-size: 14.5px;">
-            Sonhos borrados com as Nuvens de Magalhães, sinais denpa de alienígenas em estática de TV e o dilema entre usar poderes cósmicos ou salvar a Terra pelo braço comum da burocracia e inteligência.
+            Sonhos febris com as Nuvens de Magalhães, sinais denpa sussurrando em estática analógica de TV e o dilema entre recorrer ao inexplicável ou preservar o mundo pela fria via da inteligência, da rotina e da burocracia.
           </p>
           <span class="tag tag-purple">LOCUS & MEDIUS // AVTechNO!</span>
         </div>
@@ -195,7 +236,7 @@
           <div class="dialog-body">
             <div class="dialog-meta">
               <div class="speaker-info">
-                <span class="speaker-name">Sargento Fernanda & "Sombra"</span>
+                <span class="speaker-name">Sargento Evangeline & "Sombra"</span>
                 <span class="speaker-role">Corpo de Bombeiros · Quartel Central</span>
               </div>
               <span class="dialog-time">TERÇA-FEIRA · 14:15</span>
@@ -275,8 +316,8 @@
           </div>
         </div>
 
-        <!-- Cápsula 4: O Mistério Alienígena e a Regra dos 4.7% -->
-        <div class="dialog-capsule capsule-alien">
+        <!-- Cápsula 4: O Sinal Denpa e a Regra dos 4.7% -->
+        <div class="dialog-capsule capsule-denpa">
           <div class="dialog-avatar">
             <img src="assets/img/tv_helicopter.png" alt="TV Maresol">
             <span class="status-indicator" style="background: #a855f7;"></span>
@@ -291,8 +332,8 @@
             </div>
             <div class="dialog-bubble">
               <p class="speech-text">
-                "Eles não usam rádio convencional e estão infiltrados entre os batedores que os sensores térmicos do registraram como calor fantasma <br>. 
-                <em>Você foi convidado pelos deuses em sonho, não foi?!</em> Saiba que se seu primeiro descanso caiu em horários terminados em 4, 40-49, 07 ou 13, você <strong>nunca será convidado</strong> e terá que salvar a Terra na raça, pela política e inteligência!"
+                "Eles não operam em frequências convencionais. Há anomalias registradas como assinaturas térmicas fantasmas pelos sensores da cidade. 
+                <em>Você ouviu o chamado em sonho, não ouviu?!</em> Saiba que se seu primeiro descanso caiu em horários terminados em 4, 40-49, 07 ou 13, você <strong>jamais receberá essa resposta</strong> — terá que encarar o destino da cidade na raça, pela frieza das escolhas e pela inteligência!"
               </p>
               <div class="dialog-media">
                 <img src="assets/img/tv_maresol_building.png" alt="Edifício de 10 andares da TV Maresol">
@@ -354,5 +395,28 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <!-- Dock de Navegação Inferior para Mobile -->
+  <nav class="mobile-bottom-dock" aria-label="Navegação Rápida Mobile">
+    <a href="index.html" class="dock-item active">
+      <span class="dock-icon">🏙️</span>
+      <span class="dock-label">Início</span>
+    </a>
+    <a href="profissoes.html" class="dock-item ">
+      <span class="dock-icon">💼</span>
+      <span class="dock-label">Carreiras</span>
+    </a>
+    <a href="minigames.html" class="dock-item ">
+      <span class="dock-icon">🎮</span>
+      <span class="dock-label">Minigames</span>
+    </a>
+    <a href="transportes.html" class="dock-item ">
+      <span class="dock-icon">🚌</span>
+      <span class="dock-label">Frota</span>
+    </a>
+    <a href="penalidades.html" class="dock-item ">
+      <span class="dock-icon">⚖️</span>
+      <span class="dock-label">Leis</span>
+    </a>
+  </nav>
 </body>
 </html>
