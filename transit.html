@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXORDIUM // Urban Mobility & Fleet</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dialogs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <div class="logo-symbol">EX</div>
+      <div class="brand-title">
+        <span class="title">EXORDIUM</span>
+        <span class="subtitle">METROPOLITAN SYSTEM // SPRF</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="careers.html">Career Tree</a></li>
+        <li><a href="minigames.html">Work Minigames</a></li>
+        <li><a href="transit.html" class="active">Mobility & Fleet</a></li>
+        <li><a href="penalties.html">Laws & Penalties</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
+      <a href="pt/transportes.html" class="lang-switch-btn" title="Versão em Português">🌐 PT-BR</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <span class="eyebrow" style="margin: 0;">Metropolitan Navigation</span>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Menu">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html"><span class="nav-icon">🏙️</span> Overview</a></li>
+      <li><a href="careers.html"><span class="nav-icon">💼</span> Career Tree</a></li>
+      <li><a href="minigames.html"><span class="nav-icon">🎮</span> Work Minigames</a></li>
+      <li><a href="transit.html" class="active"><span class="nav-icon">🚌</span> Mobility & Fleet</a></li>
+      <li><a href="penalties.html"><span class="nav-icon">⚖️</span> Laws & Penalties</a></li>
+    </ul>
+    <div class="mobile-drawer-lang">
+      <a href="pt/transportes.html">🌐 Versão em Português (BR)</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <span>EXORDIUM // SPRF v0.9.4</span>
+    </div>
+  </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+
+  <main class="container">
+
+    <section class="section-header">
+      <div class="eyebrow">City Logistics & Public Transportation</div>
+      <h1 class="section-title">Urban Mobility & Vehicle Fleet</h1>
+      <p class="section-subtitle">
+        Every vehicle in SPRF serves an actual logistical function in the city. 
+        Automated suspended monorail trains, scheduled bus lines with physical timetable totems, 
+        turntable ladder fire trucks, car dealerships, and five-story municipal parking garages.
+      </p>
+    </section>
+
+    <!-- 1. THE SUSPENDED MONORAIL (SKYTRAIN) -->
+    <section class="card" style="border-left: 5px solid var(--accent-gold); margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: var(--accent-gold);">Aerial Rail Transportation</span>
+          <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">The Suspended Monorail (SkyTrain)</h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="tag tag-amber">4 Active Trains</span>
+          <span class="tag tag-amber">72 km/h on Track</span>
+          <span class="tag tag-amber">05:00 AM to Midnight</span>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 15px; margin-top: 10px;">
+        Trains run suspended beneath concrete guideways supported by T-pillars along the central reservation of Main Avenue. Carriages are white with yellow-gold and green stripes, linking the core districts of the metropolis.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 20px;">
+        <div class="card" style="padding: 16px;">
+          <div class="card-img-wrap">
+            <img src="assets/img/monorail_doors.png" alt="Automated Platform Screen Doors">
+          </div>
+          <h4 style="color: #fff; font-size: 17px; margin-top: 8px;">Platform Screen Doors</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Waist-high automated glass screen doors synchronize with train arrivals. Trains wait for passenger boarding and prevent accidental track falls.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 16px;">
+          <div class="card-img-wrap">
+            <img src="assets/img/monorail_overhead.png" alt="Elevated Monorail Track Trajectory">
+          </div>
+          <h4 style="color: #fff; font-size: 17px; margin-top: 8px;">Elevated Track & Loop Route</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            A 2,796m aerial loop with balloon return turnarounds. A complete city circuit takes 137 in-game minutes with 35-minute headways in both directions.
+          </p>
+        </div>
+
+        <div class="card" style="padding: 16px;">
+          <div class="card-img-wrap">
+            <img src="assets/img/viaduct.png" alt="SkyTrain Crossing 15.5m Above Highway Viaduct">
+          </div>
+          <h4 style="color: #fff; font-size: 17px; margin-top: 8px;">15.5m Viaduct Overpass</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            When crossing highway viaducts, the concrete guideway climbs gentle ramps up to 10%, soaring nearly 5 meters above highway traffic rushing below!
+          </p>
+        </div>
+      </div>
+
+      <!-- Monorail Dialog Capsule -->
+      <div class="dialog-capsule" style="margin-top: 20px; border-left: 4px solid var(--accent-gold);">
+        <div class="dialog-avatar" style="border-color: var(--accent-gold);">
+          <img src="assets/img/badge_monorail.png" alt="SPRF Monorail Operational Center">
+          <span class="status-indicator" style="background: #fbbf24;"></span>
+        </div>
+        <div class="dialog-body">
+          <div class="dialog-meta">
+            <div class="speaker-info">
+              <span class="speaker-name">Central Operational Control (OCC)</span>
+              <span class="speaker-role">SPRF Aerial Rapid Transit</span>
+            </div>
+            <span class="dialog-time">24H AUTOMATED CENTRAL</span>
+          </div>
+          <div class="dialog-bubble">
+            <p class="speech-text">
+              "The monorail is 100% automated by the central city computer. Since no municipal employee works more than 5 days a week, staffing drivers for four trains running from 05:00 AM to midnight would require impossible shift rotations. <strong>It only stops if the electrical grid goes down</strong> — and with the unexplained power surges and voltage dropouts hitting the city feeders lately, that's the only thing that keeps me up at night!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. THE BUS NETWORK & BLUE TRANSIT LANE -->
+    <section class="card" style="border-left: 5px solid var(--accent-blue); margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: var(--accent-blue);">Surface Public Transit</span>
+          <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">The Bus Network & The Blue Transit Lane</h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="tag tag-blue">3 Operational Routes</span>
+          <span class="tag tag-blue">2 Major Terminals</span>
+          <span class="tag tag-blue">40-Min Intervals</span>
+        </div>
+      </div>
+
+      <!-- BUS SHOWCASE (bus_grid.png) -->
+      <div style="margin-top: 24px; background: rgba(14, 28, 45, 0.75); border: 1px solid rgba(59, 130, 246, 0.4); border-radius: var(--radius-md); padding: 22px;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;">
+          <div>
+            <span class="tag tag-blue">INTEGRATED PUBLIC TRANSIT</span>
+            <h3 style="color: #fff; font-size: 22px; margin-top: 6px;">The Bus Network in Action: From Stop Totems to Vital Hubs</h3>
+          </div>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: #93c5fd; background: rgba(59, 130, 246, 0.15); padding: 4px 10px; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.3);">
+            PRECISE SCHEDULES & INTEGRATED ROUTES
+          </span>
+        </div>
+
+        <div class="card-img-wrap" style="aspect-ratio: 16/9; max-height: 560px; border: 1px solid rgba(96, 165, 250, 0.35); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);">
+          <img src="assets/img/bus_grid.png" alt="Bus Routes in SPRF — Timetable Totem, Curbside Boarding, Cabin Ride, and Downtown Drop-off">
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin-top: 18px;">
+          <div style="background: rgba(15, 23, 42, 0.65); padding: 14px 16px; border-radius: var(--radius-sm); border-left: 3px solid #60a5fa;">
+            <h5 style="color: #fff; font-size: 14.5px; margin-bottom: 4px;">1. Timetable on the Stop Totem</h5>
+            <p style="color: var(--text-muted); font-size: 13px; margin: 0; line-height: 1.5;">
+              At each sidewalk stop, the metal totem displays scheduled departures for the day (e.g. <em>Line 101 at 08:50, 09:10, 09:30</em>). If you miss one, simply check the sign for the next trip.
+            </p>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.65); padding: 14px 16px; border-radius: var(--radius-sm); border-left: 3px solid #60a5fa;">
+            <h5 style="color: #fff; font-size: 14.5px; margin-bottom: 4px;">2. Curbside Boarding</h5>
+            <p style="color: var(--text-muted); font-size: 13px; margin: 0; line-height: 1.5;">
+              The bus pulls up to the curb and opens its doors for passengers. Boarding is seamless and follows the natural rhythm of city life.
+            </p>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.65); padding: 14px 16px; border-radius: var(--radius-sm); border-left: 3px solid #60a5fa;">
+            <h5 style="color: #fff; font-size: 14.5px; margin-bottom: 4px;">3. Live Passenger Cabin Ride</h5>
+            <p style="color: var(--text-muted); font-size: 13px; margin: 0; line-height: 1.5;">
+              Inside the cabin with yellow handrails, you watch storefronts, pedestrians, and viaducts drift by through the windows as the bus progresses down the avenue.
+            </p>
+          </div>
+          <div style="background: rgba(15, 23, 42, 0.65); padding: 14px 16px; border-radius: var(--radius-sm); border-left: 3px solid #60a5fa;">
+            <h5 style="color: #fff; font-size: 14.5px; margin-bottom: 4px;">4. Connecting Vital City Hubs</h5>
+            <p style="color: var(--text-muted); font-size: 13px; margin: 0; line-height: 1.5;">
+              Routes bridge residential neighborhoods and the western suburbs with primary commercial towers, administrative buildings, and hospital centers.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 26px;">
+        <div>
+          <h3 style="color: #fff; font-size: 19px; margin-bottom: 12px;">The Three Canonical Lines</h3>
+          <ul style="color: #cbd5e1; font-size: 14.5px; display: grid; gap: 10px; padding-left: 20px;">
+            <li><strong>Line 101 (Downtown – South Avenue):</strong> The transverse line connecting Southwest Terminal, City Hall downtown, Northeast Terminal, and South Avenue.</li>
+            <li><strong>Line 202 (Downtown – East):</strong> Serves middle-class residential neighborhoods and the eastern tip of the metropolis.</li>
+            <li><strong>Line 303 (Downtown – West / Workers):</strong> <em>The player's vital lifeline!</em> Passes just 45 meters from your rented home in the western suburbs and drops you right in front of the industrial sensor company downtown.</li>
+          </ul>
+
+          <div style="margin-top: 20px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: var(--radius-sm); padding: 14px;">
+            <h4 style="color: #60a5fa; font-family: var(--font-display); font-size: 15px;">🚌 The 02:00 AM Curfew Rule</h4>
+            <p style="color: var(--text-muted); font-size: 13.5px; margin-top: 4px;">
+              I defined a strict rule for the city: <em>no bus may be running at 02:00 AM</em>. 
+              The final service leaves at 01:00 AM to return to the depot, and service resumes only at 04:00 AM.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="card-img-wrap" style="aspect-ratio: 16/10;">
+            <img src="assets/img/bus_turning.png" alt="Bus Navigating Downtown Intersection">
+          </div>
+          <h4 style="color: #fff; font-size: 17px; margin-top: 10px;">Urban Fleet & The Blue Lane</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Buses feature authentic two-axle turning physics and turning radius. On arterial thoroughfares, the exclusive Blue Lane guarantees absolute transit priority for public buses and emergency vehicles.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bus Driver Dialogue Capsule -->
+      <div class="dialog-capsule" style="margin-top: 24px; border-left: 4px solid var(--accent-blue);">
+        <div class="dialog-avatar" style="border-color: var(--accent-blue);">
+          <img src="assets/img/bus_turning.png" alt="Driver Valdemir Line 303">
+          <span class="status-indicator" style="background: #3b82f6;"></span>
+        </div>
+        <div class="dialog-body">
+          <div class="dialog-meta">
+            <div class="speaker-info">
+              <span class="speaker-name">Valdemir "Bigode"</span>
+              <span class="speaker-role">Full-Time Driver · Line 303 (Downtown – Western Suburbs)</span>
+            </div>
+            <span class="dialog-time">MONDAY · 08:21 AM · MORNING SHIFT</span>
+          </div>
+          <div class="dialog-bubble">
+            <p class="speech-text">
+              "On Line 303, we don't play around with the time of people waking up early to work. Our buses run strictly on the schedule posted on the sidewalk totem. If a passenger misses the 08:21 AM departure, no need to despair: just check the timetable sign to see when the next car pulls up. Our route cuts across the entire city, links the outer suburbs to the main terminals, and drops everyone right at the office doors downtown!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. FIRE DEPARTMENT & SQUAD MASCOT -->
+    <section class="card" style="border-left: 5px solid #f97316; margin-bottom: 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: #f97316;">Rescue Force · Civil Defense</span>
+          <h2 style="font-family: var(--font-display); font-size: 28px; color: #fff; margin-top: 4px;">Fire Department & Canonical Mascot</h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <span class="tag" style="background: rgba(249,115,22,0.15); color: #fb923c; border-color: rgba(249,115,22,0.3);">4 Strategic Firehouses</span>
+          <span class="tag" style="background: rgba(249,115,22,0.15); color: #fb923c; border-color: rgba(249,115,22,0.3);">Turntable Ladder</span>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
+        <div>
+          <img src="assets/img/fire_ladder.png" alt="Turntable Ladder Fire Engine" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <h4 style="color: #fff; font-size: 17px; margin-top: 10px;">Central Station's 23m Ladder</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Only Central Station houses the massive <em>Turntable Ladder</em> truck. Every 4 hours, firefighters conduct live courtyard drills extending the rotating ladder into the open air.
+          </p>
+        </div>
+
+        <div>
+          <img src="assets/img/badge_fire_cat.png" alt="Black Cat Station Mascot Sombra" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <h4 style="color: #fff; font-size: 17px; margin-top: 10px;">Sombra the Green-Eyed Black Cat</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            My golden rule for every station in the city: <strong>each of the 4 firehouses has its own standing black cat</strong> walking with charming flip-book animations through the locker room bays!
+          </p>
+        </div>
+
+        <div>
+          <img src="assets/img/condo_alphaville.png" alt="North Fire Station near Alphaville" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+          <h4 style="color: #fff; font-size: 17px; margin-top: 10px;">Aerial Basket Bucket Trucks</h4>
+          <p style="color: var(--text-muted); font-size: 13.5px;">
+            Stationed at North Station (mansion district) and East Station to clear hazardous tree branches and smoke out aggressive wasp swarms nesting in 18-meter canopies.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DEALERSHIPS & PERSONAL VEHICLES -->
+    <section class="card" style="border-left: 5px solid var(--brand-teal);">
+      <span class="eyebrow">Open-World Automotive Market</span>
+      <h2 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">Purchasing Cars and Bicycles</h2>
+      <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 8px;">
+        As you save up money from jobs, visit dealerships seamlessly integrated into the city map without loading screens:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px;">
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Dealerships</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">Motorama & Central Motors</span>
+          <span style="font-size: 13px; color: #34d399;">Sedan: $ 12,000</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Purchased with smooth camera fade, seated right at the wheel!</span>
+        </div>
+
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Bicycle Shop</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">Spoke Cycles (East Avenue)</span>
+          <span style="font-size: 13px; color: #34d399;">Sport Bicycle: $ 600</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Ideal for swift courier deliveries weaving through traffic.</span>
+        </div>
+
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Multi-Story Garages</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">2 Parking Towers (5 Stories)</span>
+          <span style="font-size: 13px; color: #38bdf8;">Paid Municipal Parking</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Complete with ramps, stairwells, and numbered parking stalls.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 18px; color: #fff;">EXORDIUM</div>
+        <p>Canonical Open-World Adventure & Urban Simulation · SPRF, New Kansas</p>
+      </div>
+      <div class="footer-quote">
+        "Everyday life is the game. The extraordinary lies within the ordinary."
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Modal Lightbox -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-image-container">
+        <img id="modalImage" src="" alt="High-Resolution In-Game Capture">
+      </div>
+      <div class="modal-footer-bar">
+        <p id="modalCaption" class="modal-caption"></p>
+        <div class="modal-controls">
+          <button id="zoomToggleBtn" class="modal-action-btn" title="Toggle 100% Size">🔍 Full Size (100%)</button>
+          <span class="modal-hint">Click image to toggle zoom</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- Mobile Bottom Dock Navigation -->
+  <nav class="mobile-bottom-dock" aria-label="Quick Mobile Navigation">
+    <a href="index.html" class="dock-item">
+      <span class="dock-icon">🏙️</span>
+      <span class="dock-label">Home</span>
+    </a>
+    <a href="careers.html" class="dock-item">
+      <span class="dock-icon">💼</span>
+      <span class="dock-label">Careers</span>
+    </a>
+    <a href="minigames.html" class="dock-item">
+      <span class="dock-icon">🎮</span>
+      <span class="dock-label">Minigames</span>
+    </a>
+    <a href="transit.html" class="dock-item active">
+      <span class="dock-icon">🚌</span>
+      <span class="dock-label">Fleet</span>
+    </a>
+    <a href="penalties.html" class="dock-item">
+      <span class="dock-icon">⚖️</span>
+      <span class="dock-label">Laws</span>
+    </a>
+  </nav>
+</body>
+</html>

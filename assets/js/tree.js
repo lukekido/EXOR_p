@@ -104,10 +104,10 @@ const CAREERS_DATABASE = [
     desc: "Visitas técnicas a indústrias e clientes corporativos em SPRF. Quem passa por aqui e chega a Gerente de Vendas conquista o cobiçado modificador permanente.",
     responsibilities: [
       "Prospectar indústrias e fechar contratos de alto volume na cidade.",
-      "Garante a conquista do título permanente: 'Eu vi, eu fui e eu conquistei' (+20% em todos os salários do setor comercial!)."
+      "Garante a conquista do modificador permanente de Lábia Comercial (+20% em todos os salários do setor comercial!)."
     ],
     promotionNotes: "Promoção para Gerente de Vendas com bônus de 20%, ou salto para Vice-Diretor.",
-    dialogQuote: "Eu vi, eu fui e eu conquistei! Esse contrato de sensores para o polo industrial garantiu 20% a mais no meu bolso para sempre.",
+    dialogQuote: "Esse contrato de sensores para o polo industrial garantiu 20% a mais de comissão no meu bolso para sempre!",
     dialogSpeaker: "Representante Comercial",
     dialogImage: "assets/img/downtown.png"
   },

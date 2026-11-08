@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXORDIUM // Árvore Interativa de Profissões</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/tree.css">
+  <link rel="stylesheet" href="../assets/css/dialogs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <div class="logo-symbol">EX</div>
+      <div class="brand-title">
+        <span class="title">EXORDIUM</span>
+        <span class="subtitle">SISTEMA METROPOLITANO // SPRF</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Visão Geral</a></li>
+        <li><a href="profissoes.html" class="active">Árvore de Carreiras</a></li>
+        <li><a href="minigames.html">Minigames</a></li>
+        <li><a href="transportes.html">Mobilidade & Frota</a></li>
+        <li><a href="penalidades.html">Leis & Penalidades</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
+      <a href="../careers.html" class="lang-switch-btn" title="Switch to English">🌐 EN</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu Gaveta Mobile (Drawer) -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <span class="eyebrow" style="margin: 0;">Navegação Metropolitana</span>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar Menu">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class=""><span class="nav-icon">🏙️</span> Visão Geral</a></li>
+      <li><a href="profissoes.html" class="active"><span class="nav-icon">💼</span> Árvore de Carreiras</a></li>
+      <li><a href="minigames.html" class=""><span class="nav-icon">🎮</span> Minigames</a></li>
+      <li><a href="transportes.html" class=""><span class="nav-icon">🚌</span> Mobilidade & Frota</a></li>
+      <li><a href="penalidades.html" class=""><span class="nav-icon">⚖️</span> Leis & Penalidades</a></li>
+    </ul>
+    <div class="mobile-drawer-lang"><a href="../careers.html">🌐 Switch to English</a></div>
+    <div class="mobile-drawer-footer">
+      <span>EXORDIUM // SPRF v0.9.4</span>
+    </div>
+  </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+
+  <main class="container">
+
+    <!-- CABEÇALHO DA SEÇÃO DE CARREIRAS -->
+    <section class="section-header">
+      <div class="eyebrow">Progressão Social, Empregos & Economia Viva</div>
+      <h1 class="section-title">A Árvore Canônica de Profissões</h1>
+      <p class="section-subtitle">
+        Trabalhar não é uma pausa no jogo: <strong>o trabalho é o jogo</strong>. 
+        Navegue pelos ramos da metrópole, filtre por <em>visual cues</em> de opções especiais, 
+        descubra esquemas de corrupção, bônus permanentes e requisitos de diploma universitário.
+      </p>
+    </section>
+
+    <!-- CARDS EXPLICATIVOS DE MECÂNICAS CENTRAIS -->
+    <div class="card-grid" style="margin-bottom: 36px;">
+      <div class="card">
+        <div class="eyebrow">Mecânica Oculta</div>
+        <h4 style="color: #fff; font-size: 18px;">Performance Invisível</h4>
+        <p style="color: var(--text-muted); font-size: 14px;">
+          Não existe barra na tela na versão final. Você sente seu rendimento pelo comportamento das pessoas:
+          colegas invejosos te chamam de <em>"puxa-saco"</em> se produzir demais, e o chefe desconfia de início
+          (<em>"cavalo paraguaio"</em>). A reputação precede o trabalhador sênior.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Modo Brasil: Rigor Máximo</div>
+        <h4 style="color: #fff; font-size: 18px;">Penalidade em Dobro</h4>
+        <p style="color: var(--text-muted); font-size: 14px;">
+          Nos modos Hard e Inferno, um erro não cancela o ganho do dia. No <strong>Modo Brasil</strong>, 
+          um erro desconta o <strong>dobro</strong> do que a tarefa renderia! Se esquecer de repor guardanapos na mesa, perde 4 pontos.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Opções Especiais</div>
+        <h4 style="color: #fff; font-size: 18px;">Bônus Permanentes</h4>
+        <p style="color: var(--text-muted); font-size: 14px;">
+          Passar por Vendas Externas garante <strong>+20% de salário perpétuo</strong> (Bônus de Experiência Comercial).
+          Formar-se e acumular Farmacêutico e Gerente confere <strong>+50% de salário base vitalício</strong>!
+        </p>
+      </div>
+    </div>
+
+    <!-- CÁPSULA RÁPIDA: ALERTA DE RISCO DE PRISÃO NO ESCRITÓRIO -->
+    <div class="dialog-capsule capsule-police" style="margin-bottom: 36px;">
+      <div class="dialog-avatar">
+        <img src="../assets/img/badge_crash.png" alt="Polícia Civil SPRF">
+        <span class="status-indicator" style="background: #ef4444;"></span>
+      </div>
+      <div class="dialog-body">
+        <div class="dialog-meta">
+          <div class="speaker-info">
+            <span class="speaker-name">Investigação Corporativa // Flagrante Policial</span>
+            <span class="speaker-role">Setor de Crimes Financeiros · SPRF</span>
+          </div>
+          <span class="dialog-time">EVENTO RARO · 4% DE CHANCE</span>
+        </div>
+        <div class="dialog-bubble">
+          <p class="speech-text">
+            "Atenção ao esquema de <em>'Caixa 2'</em> como Gerente de Vendas: se extorquir vendedores corruptos por 50% dos desvios, 
+            você corre 4% de chance do vendedor ser um <strong>agente infiltrado do Diretor Geral</strong>. 
+            No meio do aperto de mãos, ele diz: <em>'Esqueci de dizer algo...'</em>, o Diretor entra e <strong>quatro policiais</strong> dão voz de prisão imediata!"
+          </p>
+          <div class="dialog-media">
+            <img src="../assets/img/job_hire_dialog.png" alt="Flagrante no Gabinete do Diretor">
+            <div class="media-caption">
+              <span>Gabinete da Diretoria · Confronto e Prisão em Flagrante</span>
+              <span class="media-badge">RISCO CRIME</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTROLES DA ÁRVORE INTERATIVA -->
+    <div class="career-tree-container">
+      <div class="tree-controls">
+        <div class="tree-filter-group">
+          <span style="font-family: var(--font-mono); font-size: 12px; color: #fff; text-transform: uppercase;">Setor:</span>
+          <button class="filter-btn branch-filter-btn active" data-branch="all">🏢 Todos os Ramos</button>
+          <button class="filter-btn branch-filter-btn" data-branch="office">🔬 Sensores (Escritório)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="pharmacy">💊 Rede Farmacêutica</button>
+          <button class="filter-btn branch-filter-btn" data-branch="restaurant">🍽️ Restaurantes</button>
+          <button class="filter-btn branch-filter-btn" data-branch="freelance">🧹 Autônomos & Limpeza</button>
+        </div>
+
+        <div class="tree-filter-group">
+          <span style="font-family: var(--font-mono); font-size: 12px; color: #fff; text-transform: uppercase;">Visual Cues:</span>
+          <button class="filter-btn cue-filter-btn active" data-cue="all">Todos</button>
+          <button class="filter-btn cue-filter-btn" data-cue="bonus">⭐ Bônus Salarial</button>
+          <button class="filter-btn cue-filter-btn" data-cue="crime">⚖️ Esquema / Caixa 2</button>
+          <button class="filter-btn cue-filter-btn" data-cue="danger">🚨 Risco Prisão</button>
+          <button class="filter-btn cue-filter-btn" data-cue="diploma">🎓 Exige Diploma</button>
+          <button class="filter-btn cue-filter-btn" data-cue="executive">👔 Executivo (2h/dia)</button>
+        </div>
+      </div>
+
+      <!-- LEGENDA DE CUES -->
+      <div class="visual-cue-legend">
+        <span class="cue-item"><span class="cue-dot bonus"></span> Bônus Salarial (+20%, +50%, Comissões)</span>
+        <span class="cue-item"><span class="cue-dot crime"></span> Atividade Ilícita / Caixa 2</span>
+        <span class="cue-item"><span class="cue-dot danger"></span> Risco de Flagrante Policial</span>
+        <span class="cue-item"><span class="cue-dot diploma"></span> Requisito de Formação Superior</span>
+        <span class="cue-item"><span class="cue-dot executive"></span> Carga Horária Reduzida (2h/dia)</span>
+      </div>
+
+      <!-- GRADE HIERÁRQUICA DINÂMICA (RENDERIZADA VIA tree.js) -->
+      <div id="treeHierarchyContainer" class="tree-hierarchy-wrapper">
+        <!-- Render dinâmico injetado aqui -->
+      </div>
+
+      <!-- PAINEL RAIO-X DA CARREIRA SELECIONADA -->
+      <section id="careerDetailPanel" class="career-detail-panel">
+        <!-- Detalhes preenchidos dinamicamente pelo tree.js -->
+      </section>
+    </div>
+
+    <!-- CÁPSULA RÁPIDA: A REPUTAÇÃO E A TROCA DE EMPREGO -->
+    <div class="dialog-capsule capsule-office" style="margin-top: 40px;">
+      <div class="dialog-avatar">
+        <img src="../assets/img/job_director_press.png" alt="Entrevista de Emprego">
+        <span class="status-indicator"></span>
+      </div>
+      <div class="dialog-body">
+        <div class="dialog-meta">
+          <div class="speaker-info">
+            <span class="speaker-name">Dr. Castanho</span>
+            <span class="speaker-role">Presidente do Conselho · SPRF</span>
+          </div>
+          <span class="dialog-time">MUDANÇA DE EMPREGADOR</span>
+        </div>
+        <div class="dialog-bubble">
+          <p class="speech-text">
+            "Ao mudar de empresa na cidade, seu histórico de rendimento determina sua contratação. 
+            No início chamam de <em>'carta de recomendação do chefe anterior'</em>. Mas a partir do Nível 5, 
+            o jogo avisa: <strong>'Sua reputação o precede'</strong>. Gerentes, chefs e farmacêuticos podem ser contratados diretamente sem precisar subir os degraus de novo!"
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 18px; color: #fff;">EXORDIUM</div>
+        <p>Sistema Interativo de Progressão Profissional · Cidade de SPRF</p>
+      </div>
+      <div class="footer-quote">
+        Pagamentos semanais pontuais: toda sexta-feira às 17:00!
+      </div>
+    </div>
+  </footer>
+
+    <!-- Modal Lightbox Expandido -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" title="Fechar (Esc)">✕</button>
+      <div class="modal-image-container">
+        <img id="modalImage" src="" alt="Captura em Tamanho Ampliado">
+      </div>
+      <div class="modal-footer-bar">
+        <p id="modalCaption" class="modal-caption"></p>
+        <div class="modal-controls">
+          <button id="zoomToggleBtn" class="modal-action-btn" title="Alternar Tamanho Original">🔍 Tamanho 100%</button>
+          <span class="modal-hint">Esc para fechar</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/tree.js"></script>
+  <!-- Dock de Navegação Inferior para Mobile -->
+  <nav class="mobile-bottom-dock" aria-label="Navegação Rápida Mobile">
+    <a href="index.html" class="dock-item ">
+      <span class="dock-icon">🏙️</span>
+      <span class="dock-label">Início</span>
+    </a>
+    <a href="profissoes.html" class="dock-item active">
+      <span class="dock-icon">💼</span>
+      <span class="dock-label">Carreiras</span>
+    </a>
+    <a href="minigames.html" class="dock-item ">
+      <span class="dock-icon">🎮</span>
+      <span class="dock-label">Minigames</span>
+    </a>
+    <a href="transportes.html" class="dock-item ">
+      <span class="dock-icon">🚌</span>
+      <span class="dock-label">Frota</span>
+    </a>
+    <a href="penalidades.html" class="dock-item ">
+      <span class="dock-icon">⚖️</span>
+      <span class="dock-label">Leis</span>
+    </a>
+  </nav>
+</body>
+</html>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EXORDIUM // A Metrópole Viva & O Mistério Cósmico</title>
+  <title>EXORDIUM // The Living Metropolis & The Cosmic Mystery</title>
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/dialogs.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,29 +12,30 @@
 </head>
 <body>
 
-  <!-- Barra de Navegação Diegética -->
+  <!-- Diegetic Top Navigation -->
   <header class="top-nav">
     <a href="index.html" class="brand-badge">
       <div class="logo-symbol">EX</div>
       <div class="brand-title">
         <span class="title">EXORDIUM</span>
-        <span class="subtitle">SISTEMA METROPOLITANO // SPRF</span>
+        <span class="subtitle">METROPOLITAN SYSTEM // SPRF</span>
       </div>
     </a>
 
     <nav>
       <ul class="nav-links">
-        <li><a href="index.html" class="active">Visão Geral</a></li>
-        <li><a href="profissoes.html">Árvore de Carreiras</a></li>
-        <li><a href="minigames.html">Minigames</a></li>
-        <li><a href="transportes.html">Mobilidade & Frota</a></li>
-        <li><a href="penalidades.html">Leis & Penalidades</a></li>
+        <li><a href="index.html" class="active">Overview</a></li>
+        <li><a href="careers.html">Career Tree</a></li>
+        <li><a href="minigames.html">Work Minigames</a></li>
+        <li><a href="transit.html">Mobility & Fleet</a></li>
+        <li><a href="penalties.html">Laws & Penalties</a></li>
       </ul>
     </nav>
 
     <div class="nav-actions">
       <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir Menu">
+      <a href="pt/index.html" class="lang-switch-btn" title="Versão em Português">🌐 PT-BR</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -42,19 +43,22 @@
     </div>
   </header>
 
-  <!-- Menu Gaveta Mobile (Drawer) -->
+  <!-- Mobile Drawer Menu -->
   <div class="mobile-nav-drawer" id="mobileNavDrawer">
     <div class="mobile-drawer-header">
-      <span class="eyebrow" style="margin: 0;">Navegação Metropolitana</span>
-      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar Menu">✕</button>
+      <span class="eyebrow" style="margin: 0;">Metropolitan Navigation</span>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Menu">✕</button>
     </div>
     <ul class="mobile-nav-list">
-      <li><a href="index.html" class="active"><span class="nav-icon">🏙️</span> Visão Geral</a></li>
-      <li><a href="profissoes.html" class=""><span class="nav-icon">💼</span> Árvore de Carreiras</a></li>
-      <li><a href="minigames.html" class=""><span class="nav-icon">🎮</span> Minigames</a></li>
-      <li><a href="transportes.html" class=""><span class="nav-icon">🚌</span> Mobilidade & Frota</a></li>
-      <li><a href="penalidades.html" class=""><span class="nav-icon">⚖️</span> Leis & Penalidades</a></li>
+      <li><a href="index.html" class="active"><span class="nav-icon">🏙️</span> Overview</a></li>
+      <li><a href="careers.html" class=""><span class="nav-icon">💼</span> Career Tree</a></li>
+      <li><a href="minigames.html" class=""><span class="nav-icon">🎮</span> Work Minigames</a></li>
+      <li><a href="transit.html" class=""><span class="nav-icon">🚌</span> Mobility & Fleet</a></li>
+      <li><a href="penalties.html" class=""><span class="nav-icon">⚖️</span> Laws & Penalties</a></li>
     </ul>
+    <div class="mobile-drawer-lang">
+      <a href="pt/index.html">🌐 Versão em Português (BR)</a>
+    </div>
     <div class="mobile-drawer-footer">
       <span>EXORDIUM // SPRF v0.9.4</span>
     </div>
@@ -63,163 +67,163 @@
 
   <main class="container">
 
-    <!-- HERO PRINCIPAL VANGUARDISTA -->
+    <!-- HERO SECTION -->
     <section style="margin-bottom: 50px;">
-      <div class="eyebrow">Projeto Canônico · Arquitetura Urbana & Simulação Viva</div>
+      <div class="eyebrow">Canonical Project · Urban Architecture & Living Simulation</div>
       <h1 class="section-title" style="margin-top: 10px; font-size: clamp(34px, 5.5vw, 56px);">
-        A VIDA COTIDIANA É O JOGO.<br>
-        <span style="color: var(--brand-teal);">O EXTRAORDINÁRIO ESTÁ NO ORDINÁRIO.</span>
+        EVERYDAY LIFE IS THE GAME.<br>
+        <span style="color: var(--brand-teal);">THE EXTRAORDINARY LIES WITHIN THE ORDINARY.</span>
       </h1>
       <p class="section-subtitle" style="margin-top: 14px;">
-        Em <strong>SPRF</strong> (Springfield, New Kansas), 
-        você acorda em um domingo livre às 04:00 após um pesadelo perturbador. Enquanto enfrenta boletos, bate ponto, 
-        destrava impressoras e negocia sensores industriais, forças anômalas sussurram sob a estática da cidade, 
-        insinuando que algo inexplicável paira silenciosamente sobre a metrópole.
+        In <strong>SPRF</strong> (Springfield, New Kansas), 
+        you wake up on a free Sunday at 04:00 AM after a haunting nightmare. While paying utility bills, clocking into work, 
+        unjamming office printers, and negotiating industrial sensors, anomalous forces whisper through the city's static, 
+        insinuating that something inexplicable quietly looms over the metropolis.
       </p>
 
-      <!-- TRAILER OFICIAL (TEASER / TRAILER PT) -->
+      <!-- OFFICIAL TRAILER EMBED -->
       <div class="trailer-container">
         <div class="trailer-video-wrap">
           <video id="mainTrailerVideo" controls playsinline preload="metadata" poster="assets/img/trailer_poster.jpg">
-            <source src="assets/video/trailer_pt.mp4" type="video/mp4">
-            Seu navegador não suporta a reprodução direta deste vídeo.
+            <source src="assets/video/trailer_en.mp4" type="video/mp4">
+            Your browser does not support HTML5 video playback.
           </video>
         </div>
         <div class="trailer-meta-bar">
           <div>
-            <span class="tag tag-teal" style="font-size: 11px;">TRAILER OFICIAL · 1080P</span>
-            <span style="color: #fff; font-family: var(--font-display); font-size: 15px; margin-left: 8px;">EXORDIUM: Teaser Cinemático Canônico</span>
+            <span class="tag tag-teal" style="font-size: 11px;">OFFICIAL TRAILER · 1080P</span>
+            <span style="color: #fff; font-family: var(--font-display); font-size: 15px; margin-left: 8px;">EXORDIUM: Official Cinematic Teaser</span>
           </div>
-          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">Áudio Diegético & Trilha Original AVTechNO!</span>
+          <span style="font-family: var(--font-mono); font-size: 12px; color: var(--text-muted);">Diegetic Audio & Original Soundtrack</span>
         </div>
       </div>
 
-      <!-- Grade Rápida de Indicadores Diegéticos -->
+      <!-- Quick Metrics Grid -->
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 30px;">
         <div class="panel-stat-card">
-          <span class="panel-stat-label">População Simulada</span>
-          <span class="panel-stat-val">500 Cidadãos Reais</span>
-          <span style="font-size: 12px; color: var(--text-muted);">Rotinas de 24h, sem clipping</span>
+          <span class="panel-stat-label">Simulated Population</span>
+          <span class="panel-stat-val">500 Real Citizens</span>
+          <span style="font-size: 12px; color: var(--text-muted);">24h daily schedules, zero clipping</span>
         </div>
         <div class="panel-stat-card">
-          <span class="panel-stat-label">Frota Veicular Ativa</span>
-          <span class="panel-stat-val">~190 Veículos</span>
-          <span style="font-size: 12px; color: var(--text-muted);">Com rotas e estacionamento real</span>
+          <span class="panel-stat-label">Active Vehicle Fleet</span>
+          <span class="panel-stat-val">~190 Vehicles</span>
+          <span style="font-size: 12px; color: var(--text-muted);">With live routes and physical parking</span>
         </div>
         <div class="panel-stat-card">
-          <span class="panel-stat-label">Ciclo da Campanha</span>
-          <span class="panel-stat-val">24 Semanas</span>
-          <span style="font-size: 12px; color: var(--text-muted);">Equivalem a 2 anos in-game</span>
+          <span class="panel-stat-label">Campaign Cycle</span>
+          <span class="panel-stat-val">24 Weeks</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Equivalent to 2 in-game years</span>
         </div>
         <div class="panel-stat-card">
-          <span class="panel-stat-label">Estilo Visual</span>
+          <span class="panel-stat-label">Visual Style</span>
           <span class="panel-stat-val">Low-Poly / Sub Rosa</span>
-          <span style="font-size: 12px; color: var(--text-muted);">Física tátil e consequências</span>
+          <span style="font-size: 12px; color: var(--text-muted);">Tactile physics and real consequences</span>
         </div>
       </div>
     </section>
 
-    <!-- BANNER DE DESTAQUE: MAPA CANÔNICO DA CIDADE -->
+    <!-- HIGHLIGHT BANNER: CANONICAL CITY MAP -->
     <section class="card" style="padding: 0; margin-bottom: 50px;">
       <div style="position: relative;">
-        <img src="assets/img/city_map.png" alt="Mapa Canônico de SPRF" style="width: 100%; max-height: 480px; object-fit: cover; display: block;">
+        <img src="assets/img/city_map.png" alt="Official Map of SPRF" style="width: 100%; max-height: 480px; object-fit: cover; display: block;">
         <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(7, 10, 10, 0.95) 90%); pointer-events: none;"></div>
         <div style="position: absolute; bottom: 24px; left: 24px; right: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
           <div>
-            <span class="tag tag-teal">MAPA OFICIAL DE SPRF</span>
-            <h3 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 6px;">Metrópole Orgânica de 1.4 × 1.24 km</h3>
+            <span class="tag tag-teal">OFFICIAL MAP OF SPRF</span>
+            <h3 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 6px;">Organic Metropolis of 1.4 × 1.24 km</h3>
             <p style="color: #cbd5e1; font-size: 14.5px; max-width: 65ch;">
-              Do centro denso com viadutos e o prédio da TV Maresol até os condomínios de luxo estilo Alphaville,
-              o conjunto popular The Projects e a periferia simples onde fica sua casa alugada.
+              From the dense commercial core with highway viaducts and the TV Maresol tower to the luxury gated estates of Alphaville,
+              the public housing blocks of The Projects, and the quiet western suburbs where your rented home sits.
             </p>
           </div>
-          <a href="transportes.html" class="btn btn-primary">EXPLORAR MOBILIDADE URBANA →</a>
+          <a href="transit.html" class="btn btn-primary">EXPLORE URBAN MOBILITY →</a>
         </div>
       </div>
     </section>
 
-    <!-- OS QUATRO PILARES CANÔNICOS DO JOGO -->
+    <!-- THE FOUR CANONICAL PILLARS -->
     <section style="margin-bottom: 50px;">
       <div class="section-header">
-        <div class="eyebrow">Fundação Canônica</div>
-        <h2 class="section-title">Os 4 Pilares de EXORDIUM</h2>
+        <div class="eyebrow">Canonical Foundation</div>
+        <h2 class="section-title">The 4 Pillars of EXORDIUM</h2>
         <p class="section-subtitle">
-          Inspirado em <em>Sub Rosa</em>, <em>Hard Time</em>, <em>Serial Experiments Lain</em>, <em>Evangelion</em> e no universo sonoro de <strong>AVTechNO!</strong>.
+          Inspired by <em>Sub Rosa</em>, <em>Hard Time</em>, <em>Serial Experiments Lain</em>, and <em>Evangelion</em>.
         </p>
       </div>
 
       <div class="card-grid">
         <div class="card">
-          <div class="eyebrow">Pilar 01</div>
-          <h3 style="color: #fff; font-size: 20px;">A Vida Cotidiana Importa</h3>
+          <div class="eyebrow">Pillar 01</div>
+          <h3 style="color: #fff; font-size: 20px;">Everyday Life Matters</h3>
           <p style="color: var(--text-muted); font-size: 14.5px;">
-            Trabalho, contas a pagar e amizades reais <em>são</em> o jogo, não apenas pausas entre missões. Cada profissão tem mecânicas profundas e regras baseadas na rotina real de cada profissão.
+            Jobs, utility bills, and genuine workplace camaraderie <em>are</em> the game, not mere breathers between missions. Every profession features deep tactile mechanics and routines modeled after authentic workplace demands.
           </p>
-          <span class="tag tag-teal">MINIGAMES DE TRABALHO REAIS</span>
+          <span class="tag tag-teal">DEEP JOB MINIGAMES</span>
         </div>
 
         <div class="card">
-          <div class="eyebrow">Pilar 02</div>
-          <h3 style="color: #fff; font-size: 20px;">O Mundo Vive Sem Você</h3>
+          <div class="eyebrow">Pillar 02</div>
+          <h3 style="color: #fff; font-size: 20px;">The World Lives Without You</h3>
           <p style="color: var(--text-muted); font-size: 14.5px;">
-            Cada círculo social (colegas de escritório, familiares, clientes e vizinhos) são microcosmos que continuam simulando suas vidas, mesmo quando o jogador toma outras decisões.
+            Every social circle (office coworkers, family, clients, and neighbors) is a self-sustaining microcosm that continues simulating its daily routines, even when you make different choices elsewhere in town.
           </p>
-          <span class="tag tag-amber"> MAIS DE 500 INDIVÍDUOS COM ROTINA</span>
+          <span class="tag tag-amber">OVER 500 CITIZENS WITH SCHEDULES</span>
         </div>
 
         <div class="card">
-          <div class="eyebrow">Pilar 03</div>
-          <h3 style="color: #fff; font-size: 20px;">Consequências Reais e Punitivas</h3>
+          <div class="eyebrow">Pillar 03</div>
+          <h3 style="color: #fff; font-size: 20px;">Real & Punitive Consequences</h3>
           <p style="color: var(--text-muted); font-size: 14.5px;">
-            A atenção obsessiva aos detalhes de um GTA, mas punitivo. Se cometer um acidente e fugir a mais de 20m da vítima, sua multa é multiplicada de forma impiedosa pelo código de trânsito, tornando-o um foragido procurado.
+            The obsessive attention to urban detail of a GTA, but strictly punitive. If you cause a traffic accident and flee more than 20 meters from the victim, your fine is multiplied severely by the penal code, making you a wanted fugitive.
           </p>
-          <span class="tag tag-crimson">CÓDIGO PENAL RIGOROSO</span>
+          <span class="tag tag-crimson">STRICT PENAL CODE</span>
         </div>
 
         <div class="card">
-          <div class="eyebrow">Pilar 04</div>
-          <h3 style="color: #fff; font-size: 20px;">O Extraordinário no Ordinário</h3>
+          <div class="eyebrow">Pillar 04</div>
+          <h3 style="color: #fff; font-size: 20px;">The Extraordinary in the Ordinary</h3>
           <p style="color: var(--text-muted); font-size: 14.5px;">
-            Sonhos febris com as Nuvens de Magalhães, sinais denpa sussurrando em estática analógica de TV e o dilema entre recorrer ao inexplicável ou preservar o mundo pela fria via da inteligência, da rotina e da burocracia.
+            Feverish dreams beneath the Magellanic Clouds, denpa signals whispering through analog television static, and the dilemma between grasping the inexplicable or preserving the city through the cold clarity of intelligence, routine, and bureaucracy.
           </p>
-          <span class="tag tag-purple">TRILHA CANÔNICA // AVTechNO!</span>
+          <span class="tag tag-purple">ORIGINAL CANONICAL SOUNDTRACK</span>
         </div>
       </div>
     </section>
 
-    <!-- FEED DE DIÁLOGOS VANGUARDISTAS: CÁPSULAS DE CONTEÚDO RÁPIDO -->
+    <!-- MICRO-STORIES DIALOGUE FEED -->
     <section style="margin-bottom: 50px;">
       <div class="section-header">
-        <div class="eyebrow">Micro-Histórias & Cápsulas de Conteúdo</div>
-        <h2 class="section-title">SPRF: A Cidade Fala com Você</h2>
+        <div class="eyebrow">Micro-Stories & Content Capsules</div>
+        <h2 class="section-title">SPRF: The City Speaks to You</h2>
         <p class="section-subtitle">
-          Relances instantâneos da vida na metrópole. Clique nas capturas integradas para expandir.
+          Instant glimpses into daily life across the metropolis. Click on any screenshot to expand into high-resolution view.
         </p>
       </div>
 
       <div class="dialog-feed">
-        <!-- Cápsula 1: Escritório / Cavalo Paraguaio -->
+        <!-- Capsule 1: Office Director -->
         <div class="dialog-capsule capsule-office">
           <div class="dialog-avatar">
-            <img src="assets/img/closing_day_boss.png" alt="Diretor da Empresa">
+            <img src="assets/img/closing_day_boss.png" alt="Company Director">
             <span class="status-indicator"></span>
           </div>
           <div class="dialog-body">
             <div class="dialog-meta">
               <div class="speaker-info">
                 <span class="speaker-name">Dr. Roberto</span>
-                <span class="speaker-role">Diretor Geral · Empresa de Sensores</span>
+                <span class="speaker-role">General Director · Industrial Sensor Co.</span>
               </div>
-              <span class="dialog-time">SEGUNDA-FEIRA · 08:35</span>
+              <span class="dialog-time">MONDAY · 08:35 AM</span>
             </div>
             <div class="dialog-bubble">
               <p class="speech-text">
-                "Por que esse funcionário novo começou a render tanto do nada? Cuidado com o <em>'cavalo paraguaio'</em>... Chega cheio de energia querendo mostrar serviço só para passar do período de experiência e depois encosta o corpo. Tô de olho em você!"
+                "Why did this new hire suddenly start delivering so much out of nowhere? Beware the <em>'flash in the pan'</em>... Coming in burning with energy just to get past the probation period, only to slack off right after. I've got my eyes on you!"
               </p>
               <div class="dialog-media">
-                <img src="assets/img/job_inbox.png" alt="Minigame Inbox de Suporte">
+                <img src="assets/img/job_inbox.png" alt="Support Inbox Minigame">
                 <div class="media-caption">
-                  <span>Terminal de Suporte · Triagem de Chamados e E-mails</span>
+                  <span>Support Terminal · Triaging Service Tickets and Client Inquiries</span>
                   <span class="media-badge">INBOX SHIFT</span>
                 </div>
               </div>
@@ -227,96 +231,94 @@
           </div>
         </div>
 
-        <!-- Cápsula 2: Bombeiros & Gato Mascote -->
+        <!-- Capsule 2: Fire Department & Cat Mascot -->
         <div class="dialog-capsule capsule-fire">
           <div class="dialog-avatar">
-            <img src="assets/img/badge_fire_cat.png" alt="Gato Mascote dos Bombeiros">
+            <img src="assets/img/badge_fire_cat.png" alt="Fire Department Mascot Cat">
             <span class="status-indicator"></span>
           </div>
           <div class="dialog-body">
             <div class="dialog-meta">
               <div class="speaker-info">
-                <span class="speaker-name">Sargento Evangeline & "Sombra"</span>
-                <span class="speaker-role">Corpo de Bombeiros · Quartel Central</span>
+                <span class="speaker-name">Sergeant Evangeline & "Sombra"</span>
+                <span class="speaker-role">Fire Department · Station 1 Central</span>
               </div>
-              <span class="dialog-time">TERÇA-FEIRA · 14:15</span>
+              <span class="dialog-time">TUESDAY · 02:15 PM</span>
             </div>
             <div class="dialog-bubble">
               <p class="speech-text">
-                "Todo quartel tem uma regra sagrada: <strong>o mascote é sempre um gato preto que adotamos</strong>. Entre um chamado e outro, a guarnição treina resgate no pátio do prédio do batalhão. E veja só! Nossa Auto-Escada Mecânica de 23 metros acabou de passar pela manutenção!"
+                "Every station in our city follows one golden rule: <strong>the mascot is always an adopted black cat</strong>. Between dispatches, the crew trains courtyard rescues. Look at that! Our 23-meter Turntable Ladder truck just cleared mechanical inspection!"
               </p>
               <div class="dialog-media">
-                <img src="assets/img/fire_ladder.png" alt="Auto-Escada Mecânica se espichando">
+                <img src="assets/img/fire_ladder.png" alt="Turntable Ladder Truck Extending">
                 <div class="media-caption">
-                  <span>Auto-Escada Mecânica</span>
-                  <span class="media-badge">VTR BOMBEIROS</span>
+                  <span>23-Meter Turntable Ladder Truck</span>
+                  <span class="media-badge">RESCUE VTR</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Cápsula 3: SAMU 192 e Trânsito Rigoroso -->
+        <!-- Capsule 3: Emergency Medical Services (SAMU 192) -->
         <div class="dialog-capsule capsule-samu">
           <div class="dialog-avatar">
-            <img src="assets/img/badge_samu.png" alt="SAMU 192">
+            <img src="assets/img/badge_samu.png" alt="SAMU 192 Paramedics">
             <span class="status-indicator" style="background: #eab308;"></span>
           </div>
           <div class="dialog-body">
             <div class="dialog-meta">
               <div class="speaker-info">
-                <span class="speaker-name">Equipe SAMU 192</span>
-                <span class="speaker-role">Pronto-Socorro Metropolitano</span>
+                <span class="speaker-name">Emergency Paramedic Unit</span>
+                <span class="speaker-role">Metropolitan Emergency Response</span>
               </div>
-              <span class="dialog-time">SEXTA-FEIRA · 23:40</span>
+              <span class="dialog-time">FRIDAY · 11:40 PM</span>
             </div>
             <div class="dialog-bubble">
               <p class="speech-text">
-                "Alerta de colisão na Avenida Principal! Condutores civis abrindo espaço e ambulância cortando sinal vermelho. Se quem causou o acidente fugir mais de 20 metros da vítima antes do nosso atendimento, <em>a infração é agravada por omissão de socorro e a multa é multiplicada</em>, e a polícia vai buscá-lo até no trabalho!"
+                "Collision alert on Main Avenue! Civilian cars parting ways as our ambulance cuts through red lights. If whoever caused this crash runs more than 20 meters from the victim before medical units arrive, <em>the infraction is aggravated by hit-and-run and the fine is multiplied</em>, and police will track you down right at your desk!"
               </p>
               <div class="dialog-media">
-                <img src="assets/img/samu_ambulance.png" alt="Ambulância SAMU 192 em Ação">
+                <img src="assets/img/samu_ambulance.png" alt="SAMU Emergency Response Ambulance in Action">
                 <div class="media-caption">
-                  <span>Atendimento de Urgência no Asfalto · SAMU 192 e Maca de Resgate</span>
-                  <span class="media-badge">EMERGÊNCIA</span>
+                  <span>Asphalt Trauma Response · Emergency Ambulance and Stretcher Extraction</span>
+                  <span class="media-badge">EMERGENCY</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Cápsula: Transporte Coletivo & Linha dos Trabalhadores -->
+        <!-- Capsule 4: Public Bus Network & Workers' Route -->
         <div class="dialog-capsule" style="border-left: 4px solid var(--accent-blue);">
           <div class="dialog-avatar" style="border-color: var(--accent-blue);">
-            <img src="assets/img/bus_turning.png" alt="Motorista Linha 303">
+            <img src="assets/img/bus_turning.png" alt="Bus Driver Line 303">
             <span class="status-indicator" style="background: #3b82f6;"></span>
           </div>
           <div class="dialog-body">
             <div class="dialog-meta">
               <div class="speaker-info">
                 <span class="speaker-name">Valdemir "Bigode"</span>
-                <span class="speaker-role">Motorista Efetivo · Linha 303 (Centro – Periferia Oeste)</span>
+                <span class="speaker-role">Full-Time Driver · Line 303 (Downtown – Western Suburbs)</span>
               </div>
-              <span class="dialog-time">SEGUNDA-FEIRA · 08:21 · TURNO DA MANHÃ</span>
+              <span class="dialog-time">MONDAY · 08:21 AM · MORNING SHIFT</span>
             </div>
             <div class="dialog-bubble">
               <p class="speech-text">
-                "Os ônibus de SPRF operam com pontualidade cravada no relógio! As linhas passam rigorosamente nos horários marcados nos totens da calçada. 
-                Se você perder a viagem da manhã, basta conferir na placa a que horas passa o próximo carro da linha. 
-                Nossos itinerários cobrem os pontos mais vitais da metrópole: passam pelas avenidas troncais, conectam os terminais e deixam os passageiros bem na porta das empresas e repartições do centro."
+                "The buses in SPRF operate with clockwork precision! Our lines run strictly according to the timetable posted on the sidewalk totem. If you miss the morning departure, just check the sign to see when the next car pulls in. Our routes cut across the entire city, linking the outer suburbs to the main terminals and dropping passengers right at the front doors of downtown businesses and offices!"
               </p>
               <div class="dialog-media">
-                <img src="assets/img/bus_grid.png" alt="Linhas de Ônibus em SPRF — Tabela de Horários no Totem, Embarque Pontual, Salão e Paradas Vitais">
+                <img src="assets/img/bus_grid.png" alt="Bus Routes in SPRF — Timetable Totem, Curbside Boarding, Cabin Ride, and Downtown Drop-off">
                 <div class="media-caption">
-                  <span>Operação das Linhas Urbanas · Horários no Totem, Embarque Pontual, Viagem pelas Avenidas e Conexão aos Polos de Trabalho</span>
-                  <span class="media-badge" style="background: #3b82f6; color: #fff;">TRANSPORTE REAL</span>
+                  <span>Urban Transit Operation · Totem Schedules, Curbside Boarding, Avenue Transit, and Workplace Connections</span>
+                  <span class="media-badge" style="background: #3b82f6; color: #fff;">REAL TRANSIT</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Cápsula 4: As Transmissões Noturnas da TV Maresol -->
+        <!-- Capsule 5: TV Maresol Denpa Broadcasts -->
         <div class="dialog-capsule capsule-denpa">
           <div class="dialog-avatar">
             <img src="assets/img/tv_helicopter.png" alt="TV Maresol">
@@ -325,22 +327,20 @@
           <div class="dialog-body">
             <div class="dialog-meta">
               <div class="speaker-info">
-                <span class="speaker-name">Os Sensitivos / Transmissões Denpa (電波)</span>
-                <span class="speaker-role">Ondas estáticas de TV · TV Maresol</span>
+                <span class="speaker-name">Voices in the Night // Denpa Frequencies</span>
+                <span class="speaker-role">Off-Air Broadcast Static · TV Maresol</span>
               </div>
-              <span class="dialog-time">MADRUGADA ANÔMALA</span>
+              <span class="dialog-time">LATE NIGHT ANOMALY</span>
             </div>
             <div class="dialog-bubble">
               <p class="speech-text">
-                "Quando o transmissor principal da TV Maresol entra em manutenção nas primeiras horas da madrugada, algo inexplicável começa a vazar pelos canais fora do ar. 
-                Não são transmissões comuns... Há sussurros sob a estática analógica e anomalias térmicas registradas pelos sensores nos pontos cegos da cidade. 
-                Muitos ignoram e continuam dormindo para bater ponto cedo. Mas quem já despertou de sobressalto no meio da noite sabe: <em>há algo observando a metrópole</em>."
+                "When the main transmitter of TV Maresol enters maintenance during the small hours of the morning, something inexplicable begins leaking across the off-air channels. These aren't normal broadcasts... There are whispers beneath the analog static and thermal anomalies registered by sensors in the blind spots of the city. Many ignore it and sleep through to clock in early. But whoever has bolted awake at 04:00 AM knows: <em>something is watching the metropolis</em>."
               </p>
               <div class="dialog-media">
-                <img src="assets/img/tv_maresol_building.png" alt="Edifício de 10 andares da TV Maresol">
+                <img src="assets/img/tv_maresol_building.png" alt="10-Story TV Maresol Headquarters">
                 <div class="media-caption">
-                  <span>Torre de 84m da TV Maresol com luz estroboscópica e antena de transmissão</span>
-                  <span class="media-badge">SINAL DENPA</span>
+                  <span>84m TV Maresol Transmission Tower with Strobe Lights and Anomalous Signals</span>
+                  <span class="media-badge">DENPA SIGNAL</span>
                 </div>
               </div>
             </div>
@@ -349,74 +349,81 @@
       </div>
     </section>
 
-    <!-- GUIA DE NAVEGAÇÃO RÁPIDA PELAS SEÇÕES -->
+    <!-- FAST NAVIGATION GUIDE -->
     <section class="callout-banner">
-      <h4>Conheça Cada Camada do Ecossistema de EXORDIUM</h4>
-      <p style="color: var(--text-muted); font-size: 15px;">
-        Clique nos módulos abaixo para mergulhar nos detalhes canônicos do projeto:
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <span class="eyebrow">Explore the City Systems</span>
+          <h3 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">Canonical Knowledge Base</h3>
+        </div>
+        <span class="tag tag-teal">5 CORE MODULES AVAILABLE</span>
+      </div>
+      <p style="color: #cbd5e1; font-size: 14.5px; margin-top: 8px;">
+        Choose a module below to inspect the living simulation, job mechanics, vehicle fleet, and strict legal codes:
       </p>
-      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px;">
-        <a href="profissoes.html" class="btn btn-primary">🌳 Árvore de Carreiras Interativa</a>
-        <a href="minigames.html" class="btn btn-secondary">🎮 Minigames de Cada Trabalho</a>
-        <a href="transportes.html" class="btn btn-secondary">🚝 Monotrilho & Ônibus</a>
-        <a href="penalidades.html" class="btn btn-crimson">⚖️ Leis, Ragdoll & Prisão</a>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px;">
+        <a href="careers.html" class="btn btn-primary">💼 Interactive Career Tree</a>
+        <a href="minigames.html" class="btn btn-secondary">🎮 Work Minigames</a>
+        <a href="transit.html" class="btn btn-secondary">🚌 Monorail & Bus Fleet</a>
+        <a href="penalties.html" class="btn btn-crimson">⚖️ Laws, Ragdoll & Prison</a>
       </div>
     </section>
 
   </main>
 
-  <!-- Rodapé Vanguardista -->
+  <!-- Site Footer -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div>
         <div style="font-family: var(--font-display); font-size: 18px; color: #fff;">EXORDIUM</div>
-        <p>Projeto Canônico de Aventura em Mundo Aberto & Simulação Urbana · SPRF, New Kansas</p>
+        <p>Canonical Open-World Adventure & Urban Simulation · SPRF, New Kansas</p>
       </div>
       <div class="footer-quote">
-        "A vida cotidiana é o jogo. O extraordinário está no ordinário."
+        "Everyday life is the game. The extraordinary lies within the ordinary."
       </div>
     </div>
   </footer>
 
-    <!-- Modal Lightbox Expandido -->
+  <!-- Universal Modal Lightbox -->
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-content">
-      <button class="modal-close-btn" id="modalCloseBtn" title="Fechar (Esc)">✕</button>
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
       <div class="modal-image-container">
-        <img id="modalImage" src="" alt="Captura em Tamanho Ampliado">
+        <img id="modalImage" src="" alt="Canonical In-Game Screenshot">
       </div>
       <div class="modal-footer-bar">
-        <p id="modalCaption" class="modal-caption"></p>
+        <p class="modal-caption" id="modalCaption">Canonical Record</p>
         <div class="modal-controls">
-          <button id="zoomToggleBtn" class="modal-action-btn" title="Alternar Tamanho Original">🔍 Tamanho 100%</button>
-          <span class="modal-hint">Esc para fechar</span>
+          <span class="modal-hint">Click image to toggle zoom</span>
+          <button class="modal-action-btn" id="zoomToggleBtn">🔍 Full Size (100%)</button>
         </div>
       </div>
     </div>
   </div>
 
   <script src="assets/js/main.js"></script>
-  <!-- Dock de Navegação Inferior para Mobile -->
-  <nav class="mobile-bottom-dock" aria-label="Navegação Rápida Mobile">
+
+  <!-- Mobile Bottom Dock Navigation -->
+  <nav class="mobile-bottom-dock" aria-label="Quick Mobile Navigation">
     <a href="index.html" class="dock-item active">
       <span class="dock-icon">🏙️</span>
-      <span class="dock-label">Início</span>
+      <span class="dock-label">Home</span>
     </a>
-    <a href="profissoes.html" class="dock-item ">
+    <a href="careers.html" class="dock-item">
       <span class="dock-icon">💼</span>
-      <span class="dock-label">Carreiras</span>
+      <span class="dock-label">Careers</span>
     </a>
-    <a href="minigames.html" class="dock-item ">
+    <a href="minigames.html" class="dock-item">
       <span class="dock-icon">🎮</span>
       <span class="dock-label">Minigames</span>
     </a>
-    <a href="transportes.html" class="dock-item ">
+    <a href="transit.html" class="dock-item">
       <span class="dock-icon">🚌</span>
-      <span class="dock-label">Frota</span>
+      <span class="dock-label">Fleet</span>
     </a>
-    <a href="penalidades.html" class="dock-item ">
+    <a href="penalties.html" class="dock-item">
       <span class="dock-icon">⚖️</span>
-      <span class="dock-label">Leis</span>
+      <span class="dock-label">Laws</span>
     </a>
   </nav>
 </body>

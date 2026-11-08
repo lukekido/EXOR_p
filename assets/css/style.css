@@ -916,3 +916,55 @@ footer.site-footer {
     font-size: 13px;
   }
 }
+
+
+/* Language Switcher Buttons */
+.lang-switch-btn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--brand-teal);
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.lang-switch-btn:hover {
+  border-color: var(--brand-teal);
+  background: rgba(20, 184, 166, 0.12);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(20, 184, 166, 0.25);
+}
+
+.mobile-drawer-lang {
+  padding: 14px 0 6px;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 6px;
+}
+
+.mobile-drawer-lang a {
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  color: var(--brand-teal);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(20, 184, 166, 0.08);
+  border: 1px solid var(--border-active);
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.mobile-drawer-lang a:hover {
+  background: var(--brand-teal);
+  color: #041210;
+}

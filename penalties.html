@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXORDIUM // Laws, Ragdoll & Penalties</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/dialogs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <div class="logo-symbol">EX</div>
+      <div class="brand-title">
+        <span class="title">EXORDIUM</span>
+        <span class="subtitle">METROPOLITAN SYSTEM // SPRF</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="careers.html">Career Tree</a></li>
+        <li><a href="minigames.html">Work Minigames</a></li>
+        <li><a href="transit.html">Mobility & Fleet</a></li>
+        <li><a href="penalties.html" class="active">Laws & Penalties</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
+      <a href="pt/penalidades.html" class="lang-switch-btn" title="Versão em Português">🌐 PT-BR</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <span class="eyebrow" style="margin: 0;">Metropolitan Navigation</span>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Menu">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html"><span class="nav-icon">🏙️</span> Overview</a></li>
+      <li><a href="careers.html"><span class="nav-icon">💼</span> Career Tree</a></li>
+      <li><a href="minigames.html"><span class="nav-icon">🎮</span> Work Minigames</a></li>
+      <li><a href="transit.html"><span class="nav-icon">🚌</span> Mobility & Fleet</a></li>
+      <li><a href="penalties.html" class="active"><span class="nav-icon">⚖️</span> Laws & Penalties</a></li>
+    </ul>
+    <div class="mobile-drawer-lang">
+      <a href="pt/penalidades.html">🌐 Versão em Português (BR)</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <span>EXORDIUM // SPRF v0.9.4</span>
+    </div>
+  </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+
+  <main class="container">
+
+    <section class="section-header">
+      <div class="eyebrow" style="color: var(--accent-crimson);">Penal Code & Punitive Physics · SPRF</div>
+      <h1 class="section-title">Crime, Punishment & Real Consequences</h1>
+      <p class="section-subtitle">
+        In EXORDIUM there are no arcade police that forget your hit-and-runs after you respray a car. 
+        The judicial system is unforgiving: pedestrian collisions with realistic ragdoll physics, 
+        fines multiplied severely if you flee the scene, police workplace searches, and the imposing Prison Cube at the southern edge of town.
+      </p>
+    </section>
+
+    <!-- 1. CRIMINAL STATUS STAGES -->
+    <section class="card" style="border-left: 5px solid var(--accent-crimson); margin-bottom: 40px;">
+      <div class="eyebrow" style="color: var(--accent-crimson);">Legal Escalation System</div>
+      <h2 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">Real-Time Criminal Escalation</h2>
+      <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 8px;">
+        The three legal stages triggered after a vehicular collision or pedestrian impact:
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 20px;">
+        <div class="panel-stat-card" style="border-top: 3px solid #eab308;">
+          <span class="tag tag-amber" style="width: fit-content;">PHASE 1 · 10 TO 30 SECONDS</span>
+          <h3 style="color: #fff; font-size: 18px; margin-top: 8px;">[Potential Suspect]</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.45; margin-top: 4px;">
+            Triggered immediately upon crash impact. If the victim survives and you remain at the scene 
+            awaiting emergency response, you are held liable only for civil property damages and insurance claims.
+          </p>
+        </div>
+
+        <div class="panel-stat-card" style="border-top: 3px solid #f97316;">
+          <span class="tag" style="background: rgba(249,115,22,0.2); color: #fb923c; border-color: rgba(249,115,22,0.4); width: fit-content;">PHASE 2 · FIRST 2 DAYS</span>
+          <h3 style="color: #fff; font-size: 18px; margin-top: 8px;">[Fleeing Suspect]</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.45; margin-top: 4px;">
+            Triggered instantly if you move <strong>more than 20 meters away from the victim</strong> before medical response arrives! 
+            Spending more than 4 continuous seconds in a police cruiser's cone of vision results in immediate arrest with no bail!
+          </p>
+        </div>
+
+        <div class="panel-stat-card" style="border-top: 3px solid #ef4444;">
+          <span class="tag tag-crimson" style="width: fit-content;">PHASE 3 · AFTER 2 DAYS</span>
+          <h3 style="color: #fff; font-size: 18px; margin-top: 8px;">[Wanted Fugitive]</h3>
+          <p style="color: var(--text-muted); font-size: 13.5px; line-height: 1.45; margin-top: 4px;">
+            A judicial search warrant is issued. <strong>Police officers will raid your workplace</strong>:
+            if you work in an office, officers search commercial buildings during business hours. Ride-hailing apps are blocked!
+          </p>
+        </div>
+      </div>
+
+      <!-- Police Dialogue Capsule -->
+      <div class="dialog-capsule capsule-police" style="margin-top: 24px;">
+        <div class="dialog-avatar">
+          <img src="assets/img/badge_crash.png" alt="Traffic Enforcement Police">
+          <span class="status-indicator"></span>
+        </div>
+        <div class="dialog-body">
+          <div class="dialog-meta">
+            <div class="speaker-info">
+              <span class="speaker-name">Chief Vasconcelos</span>
+              <span class="speaker-role">SPRF Police Department</span>
+            </div>
+            <span class="dialog-time">HIT-AND-RUN PROTOCOL</span>
+          </div>
+          <div class="dialog-bubble">
+            <p class="speech-text">
+              "You struck a pedestrian at the intersection and thought you could speed away?! Because you fled more than 20 meters from the victim without providing aid, 
+              <strong>the offense was aggravated and your fine was multiplied</strong>! Squad cars have your license plate on alert and officers are watching your office building downtown!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. RAGDOLL PHYSICS & BODY TRAUMA -->
+    <section class="card" style="border-left: 5px solid var(--accent-amber); margin-bottom: 40px;">
+      <span class="eyebrow" style="color: var(--accent-amber);">Ballistic Simulation & Body Dynamics</span>
+      <h2 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">Visceral Impact & Ragdoll Physics</h2>
+      <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 8px;">
+        I developed pedestrian impact physics to feel authentically visceral: <em>"Pedestrian collisions, hood throws, and secondary pavement impacts deliver the exact weight and tactile punch I always aimed for in this game!"</em>
+      </p>
+
+      <div style="overflow-x: auto; margin-top: 16px;">
+        <table class="rules-table" style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr>
+              <th style="padding: 10px 14px; border-bottom: 1px solid var(--border-subtle); color: var(--brand-teal);">Collision Speed</th>
+              <th style="padding: 10px 14px; border-bottom: 1px solid var(--border-subtle); color: var(--brand-teal);">Body Dynamics (Ragdoll)</th>
+              <th style="padding: 10px 14px; border-bottom: 1px solid var(--border-subtle); color: var(--brand-teal);">Legal Consequence</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: #fff;">10 to 20 km/h</td>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: var(--text-muted);">Pedestrian falls to their knees, curses at the driver, stands up, and limps away.</td>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: #34d399;">Civil Fine only.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: #fff;">20 to 40 km/h</td>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: var(--text-muted);">Bone fracture sound, body slides onto the hood, emergency ambulance called.</td>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: #fde047;">Aggravated Injury.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: #fff;">40 to 60 km/h</td>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: var(--text-muted);">Body is launched over the hood and rolls across the roof. Stretcher extraction.</td>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: #fb923c;">Driver's License Revocation.</td>
+            </tr>
+            <tr>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: #fff;">Above 60 km/h</td>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: var(--text-muted);">High mortality collision. Blood spatters across windshield and remains for 3 in-game days!</td>
+              <td style="padding: 12px 14px; border-bottom: 1px solid var(--border-subtle); color: #ef4444;">Manslaughter & Penitentiary.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout-banner alert-crimson" style="margin-top: 20px;">
+        <h4 style="font-family: var(--font-display); font-size: 16px; color: #fff;">⚠️ Secondary Post-Impact Collisions</h4>
+        <p style="color: #fca5a5; font-size: 13.5px; margin-top: 4px;">
+          If the launched body strikes a street lamp, utility pole, or brick wall at speeds above 30 km/h, the physical trauma automatically escalates a severity tier!
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. THE PRISON CUBE -->
+    <section class="card" style="border-left: 5px solid #a855f7;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <span class="eyebrow" style="color: #c084fc;">Penitentiary System of SPRF</span>
+          <h2 style="font-family: var(--font-display); font-size: 26px; color: #fff; margin-top: 4px;">The Prison Cube</h2>
+        </div>
+        <span class="tag tag-purple">Playable Incarceration Routine</span>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 14.5px; margin-top: 8px;">
+        Situated at the southern edge of the map, past the simple homes of the outskirts, stands the formidable Prison Cube:
+        a monolithic concrete fortress measuring <strong>56 meters per side and 36 meters tall</strong>, surrounded by 5-meter razor walls and spotlights.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 16px;">
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Cell Routine</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">Living Incarceration</span>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+            Waking up in a 6x3m cell with an iron bunk, barred window, prison courtyard exercise yard, and scheduled meal shifts.
+          </p>
+        </div>
+
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Consequence in the World</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">Time Never Stops</span>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+            While you are incarcerated, the 24-week campaign clock keeps ticking relentlessly toward the point of no return!
+          </p>
+        </div>
+
+        <div class="panel-stat-card">
+          <span class="panel-stat-label">Life After Release</span>
+          <span style="font-size: 16px; color: #fff; font-weight: 700;">Zero Credit & Back to Start</span>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+            Serving your sentence releases you back to the street with an empty bank balance. You must rebuild your career from the bottom rung!
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 18px; color: #fff;">EXORDIUM</div>
+        <p>Canonical Open-World Adventure & Urban Simulation · SPRF, New Kansas</p>
+      </div>
+      <div class="footer-quote">
+        "Everyday life is the game. The extraordinary lies within the ordinary."
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Modal Lightbox -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-image-container">
+        <img id="modalImage" src="" alt="High-Resolution In-Game Capture">
+      </div>
+      <div class="modal-footer-bar">
+        <p id="modalCaption" class="modal-caption"></p>
+        <div class="modal-controls">
+          <button id="zoomToggleBtn" class="modal-action-btn" title="Toggle 100% Size">🔍 Full Size (100%)</button>
+          <span class="modal-hint">Click image to toggle zoom</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+
+  <!-- Mobile Bottom Dock Navigation -->
+  <nav class="mobile-bottom-dock" aria-label="Quick Mobile Navigation">
+    <a href="index.html" class="dock-item">
+      <span class="dock-icon">🏙️</span>
+      <span class="dock-label">Home</span>
+    </a>
+    <a href="careers.html" class="dock-item">
+      <span class="dock-icon">💼</span>
+      <span class="dock-label">Careers</span>
+    </a>
+    <a href="minigames.html" class="dock-item">
+      <span class="dock-icon">🎮</span>
+      <span class="dock-label">Minigames</span>
+    </a>
+    <a href="transit.html" class="dock-item">
+      <span class="dock-icon">🚌</span>
+      <span class="dock-label">Fleet</span>
+    </a>
+    <a href="penalties.html" class="dock-item active">
+      <span class="dock-icon">⚖️</span>
+      <span class="dock-label">Laws</span>
+    </a>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXORDIUM // Interactive Career Tree</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/tree.css">
+  <link rel="stylesheet" href="assets/css/dialogs.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800;900&family=IBM+Plex+Mono:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <a href="index.html" class="brand-badge">
+      <div class="logo-symbol">EX</div>
+      <div class="brand-title">
+        <span class="title">EXORDIUM</span>
+        <span class="subtitle">METROPOLITAN SYSTEM // SPRF</span>
+      </div>
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Overview</a></li>
+        <li><a href="careers.html" class="active">Career Tree</a></li>
+        <li><a href="minigames.html">Work Minigames</a></li>
+        <li><a href="transit.html">Mobility & Fleet</a></li>
+        <li><a href="penalties.html">Laws & Penalties</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="sound-toggle-btn active" id="soundToggleBtn">🔊 SFX ON</button>
+      <a href="pt/profissoes.html" class="lang-switch-btn" title="Versão em Português">🌐 PT-BR</a>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-drawer-header">
+      <span class="eyebrow" style="margin: 0;">Metropolitan Navigation</span>
+      <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close Menu">✕</button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html"><span class="nav-icon">🏙️</span> Overview</a></li>
+      <li><a href="careers.html" class="active"><span class="nav-icon">💼</span> Career Tree</a></li>
+      <li><a href="minigames.html"><span class="nav-icon">🎮</span> Work Minigames</a></li>
+      <li><a href="transit.html"><span class="nav-icon">🚌</span> Mobility & Fleet</a></li>
+      <li><a href="penalties.html"><span class="nav-icon">⚖️</span> Laws & Penalties</a></li>
+    </ul>
+    <div class="mobile-drawer-lang">
+      <a href="pt/profissoes.html">🌐 Versão em Português (BR)</a>
+    </div>
+    <div class="mobile-drawer-footer">
+      <span>EXORDIUM // SPRF v0.9.4</span>
+    </div>
+  </div>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+
+  <main class="container">
+
+    <!-- CAREER SECTION HEADER -->
+    <section class="section-header">
+      <div class="eyebrow">Social Progression, Jobs & Living Economy</div>
+      <h1 class="section-title">The Canonical Career Tree</h1>
+      <p class="section-subtitle">
+        Working is not a pause between missions: <strong>the work IS the game</strong>. 
+        Navigate through the branches of the metropolis, filter by <em>visual cues</em> for special perks, 
+        uncover kickback schemes, permanent modifiers, and university degree prerequisites.
+      </p>
+    </section>
+
+    <!-- CORE MECHANICS CARDS -->
+    <div class="card-grid" style="margin-bottom: 36px;">
+      <div class="card">
+        <div class="eyebrow">Hidden Mechanics</div>
+        <h4 style="color: #fff; font-size: 18px;">Invisible Performance</h4>
+        <p style="color: var(--text-muted); font-size: 14px;">
+          There is no immersion-breaking progress bar on screen. You feel your performance through human behavior:
+          jealous coworkers call you a kiss-up if you produce too fast, and the boss starts suspicious (<em>"flash in the pan"</em>). 
+          Reputation precedes senior workers.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Hardcore Mode</div>
+        <h4 style="color: #fff; font-size: 18px;">Double Error Penalty</h4>
+        <p style="color: var(--text-muted); font-size: 14px;">
+          On higher difficulty levels, mistakes don't just erase the day's gains: a single blunder deducts <strong>double</strong> what the task was worth! If you forget napkins on a table, you lose 4 points on the spot.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="eyebrow">Special Perks</div>
+        <h4 style="color: #fff; font-size: 18px;">Permanent Modifiers</h4>
+        <p style="color: var(--text-muted); font-size: 14px;">
+          Rising through Field Sales grants a <strong>+20% permanent salary bonus</strong> across the commercial sector.
+          Graduating with a degree and stacking Pharmacist + Manager grants <strong>+50% base salary for life</strong>!
+        </p>
+      </div>
+    </div>
+
+    <!-- QUICK CAPSULE: OFFICE RAID RISK -->
+    <div class="dialog-capsule capsule-police" style="margin-bottom: 36px;">
+      <div class="dialog-avatar">
+        <img src="assets/img/badge_crash.png" alt="SPRF Police Department">
+        <span class="status-indicator" style="background: #ef4444;"></span>
+      </div>
+      <div class="dialog-body">
+        <div class="dialog-meta">
+          <div class="speaker-info">
+            <span class="speaker-name">Corporate Fraud Investigation // Police Sting</span>
+            <span class="speaker-role">Financial Crimes Division · SPRF</span>
+          </div>
+          <span class="dialog-time">RARE EVENT · 4% PROBABILITY</span>
+        </div>
+        <div class="dialog-bubble">
+          <p class="speech-text">
+            "Watch out for kickback schemes as Sales Manager: if you extort corrupt sales reps for 50% of diverted commissions, 
+            there's a 4% chance the rep is an <strong>undercover informant planted by the General Director</strong>. 
+            Right during the handshake, he mutters: <em>'Forgot to tell you one thing...'</em>, the Director walks in, and <strong>four police officers</strong> put you in handcuffs on the spot!"
+          </p>
+          <div class="dialog-media">
+            <img src="assets/img/job_hire_dialog.png" alt="Police Sting in the Director's Office">
+            <div class="media-caption">
+              <span>Executive Office · Corporate Fraud Confrontation and Arrest</span>
+              <span class="media-badge">CRIME RISK</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE TREE CONTROLS -->
+    <div class="career-tree-container">
+      <div class="tree-controls">
+        <div class="tree-filter-group">
+          <span style="font-family: var(--font-mono); font-size: 12px; color: #fff; text-transform: uppercase;">Sector:</span>
+          <button class="filter-btn branch-filter-btn active" data-branch="all">🏢 All Sectors</button>
+          <button class="filter-btn branch-filter-btn" data-branch="office">🔬 Industrial Sensors (Office)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="pharmacy">💊 Pharmacy Chain</button>
+          <button class="filter-btn branch-filter-btn" data-branch="restaurant">🍽️ Restaurants & Dining</button>
+          <button class="filter-btn branch-filter-btn" data-branch="freelance">🧹 Freelance & City Services</button>
+        </div>
+
+        <div class="tree-filter-group">
+          <span style="font-family: var(--font-mono); font-size: 12px; color: #fff; text-transform: uppercase;">Visual Cues:</span>
+          <button class="filter-btn cue-filter-btn active" data-cue="all">All</button>
+          <button class="filter-btn cue-filter-btn" data-cue="bonus">⭐ Salary Bonus</button>
+          <button class="filter-btn cue-filter-btn" data-cue="crime">⚖️ Kickback Scheme</button>
+          <button class="filter-btn cue-filter-btn" data-cue="danger">🚨 Police Raid Risk</button>
+          <button class="filter-btn cue-filter-btn" data-cue="diploma">🎓 Degree Required</button>
+          <button class="filter-btn cue-filter-btn" data-cue="executive">👔 Executive (2h/day)</button>
+        </div>
+      </div>
+
+      <!-- CUES LEGEND -->
+      <div class="visual-cue-legend">
+        <span class="cue-item"><span class="cue-dot bonus"></span> Salary Bonus (+20%, +50%, Commissions)</span>
+        <span class="cue-item"><span class="cue-dot crime"></span> Illicit Activity / Kickbacks</span>
+        <span class="cue-item"><span class="cue-dot danger"></span> Police Raid Risk (In Flagrante)</span>
+        <span class="cue-item"><span class="cue-dot diploma"></span> University Degree Required</span>
+        <span class="cue-item"><span class="cue-dot executive"></span> Reduced Hours (2h/day executive schedule)</span>
+      </div>
+
+      <!-- DYNAMIC HIERARCHY TREE (RENDERED VIA tree_en.js) -->
+      <div id="treeHierarchyContainer" class="tree-hierarchy-wrapper"></div>
+
+      <!-- X-RAY DETAIL PANEL -->
+      <section id="careerDetailPanel" class="career-detail-panel"></section>
+    </div>
+
+    <!-- CAPSULE: REPUTATION & JOB HOPPING -->
+    <div class="dialog-capsule capsule-office" style="margin-top: 40px;">
+      <div class="dialog-avatar">
+        <img src="assets/img/job_director_press.png" alt="Executive Job Interview">
+        <span class="status-indicator"></span>
+      </div>
+      <div class="dialog-body">
+        <div class="dialog-meta">
+          <div class="speaker-info">
+            <span class="speaker-name">Dr. Castanho</span>
+            <span class="speaker-role">Board Chairman · SPRF</span>
+          </div>
+          <span class="dialog-time">CORPORATE MOBILITY</span>
+        </div>
+        <div class="dialog-bubble">
+          <p class="speech-text">
+            "When switching employers across the city, your performance history dictates your entry rank. 
+            Early on, they ask for a <em>'recommendation letter from your previous supervisor'</em>. But past Level 5, 
+            the game makes it clear: <strong>'Your reputation precedes you'</strong>. Seasoned managers, executive chefs, and licensed pharmacists can be hired straight into top positions without climbing the ladder all over again!"
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div style="font-family: var(--font-display); font-size: 18px; color: #fff;">EXORDIUM</div>
+        <p>Interactive Career Progression System · City of SPRF</p>
+      </div>
+      <div class="footer-quote">
+        "Everyday life is the game. The extraordinary lies within the ordinary."
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Modal Lightbox -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
+      <div class="modal-image-container">
+        <img id="modalImage" src="" alt="High-Resolution In-Game Capture">
+      </div>
+      <div class="modal-footer-bar">
+        <p id="modalCaption" class="modal-caption"></p>
+        <div class="modal-controls">
+          <button id="zoomToggleBtn" class="modal-action-btn" title="Toggle 100% Size">🔍 Full Size (100%)</button>
+          <span class="modal-hint">Click image to toggle zoom</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/tree_en.js"></script>
+
+  <!-- Mobile Bottom Dock Navigation -->
+  <nav class="mobile-bottom-dock" aria-label="Quick Mobile Navigation">
+    <a href="index.html" class="dock-item">
+      <span class="dock-icon">🏙️</span>
+      <span class="dock-label">Home</span>
+    </a>
+    <a href="careers.html" class="dock-item active">
+      <span class="dock-icon">💼</span>
+      <span class="dock-label">Careers</span>
+    </a>
+    <a href="minigames.html" class="dock-item">
+      <span class="dock-icon">🎮</span>
+      <span class="dock-label">Minigames</span>
+    </a>
+    <a href="transit.html" class="dock-item">
+      <span class="dock-icon">🚌</span>
+      <span class="dock-label">Fleet</span>
+    </a>
+    <a href="penalties.html" class="dock-item">
+      <span class="dock-icon">⚖️</span>
+      <span class="dock-label">Laws</span>
+    </a>
+  </nav>
+</body>
+</html>
