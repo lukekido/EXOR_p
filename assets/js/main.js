@@ -1,8 +1,8 @@
 /* ==========================================================================
-   EXORDIUM // MAIN SCRIPT: Áudio Sintético Diegético, Modais e Navegação
+   EXORDIUM // MAIN SCRIPT: Diegetic Web Audio SFX, Lightbox Modals & Mobile Navigation
    ========================================================================== */
 
-// --- 1. SÍNTESE DE ÁUDIO DIEGÉTICO VIA WEB AUDIO API ---
+// --- 1. DIEGETIC AUDIO SYNTHESIS VIA WEB AUDIO API ---
 let audioCtx = null;
 let soundEnabled = true;
 
@@ -86,20 +86,26 @@ const SFX = {
   }
 };
 
-// --- 2. CONTROLE DO BOTÃO DE SOM ---
+// --- 2. SOUND TOGGLE BUTTON & INTERACTION HOOKS ---
 document.addEventListener('DOMContentLoaded', () => {
+  const isPt = document.documentElement.lang === 'pt' || window.location.pathname.includes('/pt/');
+
   const soundBtn = document.getElementById('soundToggleBtn');
   if (soundBtn) {
     soundBtn.addEventListener('click', () => {
       initAudio();
       soundEnabled = !soundEnabled;
       soundBtn.classList.toggle('active', soundEnabled);
-      soundBtn.innerHTML = soundEnabled ? '🔊 SFX ON' : '🔇 SFX OFF';
+      if (isPt) {
+        soundBtn.innerHTML = soundEnabled ? '🔊 SFX LIGADO' : '🔇 SFX DESLIGADO';
+      } else {
+        soundBtn.innerHTML = soundEnabled ? '🔊 SFX ON' : '🔇 SFX OFF';
+      }
       if (soundEnabled) SFX.select();
     });
   }
 
-  // Interatividade geral com som
+  // General click sound
   document.querySelectorAll('a, button, .tree-node').forEach(el => {
     el.addEventListener('click', () => {
       initAudio();
@@ -107,20 +113,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --- 3. MODAL LIGHTBOX PARA TODAS AS IMAGENS ---
+  // --- 3. MODAL LIGHTBOX FOR ALL IMAGES ---
   const modalOverlay = document.getElementById('modalOverlay');
   const modalImg = document.getElementById('modalImage');
   const modalCaption = document.getElementById('modalCaption');
   const modalClose = document.getElementById('modalCloseBtn');
   const zoomBtn = document.getElementById('zoomToggleBtn');
 
+  function getZoomBtnLabel(isOriginal) {
+    if (isPt) {
+      return isOriginal ? '🔍 Ajustar à Tela' : '🔍 Ver em Tamanho Real (100%)';
+    }
+    return isOriginal ? '🔍 Fit to Screen' : '🔍 View Full Size (100%)';
+  }
+
+  function getDefaultCaption() {
+    return isPt ? 'Registro Canônico de EXORDIUM' : 'EXORDIUM Canonical Record';
+  }
+
   function openModal(src, captionText) {
     if (!modalOverlay || !modalImg) return;
     modalImg.src = src;
     modalImg.classList.remove('is-original-size');
-    const baseCaption = captionText || 'Registro Canônico de EXORDIUM';
+    const baseCaption = captionText || getDefaultCaption();
     if (modalCaption) modalCaption.textContent = baseCaption;
-    if (zoomBtn) zoomBtn.textContent = '🔍 Ver em Tamanho Real (100%)';
+    if (zoomBtn) zoomBtn.textContent = getZoomBtnLabel(false);
 
     modalImg.onload = () => {
       const w = modalImg.naturalWidth;
@@ -144,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!modalImg) return;
     const isOrig = modalImg.classList.toggle('is-original-size');
     if (zoomBtn) {
-      zoomBtn.textContent = isOrig ? '📐 Ajustar à Tela' : '🔍 Ver em Tamanho Real (100%)';
+      zoomBtn.textContent = getZoomBtnLabel(isOrig);
     }
   }
 
@@ -164,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Torna TODAS as imagens do site clicáveis para visualização ampliada
+  // Make all content images zoomable on click
   function bindClickableImages() {
     document.querySelectorAll('img:not(#modalImage):not(.nav-logo)').forEach(img => {
       img.style.cursor = 'zoom-in';
@@ -174,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const caption = img.closest('.dialog-media')?.querySelector('.media-caption')?.textContent 
           || parentContainer?.querySelector('h3, h4, h5')?.textContent 
           || img.alt 
-          || 'Registro Canônico de EXORDIUM';
+          || getDefaultCaption();
         openModal(img.src, caption);
         e.stopPropagation();
       });
@@ -182,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   bindClickableImages();
 
-  // --- 4. CONTROLE DO MENU MOBILE (DRAWER) ---
+  // --- 4. MOBILE DRAWER NAVIGATION ---
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileNavDrawer = document.getElementById('mobileNavDrawer');
   const mobileDrawerClose = document.getElementById('mobileDrawerClose');
@@ -219,4 +236,3 @@ document.addEventListener('DOMContentLoaded', () => {
     a.addEventListener('click', closeMobileMenu);
   });
 });
-

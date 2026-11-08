@@ -1,29 +1,29 @@
 /* ==========================================================================
-   EXORDIUM // CAREER TREE LOGIC: Base Canônica, Filtros e Painel Raio-X
+   EXORDIUM // CAREER TREE LOGIC: Canonical Database, Filters & X-Ray Panel
    ========================================================================== */
 
 const CAREERS_DATABASE = [
-  // --- SETOR A: EMPRESA DE SENSORES INDUSTRIAIS ---
+  // --- SECTOR A: INDUSTRIAL SENSOR CO. ---
   {
     id: "aux_adm",
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 1,
-    name: "Auxiliar Administrativo",
-    salary: "$ 1.800 / week",
-    hours: "Mon-Fri · 08:00 às 17:00",
+    name: "Administrative Assistant",
+    salary: "$ 1,800 / week",
+    hours: "Mon-Fri · 08:00 to 17:00",
     cues: ["starting"],
     cuesLabels: ["Mandatory Starting Point"],
-    desc: "O ponto de partida de todos. Resolve as demandas imediatas do diretor em ritmo de gincana: recolhe notas fiscais, destrava impressoras emperradas e busca café.",
+    desc: "The universal starting point for corporate life. Juggle immediate director demands in a scavenger-hunt sprint: gather supplier invoices, unjam stubborn printers, and fetch coffee.",
     responsibilities: [
-      "Minigame Closing Day: 5 minutos para entregar o fechamento semanal.",
-      "Destravar a impressora mecânica (5 interações [E]).",
-      "Levar café ao diretor antes das 3:20 no relógio para evitar bronca.",
-      "Conferência de balancete numérico e entrega física do relatório."
+      "Closing Day Minigame: 5 minutes to deliver the weekly company closing report.",
+      "Unjam the mechanical printer (multi-step clearing sequence).",
+      "Deliver fresh coffee to the director before 3:20 on the clock to avoid reprimands.",
+      "Audit numeric spreadsheets and physically deliver the printed report."
     ],
-    promotionNotes: "Observa a dinâmica dos colegas e ganha a chance de migrar para Suporte Técnico (Inbox) ou Vendas Internas (Spec & Deal).",
-    dialogQuote: "A impressora travou de novo e o diretor quer o café na mesa dele antes da reunião das 2:30. Corre!",
-    dialogSpeaker: "Ana · Colega de Escritório",
+    promotionNotes: "Observe coworkers' routines and earn the opportunity to transition into Technical Support (Inbox triage) or Inside Sales (Spec & Deal negotiation).",
+    dialogQuote: "The printer jammed again, and the director expects fresh coffee on his desk before the 2:30 executive meeting. Hustle!",
+    dialogSpeaker: "Ana · Office Coworker",
     dialogImage: "assets/img/closing_day_printer.png"
   },
   {
@@ -31,21 +31,21 @@ const CAREERS_DATABASE = [
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 2,
-    name: "Service Desk (Suporte Técnico)",
-    salary: "$ 2.200 / week",
-    hours: "Mon-Fri · 08:00 às 17:00",
+    name: "Service Desk (Technical Support)",
+    salary: "$ 2,200 / week",
+    hours: "Mon-Fri · 08:00 to 17:00",
     cues: ["arcade"],
     cuesLabels: ["Real-Time Triaging"],
-    desc: "Na linha de frente dos tickets. Classifica e-mails em 5 categorias e decide solicitações de garantia de 24 meses sob pressão de cronômetro.",
+    desc: "On the frontline of corporate trouble tickets. Triage incoming emails into 5 distinct categories and evaluate 24-month warranty claims against ticking countdown timers.",
     responsibilities: [
-      "Triar e-mails em Pergunta Técnica, Garantia, Reclamação, Vendas e Phishing.",
-      "Identificar links maliciosos com tooltips destacando URLs suspeitas.",
-      "Decidir garantia: Cobrir apenas defeito de fábrica; imersão apenas para sensores IP68 (CAM-4); raios/tempestades NUNCA têm cobertura.",
-      "Encaminhar desvios de leitura sutis à engenharia."
+      "Triage inbound emails into Technical Inquiries, Warranty Claims, Complaints, Sales Inquiries, and Phishing.",
+      "Detect malicious links using tooltips that flag spoofed and suspicious sender URLs.",
+      "Decide warranty validity: Factory defects only; immersion coverage strictly for IP68-certified models (CAM-4); lightning strikes and weather surges are NEVER covered.",
+      "Route subtle calibration drifts to the engineering division."
     ],
-    promotionNotes: "Promoção automática por bom desempenho para Supervisor de Qualidade e Atendimento.",
-    dialogQuote: "O cliente mergulhou o transmissor PT-200 no tanque, mas ele só é IP65! Se aprovar a garantia, a empresa perde $420 do nosso bolso!",
-    dialogSpeaker: "Ben · Analista de Suporte",
+    promotionNotes: "Consistent high performance automatically qualifies you for promotion to Quality & Support Supervisor.",
+    dialogQuote: "The client submerged a PT-200 transmitter directly into a tank, but it's only rated IP65! If you approve this warranty replacement, the company eats a $420 loss right out of our department budget!",
+    dialogSpeaker: "Ben · Support Analyst",
     dialogImage: "assets/img/job_inbox.png"
   },
   {
@@ -53,21 +53,21 @@ const CAREERS_DATABASE = [
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 2,
-    name: "Inside Sales (Vendas Internas)",
-    salary: "$ 2.000 / wk + comissão de 3%",
-    hours: "Mon-Fri · 08:00 às 17:00",
+    name: "Inside Sales Representative",
+    salary: "$ 2,000 / wk + 3% Commission",
+    hours: "Mon-Fri · 08:00 to 17:00",
     cues: ["bonus"],
     cuesLabels: ["Sales Commission"],
-    desc: "Negocia sensores industriais pelo computador. Avalia temperatura, pressão e sinal elétrico (4-20mA, 0-10V) e barganha sem esgotar a paciência do cliente.",
+    desc: "Negotiate industrial sensors over workstation terminals. Cross-reference operating temperature, pressure thresholds, and output signals (4-20mA, 0-10V) while bargaining before client patience runs out.",
     responsibilities: [
-      "Cruzar especificações de catálogo (PT-100 a PT-400, sondas térmicas TH-10 a TH-50).",
-      "Evitar 'oversell' e nunca vender sensor fora da faixa técnica solicitada.",
-      "Risco canônico: Vender sensor incompatível que derrete a 80 °C gera processo judicial e demissão!",
-      "Negociar faixas de desconto (0% a 20%) para fechar antes da 3ª recusa."
+      "Cross-reference catalog specifications (PT-100 through PT-400 probes, TH-10 through TH-50 thermal sensors).",
+      "Avoid overselling and never supply a sensor outside requested technical parameters.",
+      "Canonical hazard: Supplying an incompatible sensor that melts at 80 °C triggers corporate lawsuits and immediate termination!",
+      "Counteroffer discount tiers (0% to 20%) to close orders before a third customer refusal."
     ],
-    promotionNotes: "Permite escolher entre Supervisor Comercial, Vendas Externas ou Gerente de Vendas.",
-    dialogQuote: "O cliente quer pagar $900 numa sonda que aguente 80 °C. Se eu empurrar a de 45 °C baratinha, ela vai derreter na caldeira dele...",
-    dialogSpeaker: "Vendedor Interno",
+    promotionNotes: "Unlocks career branching into Commercial Supervisor, Field Sales, or Sales Manager.",
+    dialogQuote: "The client wants to pay $900 for a thermal probe rated for 80 °C. If I push that cheap 45 °C unit to make a quick sale, it'll melt into sludge inside his boiler...",
+    dialogSpeaker: "Inside Sales Rep",
     dialogImage: "assets/img/job_deal.png"
   },
   {
@@ -75,20 +75,20 @@ const CAREERS_DATABASE = [
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 3,
-    name: "Supervisor de Qualidade e Atendimento",
-    salary: "$ 3.500 / week",
-    hours: "Mon-Fri · 08:00 às 17:00",
+    name: "Quality & Support Supervisor",
+    salary: "$ 3,500 / week",
+    hours: "Mon-Fri · 08:00 to 17:00",
     cues: ["bonus"],
-    cuesLabels: ["Surplus Becomes Bonus"],
-    desc: "Atua como ouvidoria de primeira instância. Analisa reclamações graves, concede compensações de 10% a 200% do valor do produto e aprova garantias especiais.",
+    cuesLabels: ["Surplus Converts to Bonus"],
+    desc: "Acts as the company's first-instance dispute ombudsman. Inspect severe client escalations, authorize conciliation settlements from 10% to 200% of product value, and approve exceptional warranties.",
     responsibilities: [
-      "Gerenciar o orçamento semanal de indenizações e acordos.",
-      "Decisão estratégica: O dinheiro que sobra da verba no final da semana é convertido integralmente em performance e prestígio pessoal!",
-      "Conceder brindes e estornos para conter crises de clientes indignados."
+      "Manage the weekly resolution and customer conciliation budget.",
+      "Strategic payoff: Whatever budget remains unspent by Friday afternoon converts directly into personal performance and prestige!",
+      "Distribute goodwill gifts and refunds to defuse angry corporate clients before legal action."
     ],
-    promotionNotes: "Caminho direto para Analista de Inteligência Competitiva ou CFO.",
-    dialogQuote: "Sobraram $ 1.200 na minha verba de conciliação esta sexta-feira. Isso vai direto pra minha avaliação de promoção!",
-    dialogSpeaker: "Supervisor de Atendimento",
+    promotionNotes: "Direct gateway toward Competitive Intelligence Analyst or Chief Financial Officer (CFO).",
+    dialogQuote: "We have $1,200 remaining in my conciliation discretionary fund this Friday. That surplus goes straight toward my executive promotion review!",
+    dialogSpeaker: "Customer Support Supervisor",
     dialogImage: "assets/img/job_office_elevator.png"
   },
   {
@@ -96,19 +96,19 @@ const CAREERS_DATABASE = [
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 3,
-    name: "Vendas Externas (A Campo)",
-    salary: "$ 3.000 / wk + comissões",
-    hours: "Mon-Fri · 08:00 às 17:00 (Rua)",
+    name: "Field Sales Specialist (On the Road)",
+    salary: "$ 3,000 / wk + High Commissions",
+    hours: "Mon-Fri · 08:00 to 17:00 (Fieldwork)",
     cues: ["bonus"],
-    cuesLabels: ["Unlocks Permanent +20% Bonus"],
-    desc: "Visitas técnicas a indústrias e clientes corporativos em SPRF. Quem passa por aqui e chega a Gerente de Vendas conquista o cobiçado modificador permanente.",
+    cuesLabels: ["Unlocks +20% Permanent Modifier"],
+    desc: "Field visits to industrial manufacturing plants and enterprise clients across SPRF. Climbing this path to Sales Manager permanently unlocks a coveted lifetime salary multiplier.",
     responsibilities: [
-      "Prospectar indústrias e fechar contratos de alto volume na cidade.",
-      "Garante a conquista do modificador permanente de Lábia Comercial (+20% em todos os salários do setor comercial!)."
+      "Prospect manufacturing facilities and secure high-volume municipal sensor contracts.",
+      "Grants the permanent Commercial Persuasion modifier (+20% lifetime salary bonus across every commercial branch!)."
     ],
-    promotionNotes: "Promoção para Gerente de Vendas com bônus de 20%, ou salto para Vice-Diretor.",
-    dialogQuote: "Esse contrato de sensores para o polo industrial garantiu 20% a mais de comissão no meu bolso para sempre!",
-    dialogSpeaker: "Representante Comercial",
+    promotionNotes: "Promotion to Sales Manager retaining the +20% permanent perk, or springboard to Executive Vice Director.",
+    dialogQuote: "Closing this bulk sensor contract for the industrial district locked in a permanent 20% commission bonus in my pocket for the rest of my career!",
+    dialogSpeaker: "Commercial Representative",
     dialogImage: "assets/img/downtown.png"
   },
   {
@@ -116,21 +116,21 @@ const CAREERS_DATABASE = [
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 3,
-    name: "Gerente de Vendas",
-    salary: "$ 6.000 / week",
-    hours: "Mon-Fri · Flexível",
+    name: "Commercial Sales Manager",
+    salary: "$ 6,000 / week",
+    hours: "Mon-Fri · Flexible Hours",
     cues: ["crime", "danger"],
-    cuesLabels: ["Kickback Scheme", "Police Raid Risk (Sting)"],
-    desc: "Analisa métricas e monitora e-mails de vendedores. Pode extorquir esquemas de desvio ('Caixa 2') recebendo 50% todo dia, mas corre 4% de risco de cair na armadilha do Diretor com 4 policiais!",
+    cuesLabels: ["Kickback Scheme", "Police Sting Risk"],
+    desc: "Analyze sales metrics and monitor staff communication logs. You can extort corrupt sales reps for a 50% daily cut of diverted commissions—but run a 4% chance of walking into the General Director's police sting!",
     responsibilities: [
-      "Pode bater o ponto e circular pela cidade se responder aos chamados.",
-      "Pode demitir vendedores por justa causa.",
-      "Esquema secreto: Entrar no desvio de vendas e lucrar 50% diário das fraudes.",
-      "Evento canônico X9 (4% de chance): O vendedor é informante do Diretor; a polícia dá voz de prisão imediata por corrupção corporativa!"
+      "Clock in and roam freely across the city as long as critical calls are answered.",
+      "Fire underperforming reps with immediate cause.",
+      "Secret scheme: Tap into fraudulent commission diversions to siphon 50% daily kickbacks.",
+      "Canonical Informant Event (4% probability): The rep is wired as an undercover director plant; police officers handcuff you on the spot for corporate extortion!"
     ],
-    promotionNotes: "Promoção para Vice-Diretor da empresa.",
-    dialogQuote: "Você achou que eu ia te demitir? Quem disse que você será demitido? Policiais, podem entrar!",
-    dialogSpeaker: "Diretor da Empresa · Flagrante",
+    promotionNotes: "Promotion path to Executive Vice Director.",
+    dialogQuote: "You thought I was just going to fire you? Who said anything about a pink slip? Officers, step right in!",
+    dialogSpeaker: "Company Director · Corporate Sting",
     dialogImage: "assets/img/job_hire_dialog.png"
   },
   {
@@ -138,20 +138,20 @@ const CAREERS_DATABASE = [
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 4,
-    name: "Analista de Inteligência Competitiva",
-    salary: "$ 7.000 / week",
-    hours: "Sem controle de ponto rígido",
+    name: "Competitive Intelligence Analyst",
+    salary: "$ 7,000 / week",
+    hours: "Autonomous · Unrestricted Schedule",
     cues: ["crime", "danger"],
-    cuesLabels: ["Industrial Espionage", "Falsified Ledgers"],
-    desc: "Avalia concorrentes e elabora relatórios semanais. É cortejado por corporações rivais para vazar projetos secretos de sensores em troca de quantias exorbitantes.",
+    cuesLabels: ["Industrial Espionage", "Falsified Dossiers"],
+    desc: "Audit competitor filings and assemble weekly executive intelligence briefs. Rival conglomerates court you to leak proprietary blueprints in exchange for illicit wire transfers.",
     responsibilities: [
-      "Escrever relatórios maquiados dizendo que a empresa é líder invencível.",
-      "Receber ofertas secretas no celular pessoal para vazar protótipos de sensores.",
-      "Risco: O TI monitora a rede e os concorrentes podem ser armadilha do Diretor."
+      "Draft doctored market reports claiming your firm holds an unassailable monopoly.",
+      "Receive encrypted inquiries on your personal mobile to leak proprietary sensor designs.",
+      "Risk: Internal IT monitors encrypted packets, and corporate buyers might be a compliance trap orchestrated by the Director."
     ],
-    promotionNotes: "Promoção direta para Diretor Financeiro (CFO).",
-    dialogQuote: "A concorrente me ofereceu $ 15.000 para vazar o esquema elétrico da nova sonda térmica. Se a diretoria descobrir, é cadeia na certa.",
-    dialogSpeaker: "Analista de Mercado",
+    promotionNotes: "Direct promotion track to Chief Financial Officer (CFO).",
+    dialogQuote: "The rival firm offered $15,000 in untraceable cash to leak schematics for our high-temp thermal probe. If executive compliance intercepts this, it's straight to a state prison cube.",
+    dialogSpeaker: "Market Intelligence Analyst",
     dialogImage: "assets/img/job_office_elevator.png"
   },
   {
@@ -159,20 +159,20 @@ const CAREERS_DATABASE = [
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 4,
-    name: "Vice-Diretor Executivo",
-    salary: "$ 15.000 / week",
-    hours: "Seg, Qua, Sex · 09:00 às 11:00 (2h/dia!)",
+    name: "Executive Vice Director",
+    salary: "$ 15,000 / week",
+    hours: "Mon, Wed, Fri · 09:00 to 11:00 (2h/day!)",
     cues: ["executive"],
-    cuesLabels: ["Regime 2h/dia · 3 dias/sem"],
-    desc: "O ápice do conforto executivo. Trabalha apenas 2 horas por dia, três dias por semana. Sala privativa e acesso irrestrito às decisões corporativas.",
+    cuesLabels: ["2h/Day Schedule · 3 Days/Week"],
+    desc: "The pinnacle of corporate luxury. Clock in for merely two hours a day, three days a week. Private corner office with panoramic metropolitan views and unimpeded executive authority.",
     responsibilities: [
-      "Carga horária ultrarreduzida (6 horas semanais totais).",
-      "Autoridade para contratar e demitir funcionários de todos os escalões.",
-      "Caminho mais curto e rápido para se tornar Diretor Geral (CEO)."
+      "Ultra-reduced work schedule (only 6 total hours required per week).",
+      "Full authority to hire and terminate personnel across all departmental ranks.",
+      "Shortest, most direct progression path to Chief Executive Officer (CEO)."
     ],
-    promotionNotes: "Promoção direta para CEO.",
-    dialogQuote: "Duas horinhas de reunião na segunda, quarta e sexta. O resto da semana é livre para aproveitar a vida em SPRF.",
-    dialogSpeaker: "Vice-Diretor",
+    promotionNotes: "Direct promotion to Chief Executive Officer.",
+    dialogQuote: "Two brief morning strategy briefings on Monday, Wednesday, and Friday. The rest of the week is completely mine to enjoy metropolitan life in SPRF.",
+    dialogSpeaker: "Executive Vice Director",
     dialogImage: "assets/img/job_director_press.png"
   },
   {
@@ -180,20 +180,20 @@ const CAREERS_DATABASE = [
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 4,
-    name: "Diretor Financeiro (CFO)",
-    salary: "$ 15.000 / week",
-    hours: "Seg, Qua, Sex · 09:00 às 11:00 (2h/dia!)",
+    name: "Chief Financial Officer (CFO)",
+    salary: "$ 15,000 / week",
+    hours: "Mon, Wed, Fri · 09:00 to 11:00 (2h/day!)",
     cues: ["executive"],
-    cuesLabels: ["Exige 4x Mais Performance"],
-    desc: "Idêntico ao Vice-Diretor na rotina relaxada de 2h diárias, mas exige 4 vezes mais performance para alcançar a cadeira de Diretor Geral.",
+    cuesLabels: ["Requires 4x Performance for CEO"],
+    desc: "Matches the Vice Director's relaxed 2-hour daily schedule, but requires 4 times more performance output to claim the top seat of Chief Executive Officer.",
     responsibilities: [
-      "Aprovar balanços e orçamentos gerais da empresa de sensores.",
-      "Regime de 6 horas semanais com salário de elite ($ 15.000/sem).",
-      "Precisa quadruplicar a entrega de resultados se quiser ultrapassar o Vice-Diretor."
+      "Approve quarterly balance sheets and capital allocation budgets for the sensor firm.",
+      "Elite 6-hour weekly workload commanding a top-bracket executive salary ($15,000/wk).",
+      "Must deliver quadruple net results to outmaneuver the Vice Director for the CEO chair."
     ],
-    promotionNotes: "Caminho difícil para Diretor Geral (CEO).",
-    dialogQuote: "Os números do trimestre bateram recorde, mas o Conselho ainda exige 4 vezes mais que o vice para me dar a presidência.",
-    dialogSpeaker: "CFO · Diretor Financeiro",
+    promotionNotes: "Arduous merit-based path to Chief Executive Officer (CEO).",
+    dialogQuote: "Our fiscal quarter shattered revenue projections, yet the Board still demands quadruple the performance metrics before they hand me the CEO gavel over the Vice Director.",
+    dialogSpeaker: "CFO · Chief Financial Officer",
     dialogImage: "assets/img/closing_day_boss.png"
   },
   {
@@ -201,42 +201,42 @@ const CAREERS_DATABASE = [
     branch: "office",
     branchName: "Industrial Sensor Co.",
     level: 5,
-    name: "Diretor Geral (CEO)",
-    salary: "$ 40.000 / week",
-    hours: "Sem horário fixo · Total liberdade",
+    name: "Chief Executive Officer (CEO)",
+    salary: "$ 40,000 / week",
+    hours: "No Fixed Schedule · Absolute Liberty",
     cues: ["executive", "bonus"],
-    cuesLabels: ["Comando Total", "Minigame de Crise"],
-    desc: "O topo absoluto. Joga golfe no carpete do gabinete, carimba autorizações sem ler (arriscando falência) e encara coletivas de imprensa quentes na TV Maresol.",
+    cuesLabels: ["Absolute Authority", "Live Crisis Press Minigame"],
+    desc: "The summit of corporate hierarchy. Putt golf balls across office carpeting, rubber-stamp authorizations without reading (courting corporate catastrophe), and face live televised press conferences on TV Maresol.",
     responsibilities: [
-      "Minigame 'Assinar sem ler': Carimbar centenas de notas em 5 segundos ou ler detalhadamente para caçar desvios.",
-      "Minigame 'Coletiva de Imprensa': Defender a empresa ao vivo na TV Maresol com jargões corporativos quando estoura escândalo de sensores derretidos.",
-      "Salário colossal de $ 40.000 por semana (pago toda sexta às 17h)."
+      "'Sign Without Reading' Minigame: Rapidly stamp hundreds of invoices in 5 seconds or review each entry line-by-line to hunt down embezzlements.",
+      "'Press Conference' Minigame: Defend the conglomerate live on TV Maresol using corporate jargon when a scandal erupts over melted industrial sensors.",
+      "Staggering compensation of $40,000 per week (deposited every Friday at 17:00)."
     ],
-    promotionNotes: "Nenhum cargo acima na corporação. Prestígio máximo em SPRF.",
-    dialogQuote: "Senhores jornalistas da TV Maresol: o derretimento do sensor foi um evento pontual de sobrecarga exógena sob auditoria estrita!",
-    dialogSpeaker: "CEO da Empresa · Coletiva",
+    promotionNotes: "No higher corporate rank exists in the city. Maximum social status across SPRF.",
+    dialogQuote: "Members of the press from TV Maresol: the alleged sensor melting was an isolated high-temperature surge caused by external factors currently under forensic audit!",
+    dialogSpeaker: "Company CEO · Live Press Conference",
     dialogImage: "assets/img/job_director_press.png"
   },
 
-  // --- SETOR B: REDE DE FARMÁCIAS ---
+  // --- SECTOR B: METROPOLITAN PHARMACY CHAIN ---
   {
     id: "pharm_att1",
     branch: "pharmacy",
     branchName: "Pharmacy Chain",
     level: 1,
-    name: "Atendente de Balcão 1",
-    salary: "$ 1.600 / week",
-    hours: "Mon-Fri · Turno Manhã: 07:00 às 15:00",
+    name: "Pharmacy Counter Clerk 1",
+    salary: "$ 1,600 / week",
+    hours: "Mon-Fri · Morning Shift: 07:00 to 15:00",
     cues: ["starting"],
-    cuesLabels: ["Entrada Farmacêutica"],
-    desc: "Opera o caixa da drogaria e atualiza etiquetas de preços nas gôndolas conforme o sistema ANVISA determina.",
+    cuesLabels: ["Pharmacy Starting Rank"],
+    desc: "Operate the drugstore register and update pricing labels across retail gondolas in compliance with municipal health authority directives.",
     responsibilities: [
-      "Atender clientes na fila e receber pagamentos.",
-      "Remarcar produtos nas prateleiras conforme a tabela de preços do dia."
+      "Ring up customers in checkout lines and process register payments.",
+      "Reprice retail goods across drugstore aisles following daily regulatory tariffs."
     ],
-    promotionNotes: "Promoção para Atendente 2.",
-    dialogQuote: "Preciso remarcar todas as vitaminas do corredor 3 antes do supervisor abrir o segundo caixa.",
-    dialogSpeaker: "Atendente 1",
+    promotionNotes: "Promotion to Senior Counter Clerk 2.",
+    dialogQuote: "I need to reprice all the vitamin bottles in aisle 3 before the floor supervisor opens checkout register 2.",
+    dialogSpeaker: "Pharmacy Clerk 1",
     dialogImage: "assets/img/job_pharmacy_shelf.png"
   },
   {
@@ -244,19 +244,19 @@ const CAREERS_DATABASE = [
     branch: "pharmacy",
     branchName: "Pharmacy Chain",
     level: 2,
-    name: "Atendente de Balcão 2",
-    salary: "$ 1.800 / week",
-    hours: "Mon-Fri · Turno Tarde/Noite: 15:00 às 23:00",
+    name: "Senior Pharmacy Clerk 2",
+    salary: "$ 1,800 / week",
+    hours: "Mon-Fri · Evening Shift: 15:00 to 23:00",
     cues: ["arcade"],
-    cuesLabels: ["Dispensação Controlada"],
-    desc: "Atua no balcão de remédios e começa a lidar com a dispensação de medicamentos controlados sob retenção de receita.",
+    cuesLabels: ["Controlled Prescription Triage"],
+    desc: "Staff the prescription counter and manage the dispensation of regulated controlled pharmaceuticals requiring prescription retention.",
     responsibilities: [
-      "Verificação de receitas de antibióticos e controlados (paródia ANVISA).",
-      "Conferência de dosagens e atendimento de prescrições médicas."
+      "Verify antibiotic and controlled medication slips against regulatory medical databases.",
+      "Audit dosage values and match prescriptions against certified medical registries."
     ],
-    promotionNotes: "Promoção para Supervisor de Farmácia.",
-    dialogQuote: "Essa receita de clonazepam está sem o carimbo legível do médico do Hospital Regional. Não posso liberar!",
-    dialogSpeaker: "Atendente 2",
+    promotionNotes: "Promotion to Drugstore Supervisor.",
+    dialogQuote: "This controlled prescription is missing the official registry stamp from the Regional Hospital physician. I cannot legally dispense this medication!",
+    dialogSpeaker: "Senior Clerk 2",
     dialogImage: "assets/img/job_pharmacy_rx.png"
   },
   {
@@ -264,20 +264,20 @@ const CAREERS_DATABASE = [
     branch: "pharmacy",
     branchName: "Pharmacy Chain",
     level: 3,
-    name: "Supervisor de Drogaria",
-    salary: "$ 2.500 / week",
-    hours: "Ter-Sáb · Abertura ou Fechamento",
+    name: "Drugstore Floor Supervisor",
+    salary: "$ 2,500 / week",
+    hours: "Tue-Sat · Opening or Closing Shifts",
     cues: ["bonus"],
-    cuesLabels: ["Abre/Fecha Loja · Carro-Forte"],
-    desc: "Abre e fecha a loja física. Aplica descontos gerenciais, faz sangria de valores dos caixas para o cofre e aciona o carro-forte.",
+    cuesLabels: ["Store Keys · Armored Transport"],
+    desc: "Open and close retail store branches. Grant managerial discounts, sweep register cash into the floor vault, and schedule armored cash couriers.",
     responsibilities: [
-      "Resolver impasses de clientes difíceis no balcão.",
-      "Transferir dinheiro dos caixas para o cofre ao atingir o teto de segurança.",
-      "Acionar a empresa de transporte de valores quando o cofre acumula o volume mínimo."
+      "Resolve escalated disputes with volatile counter patrons.",
+      "Sweep cash from registers into the drop safe whenever cash ceilings are exceeded.",
+      "Summon armored security vehicles when vault deposits reach collection thresholds."
     ],
-    promotionNotes: "Caminho para Gerente ou Farmacêutico.",
-    dialogQuote: "O cofre atingiu o teto de segurança de $ 20.000. Já protocolei o chamado para o carro-forte passar aqui às 18h.",
-    dialogSpeaker: "Supervisor de Loja",
+    promotionNotes: "Branching pathway to Store Manager or Licensed Pharmacist.",
+    dialogQuote: "The retail safe reached our $20,000 security ceiling. I've logged the armored transport dispatch for 18:00 sharp.",
+    dialogSpeaker: "Store Floor Supervisor",
     dialogImage: "assets/img/job_pharmacy_shelf.png"
   },
   {
@@ -285,20 +285,20 @@ const CAREERS_DATABASE = [
     branch: "pharmacy",
     branchName: "Pharmacy Chain",
     level: 4,
-    name: "Farmacêutico Responsável",
-    salary: "$ 5.000 / wk + PLR generosa",
-    hours: "Mon-Fri · Manhã · Sem ponto rígido",
+    name: "Licensed Pharmacist",
+    salary: "$ 5,000 / wk + Generous Profit Sharing",
+    hours: "Mon-Fri · Morning Shift · Autonomous Schedule",
     cues: ["diploma", "bonus"],
-    cuesLabels: ["Exige Diploma em Farmácia", "Participação nos Lucros"],
-    desc: "Cargo técnico essencial. Aplica injeções, fura orelhas (com brincos da própria drogaria), afere pressão, mede glicose e realiza testes de beta-hCG.",
+    cuesLabels: ["Pharmacy Degree Mandatory", "Quarterly Profit Sharing"],
+    desc: "Indispensable licensed clinical role. Administer injections, perform sterile ear piercings (using retail drugstore studs), check blood pressure, monitor glucose, and process diagnostic test kits.",
     responsibilities: [
-      "Obrigatório ter graduação em Farmácia.",
-      "Procedimentos clínicos na sala privativa (injeções, furos, testes).",
-      "Pode realizar qualquer tarefa de balconista e supervisor."
+      "Mandatory requirement: University Degree in Pharmacy.",
+      "Perform clinical procedures in the private consultation suite (injections, tests, piercing).",
+      "Authorized to perform any clerk or supervisory duty on the store floor."
     ],
-    promotionNotes: "Pode se fundir com o cargo de Gerente para formar o 'Farmacêutico-Gerente' (+50% salário!).",
-    dialogQuote: "A aplicação do antibiótico injetável está pronta na sala 2. Já conferi a prescrição com o médico.",
-    dialogSpeaker: "Dra. Farmacêutica",
+    promotionNotes: "Can merge with Store Manager into the elite 'Pharmacist-Manager' role (+50% permanent salary bonus!).",
+    dialogQuote: "The injectable antibiotic dosage is prepped in clinic room 2. I've cross-referenced the prescription with the prescribing physician.",
+    dialogSpeaker: "Dr. Sarah · Licensed Pharmacist",
     dialogImage: "assets/img/job_pharmacy_rx.png"
   },
   {
@@ -306,20 +306,20 @@ const CAREERS_DATABASE = [
     branch: "pharmacy",
     branchName: "Pharmacy Chain",
     level: 4,
-    name: "Gerente de Loja",
-    salary: "$ 5.000 / wk + PLR generosa",
-    hours: "Sem horário fixo · Gestão da Drogaria",
+    name: "Pharmacy Store Manager",
+    salary: "$ 5,000 / wk + Generous Profit Sharing",
+    hours: "Flexible Hours · Retail Operations Oversight",
     cues: ["bonus"],
-    cuesLabels: ["Contrata/Demite · PLR"],
-    desc: "Comanda o funcionamento da unidade. Elabora escalas de folga, contrata e demite funcionários. Sofre perda de performance se filas demorarem.",
+    cuesLabels: ["Hire/Fire Authority · Profit Bonus"],
+    desc: "Oversees all daily operations for the retail pharmacy branch. Schedules shifts, hires and dismisses floor staff, and takes performance penalties if customer lines stall.",
     responsibilities: [
-      "Montar escalas de atendentes e balconistas (máximo 5 dias/sem por CLT da cidade).",
-      "Controlar o índice de satisfação dos clientes e tempos de fila.",
-      "Pode ser contratado diretamente sem subir a escada."
+      "Build balanced staff schedules for attendants and clerks (max 5 days/wk per municipal labor code).",
+      "Maintain high customer satisfaction scores and minimize register queue delays.",
+      "Can be recruited directly into this position based on prior executive reputation."
     ],
-    promotionNotes: "Promoção para Gerente Regional da Rede.",
-    dialogQuote: "A fila do caixa 1 está dobrando a gôndola de perfumaria! Se a satisfação cair, a nossa PLR despenca na sexta.",
-    dialogSpeaker: "Gerente de Drogaria",
+    promotionNotes: "Promotion to Regional Pharmacy Director.",
+    dialogQuote: "Line 1 is wrapping around the cosmetics aisle! If customer satisfaction scores drop, our quarterly profit-sharing bonus takes a massive hit on Friday.",
+    dialogSpeaker: "Store General Manager",
     dialogImage: "assets/img/job_hire_dialog.png"
   },
   {
@@ -327,20 +327,20 @@ const CAREERS_DATABASE = [
     branch: "pharmacy",
     branchName: "Pharmacy Chain",
     level: 4,
-    name: "Farmacêutico-Gerente (Híbrido)",
-    salary: "$ 7.500 / wk + PLR (+50% Permanente!)",
-    hours: "Sem horário fixo · Autonomia Total",
+    name: "Pharmacist-Manager (Hybrid Role)",
+    salary: "$ 7,500 / wk + Profit Sharing (+50% Lifetime!)",
+    hours: "Autonomous Schedule · Total Store Sovereignty",
     cues: ["diploma", "bonus"],
-    cuesLabels: ["Bônus Permanente +50%", "Aplica Injeções & Comanda"],
-    desc: "A combinação perfeita aprovada no cânone. O gerente que se forma em Farmácia (ou o farmacêutico promovido a gerente) ganha +50% no salário base permanentemente!",
+    cuesLabels: ["+50% Permanent Lifetime Bonus", "Clinical & Executive Dual Role"],
+    desc: "The apex commercial hybrid approved in game canon. A store manager who earns a pharmacy degree (or a pharmacist promoted to manager) secures a permanent +50% base salary bonus for life!",
     responsibilities: [
-      "Substitui o farmacêutico em ausências e assume qualquer posto da loja.",
-      "Bônus permanente de 50% mantido mesmo ao trocar de rede farmacêutica.",
-      "Comanda contratações, demissões e a responsabilidade técnica do estabelecimento."
+      "Cover for pharmacists during absences while retaining executive command of the store.",
+      "Permanent 50% salary boost remains intact even if you move to a rival pharmacy chain.",
+      "Commands hiring, firing, payroll audits, and regulatory clinical compliance."
     ],
-    promotionNotes: "Promoção direta para Gerente Regional.",
-    dialogQuote: "Assumir a gerência e o CRF técnico da filial me garantiu $ 7.500 semanais fixos mais a participação nos lucros da rede inteira!",
-    dialogSpeaker: "Farmacêutico-Gerente",
+    promotionNotes: "Direct promotion track to Regional Pharmacy Director.",
+    dialogQuote: "Assuming store general management alongside official clinical license registration locked in $7,500 weekly base pay plus network-wide profit sharing!",
+    dialogSpeaker: "Hybrid Pharmacist-Manager",
     dialogImage: "assets/img/job_pharmacy_rx.png"
   },
   {
@@ -348,228 +348,228 @@ const CAREERS_DATABASE = [
     branch: "pharmacy",
     branchName: "Pharmacy Chain",
     level: 5,
-    name: "Gerente Regional de Farmácias",
-    salary: "$ 9.000 / week",
-    hours: "Mon-Fri · 08:00 às 17:00 (Rotina Externa)",
+    name: "Regional Pharmacy Director",
+    salary: "$ 9,000 / week",
+    hours: "Mon-Fri · 08:00 to 17:00 (Field Oversight)",
     cues: ["executive"],
-    cuesLabels: ["Inspeções Técnicas", "Demite Gerentes"],
-    desc: "Supervisiona todas as unidades da cidade. Faz blitz de conformidade (jalecos limpos, equipe completa, estoque regular) e prioriza filiais com queixas.",
+    cuesLabels: ["Technical Audits", "Fires Store Managers"],
+    desc: "Oversees every pharmacy outlet in SPRF. Conducts unannounced compliance inspections (clean lab coats, adequate staffing, cold-chain storage) and prioritizes branches with customer complaints.",
     responsibilities: [
-      "Auditar o cumprimento das normas sanitárias e conferência de medicamentos.",
-      "Poder de demitir gerentes e supervisores de loja em caso de irregularidade.",
-      "Apenas gerentes de loja internos podem ser promovidos para este cargo."
+      "Audit sanitary compliance, prescription retention archives, and cold-chain drug storage.",
+      "Unilateral power to fire retail store managers and supervisors for operational breaches.",
+      "Reserved exclusively for candidates promoted from within internal store management."
     ],
-    promotionNotes: "O ápice da carreira farmacêutica no jogo.",
-    dialogQuote: "A loja do centro está sem o farmacêutico em horário de pico e com jaleco fora de padrão. Notificação emitida e desconto na gerência!",
-    dialogSpeaker: "Gerente Regional",
+    promotionNotes: "The highest executive pinnacle in the metropolitan pharmaceutical sector.",
+    dialogQuote: "The downtown branch is missing its licensed pharmacist during peak commuter hours, and staff are wearing non-standard coats. Formal notice served, and store management bonuses are revoked!",
+    dialogSpeaker: "Regional Operations Director",
     dialogImage: "assets/img/downtown.png"
   },
 
-  // --- SETOR C: RESTAURANTES ---
+  // --- SECTOR C: RESTAURANTS & DINING ---
   {
     id: "rest_hall",
     branch: "restaurant",
-    branchName: "Restaurantes",
+    branchName: "Restaurants & Dining",
     level: 1,
-    name: "Auxiliar de Salão",
-    salary: "$ 1.500 / week",
-    hours: "Qua-Dom · 09:00 às 15:30 (Almoço)",
+    name: "Dining Room Busser / Attendant",
+    salary: "$ 1,500 / week",
+    hours: "Wed-Sun · 09:00 to 15:30 (Lunch Shift)",
     cues: ["starting"],
-    cuesLabels: ["Organização do Salão"],
-    desc: "Mantém mesas higienizadas, garrafas de café térmicas abastecidas e guardanapos repostos. Se faltar guardanapo, o cliente reclama e desconta pontos em dobro!",
+    cuesLabels: ["Dining Room Maintenance"],
+    desc: "Keep tables sanitized, thermal coffee dispensers filled, and napkin holders stocked. If napkins run out, disgruntled guests lodge complaints that trigger double penalties!",
     responsibilities: [
-      "Limpar mesas imediatamente após os clientes saírem.",
-      "Nunca deixar faltar café cortesia ou guardanapos.",
-      "No modo Brasil: cometer erro deduz o dobro dos pontos que a tarefa ganharia!"
+      "Clear and sanitize tables immediately after diners depart.",
+      "Ensure complimentary coffee urns and paper napkin dispensers are never depleted.",
+      "Hardcore Difficulty: Making an error deducts double the points that the task would award!"
     ],
-    promotionNotes: "Promoção para Garçom/Caixa.",
-    dialogQuote: "Tem mesa nova sentando no salão 2! Se faltar guardanapo na mesa deles, o chefe corta meu bônus!",
-    dialogSpeaker: "Auxiliar de Salão",
+    promotionNotes: "Promotion to Buffet Waiter / Cashier.",
+    dialogQuote: "A new party is sitting in dining section 2! If their table is out of napkins, the head floor manager is going to dock my daily tip bonus!",
+    dialogSpeaker: "Dining Room Busser",
     dialogImage: "assets/img/job_restaurant_buffet.png"
   },
   {
     id: "rest_kitchen_helper",
     branch: "restaurant",
-    branchName: "Restaurantes",
+    branchName: "Restaurants & Dining",
     level: 1,
-    name: "Auxiliar de Cozinha",
-    salary: "$ 1.500 / week",
-    hours: "Qua-Dom · 09:00 às 15:30",
+    name: "Kitchen Assistant / Prep Cook",
+    salary: "$ 1,500 / week",
+    hours: "Wed-Sun · 09:00 to 15:30",
     cues: ["starting"],
-    cuesLabels: ["Pré-Preparo & Pratos"],
-    desc: "Descasca batatas, corta cenouras, pica cebolinha, enche panelas com água e lava a louça com restos de comida orgânicos.",
+    cuesLabels: ["Food Prep & Dishwashing"],
+    desc: "Peel potatoes, chop carrots, dice scallions, fill heavy stockpots with water, and wash greasy dishware carrying organic leftovers.",
     responsibilities: [
-      "Abastecer a bancada do cozinheiro e chef.",
-      "Descartar imediatamente ingredientes fora do prazo de validade.",
-      "Lavar louça suja com manchas dinâmicas."
+      "Stock prep stations for line cooks and executive chefs.",
+      "Immediately dispose of expired ingredients past shelf life.",
+      "Scrub dirty pans and plates featuring dynamic procedural stains."
     ],
-    promotionNotes: "Pode ser promovido a Cozinheiro ou a Garçom/Caixa.",
-    dialogQuote: "O chef pediu 10 kg de batatas descascadas para o almoço do meio-dia. Não posso atrasar o fogo!",
-    dialogSpeaker: "Auxiliar de Cozinha",
+    promotionNotes: "Can be promoted either into Line Cook (culinary track) or Waiter/Cashier (front-of-house track).",
+    dialogQuote: "Chef ordered 20 pounds of peeled potatoes ready before the noon lunch rush. I can't let the prep line fall behind!",
+    dialogSpeaker: "Kitchen Prep Assistant",
     dialogImage: "assets/img/job_restaurant_buffet.png"
   },
   {
     id: "rest_waiter",
     branch: "restaurant",
-    branchName: "Restaurantes",
+    branchName: "Restaurants & Dining",
     level: 2,
-    name: "Garçom / Operador de Caixa",
-    salary: "$ 1.700 / week",
-    hours: "Qua-Dom · Almoço ou Jantar",
+    name: "Buffet Waiter / Cashier",
+    salary: "$ 1,700 / week",
+    hours: "Wed-Sun · Lunch or Dinner Shifts",
     cues: ["arcade"],
-    cuesLabels: ["Buffet ou À La Carte"],
-    desc: "No Buffet, repõe cubas de aço aquecidas e cobra sobremesas/bebidas. No À La Carte fino, serve pratos à mesa e busca vinhos na adega refrigerada.",
+    cuesLabels: ["Buffet & À La Carte Service"],
+    desc: "In Buffet venues, replenish heated steam tables and ring up beverage/dessert tabs. In fine-dining À La Carte venues, serve plated courses table-side and retrieve vintage bottles from chilled cellars.",
     responsibilities: [
-      "Buffet: Manter as cubas quentes abastecidas e receber pagamentos.",
-      "À La Carte: Atender mesas com botão de chamada, levar pedidos à janela da cozinha e operar a máquina de cartão.",
-      "Restaurante Fino: Abrir vinhos selecionados na adega e servir taças adequadas."
+      "Buffet: Keep stainless-steel food wells replenished and process register payments.",
+      "À La Carte: Respond to table call bells, deliver written tickets to the kitchen expo window, and run handheld POS terminals.",
+      "Fine Dining: Uncork selected wines from the temperature-controlled cellar and pour proper glassware."
     ],
-    promotionNotes: "Promoção para Gerente de Restaurante (Atenção: garçom nunca vira cozinheiro!).",
-    dialogQuote: "Mesa 4 pediu um tinto seco da adega e o salmão grelhado do chef. Indo buscar a garrafa na temperatura certa!",
-    dialogSpeaker: "Garçom À La Carte",
+    promotionNotes: "Promotion to Restaurant Floor Manager (Note: waiters never cross over to culinary line cooking!).",
+    dialogQuote: "Table 4 ordered a reserve red from the cellar and the chef's pan-seared salmon. Fetching the bottle at the exact serving temperature!",
+    dialogSpeaker: "À La Carte Waiter",
     dialogImage: "assets/img/job_restaurant_fancy.png"
   },
   {
     id: "rest_cook",
     branch: "restaurant",
-    branchName: "Restaurantes",
+    branchName: "Restaurants & Dining",
     level: 2,
-    name: "Cozinheiro de Linha",
-    salary: "$ 2.400 / week",
-    hours: "Qua-Dom · Turno de Cozinha",
+    name: "Line Cook",
+    salary: "$ 2,400 / week",
+    hours: "Wed-Sun · Kitchen Service Shift",
     cues: ["arcade"],
-    cuesLabels: ["Guarnições & Acompanhamentos"],
-    desc: "Prepara os carboidratos e entradas: arroz, massas, risotos e molhos conforme o ritmo ditado pelos pedidos do salão.",
+    cuesLabels: ["Sides, Pastas & Sauces"],
+    desc: "Prepare carbohydrates and appetizers: seasoned rice, handmade pastas, risottos, and delicate sauces following ticket pacing dictated by front-of-house orders.",
     responsibilities: [
-      "Cozinhar todas as guarnições com precisão de tempo.",
-      "Coordenar a bancada com o Auxiliar de Cozinha.",
-      "Não faz proteínas nem empratamento final (tarefa exclusiva do Chef)."
+      "Cook all side dishes with precise cooking timers.",
+      "Coordinate workstation prep with the Kitchen Assistant.",
+      "Does NOT sear premium proteins or plate final courses (exclusive domain of the Executive Chef)."
     ],
-    promotionNotes: "Com diploma de Gastronomia, é promovido a Chef de Cozinha.",
-    dialogQuote: "O risoto e o purê trufado estão prontos na janela, chef! Só faltam os cortes de carne para finalizar.",
-    dialogSpeaker: "Cozinheiro",
+    promotionNotes: "With a Culinary Arts Degree, promoted directly to Executive Chef.",
+    dialogQuote: "Truffle risotto and buttered purée are hot in the pass window, Chef! Waiting on meat cuts to finish plating.",
+    dialogSpeaker: "Line Cook",
     dialogImage: "assets/img/job_restaurant_buffet.png"
   },
   {
     id: "rest_chef",
     branch: "restaurant",
-    branchName: "Restaurantes",
+    branchName: "Restaurants & Dining",
     level: 3,
-    name: "Chef Executivo",
-    salary: "$ 12.600 / week (Dobro do Gerente + 50%!)",
-    hours: "Qua-Dom · Serviço Gastronômico",
+    name: "Executive Chef",
+    salary: "$ 12,600 / week (Double Manager Pay + 50% Bonus!)",
+    hours: "Wed-Sun · Gastronomic Dinner Service",
     cues: ["diploma", "bonus"],
-    cuesLabels: ["Exige Diploma Gastronomia", "Salário Triplo"],
-    desc: "A autoridade máxima da culinária. Prepara carnes, peixes e finaliza o empratamento artístico. Ganha o dobro do gerente mais 50% de bônus permanente!",
+    cuesLabels: ["Culinary Degree Required", "Triple Salary Multiplier"],
+    desc: "The undisputed gastronomic ruler of the kitchen. Sear steaks, pan-roast seafood, and craft artisanal plate presentations. Earns double a general manager's salary plus a 50% permanent bonus!",
     responsibilities: [
-      "Obrigatório ter graduação em Gastronomia.",
-      "Ponto perfeito de carnes, aves e frutos do mar.",
-      "Montagem impecável dos pratos e liberação na janela para os garçons.",
-      "Remuneração excepcional de $ 12.600 por semana."
+      "Mandatory requirement: University Degree in Culinary Arts.",
+      "Execute precise temperature finishes for prime steaks, poultry, and seafood.",
+      "Oversee immaculate plate presentation before handing dishes to waitstaff.",
+      "Commands an extraordinary weekly compensation of $12,600."
     ],
-    promotionNotes: "Pode comprar a franquia e se tornar Gestor de Franquia / Dono.",
-    dialogQuote: "Prato finalizado com corte nobre e emulsão de ervas. Garçom, mesa 2 imediatamente enquanto está quente!",
-    dialogSpeaker: "Chef Executivo",
+    promotionNotes: "Can buy out the business to become Restaurant Franchise Owner.",
+    dialogQuote: "Prime tenderloin finished with red wine reduction and fresh herb emulsion. Waiter, table 2 immediately while the plate is piping hot!",
+    dialogSpeaker: "Executive Chef",
     dialogImage: "assets/img/job_restaurant_fancy.png"
   },
   {
     id: "rest_franchise_owner",
     branch: "restaurant",
-    branchName: "Restaurantes",
+    branchName: "Restaurants & Dining",
     level: 4,
-    name: "Gestor de Franquia / Proprietário",
-    salary: "$ 25.000+ / week (Lucro Líquido)",
-    hours: "Autonomia Empresarial Absoluta",
+    name: "Restaurant Franchise Owner",
+    salary: "$ 25,000+ / week (Net Profit Yield)",
+    hours: "Complete Entrepreneurial Autonomy",
     cues: ["executive", "bonus"],
-    cuesLabels: ["Dono da Rede", "Lucro na Conta Pessoal"],
-    desc: "Proprietário de múltiplos restaurantes em SPRF. Paga fornecedores, impostos e salários; todo o lucro líquido residual é transferido diretamente para sua conta pessoal!",
+    cuesLabels: ["Franchise Proprietor", "Direct Net Profit Deposits"],
+    desc: "Own multiple dining establishments across SPRF. Settle supplier accounts, municipal business taxes, and staff payroll; all residual net profits transfer directly into your personal bank account!",
     responsibilities: [
-      "Auditar filiais, cardápios e qualidade de atendimento.",
-      "Poder exclusivo de contratar e demitir chefs de cozinha.",
-      "Todo o lucro líquido após custos operacionais vira patrimônio do jogador."
+      "Audit branch financials, seasonal tasting menus, and hospitality standards.",
+      "Exclusive authority to recruit and dismiss executive head chefs.",
+      "Every dollar of net operational surplus converts into personal player wealth."
     ],
-    promotionNotes: "Patrão e investidor autônomo na economia viva da cidade.",
-    dialogQuote: "Todas as contas e fornecedores quitados esta sexta. O saldo líquido de $ 32.000 já foi transferido pra minha conta corrente!",
-    dialogSpeaker: "Gestor da Franquia",
+    promotionNotes: "Independent enterprise owner and real-estate investor in the city's living economy.",
+    dialogQuote: "All supplier invoices and payroll settled this Friday. The net surplus of $32,000 has already cleared directly into my checking account!",
+    dialogSpeaker: "Franchise Proprietor",
     dialogImage: "assets/img/condo_alphaville.png"
   },
 
-  // --- SETOR D: AUTÔNOMOS E TERCEIRIZADOS ---
+  // --- SECTOR D: FREELANCE & CITY SERVICES ---
   {
     id: "cleaning_worker",
     branch: "freelance",
-    branchName: "Serviços Terceirizados",
+    branchName: "Freelance & City Services",
     level: 1,
-    name: "Profissional de Limpeza (Faxina)",
-    salary: "$ 1.400 a $ 1.500 / week + bônus",
-    hours: "Qualquer hora das 24h do dia!",
+    name: "Commercial Cleaning Contractor",
+    salary: "$ 1,400 to $ 1,500 / wk + Bonuses",
+    hours: "24/7 Any Time · Total Schedule Freedom",
     cues: ["bonus"],
-    cuesLabels: ["Bônus +$200 por Streak", "Sistema de 5 Estrelas"],
-    desc: "Atende contratos comerciais (escritórios, lojas, farmácias e restaurantes). Lava pisos, passa pano nos móveis e rega as plantas. Trabalhar bem desbloqueia até a Estrela Roxa com Borda Dourada!",
+    cuesLabels: ["+$200 Perfect Streak Bonus", "5-Star Rating System"],
+    desc: "Take on commercial sanitization contracts (offices, boutiques, pharmacies, and restaurants). Mop floors, dust surfaces, and revive indoor plants. Flawless work unlocks the legendary Purple Star with Gold Trim!",
     responsibilities: [
-      "Passar rodo no chão molhado: se demorar para secar, clientes reclamam e descontam $20 do pagamento!",
-      "Regar plantas murchas (ficam verde-vivo e radiantes quando cuidadas).",
-      "Duas empresas para escolher: Spotless Ltd. (paga mais, mais rigorosa) ou Clean Family Services (mais tolerante).",
-      "Bônus de $ 200 a cada 5 dias perfeitos seguidos.",
-      "Com 5 estrelas e estrela roxa, libera contratos para limpar mansões de Alphaville!"
+      "Squeegee wet floors: if moisture lingers too long, clients complain and dock $20 from payment!",
+      "Water wilted indoor plants (they turn vibrant green and blossom under your care).",
+      "Choose between two agencies: Spotless Ltd. (higher pay, rigorous inspections) or Clean Family Services (relaxed, forgiving).",
+      "Earn a $200 cash bonus for every 5 consecutive flawless work days.",
+      "Reaching 5 stars plus the Purple Star unlocks high-paying contracts to clean luxury mansions in gated suburbs!"
     ],
-    promotionNotes: "No futuro, promoção para Limpeza Hospitalar (+40% de salário base).",
-    dialogQuote: "O piso já está seco com o rodo e todas as plantas da recepção estão verdinhas. Mais um dia perfeito para subir pras 5 estrelas!",
-    dialogSpeaker: "Faxineiro Profissional",
+    promotionNotes: "Future expansion into Hospital Sanitization Specialist (+40% base wage boost).",
+    dialogQuote: "Floor squeegeed dry and all lobby palms watered and shining green. Another flawless shift toward securing that 5th star!",
+    dialogSpeaker: "Professional Cleaner",
     dialogImage: "assets/img/job_cleaning_plants.png"
   },
   {
     id: "courier_bike",
     branch: "freelance",
-    branchName: "Serviços Terceirizados",
+    branchName: "Freelance & City Services",
     level: 1,
-    name: "Entregador Ciclista (App de Entregas)",
-    salary: "Pago por corrida (imediato)",
-    hours: "Livre · Quando quiser ligar o app",
+    name: "Bicycle Courier (Delivery App)",
+    salary: "Paid per delivery (Instant cashout)",
+    hours: "100% Flexible · Turn on app anytime",
     cues: ["starting"],
-    cuesLabels: ["Pagamento na Hora", "Sem Antecedentes"],
-    desc: "Pedala pelas ruas e ciclovias entregando refeições, medicamentos da farmácia e malotes com documentos entre empresas e a Prefeitura de SPRF.",
+    cuesLabels: ["Instant App Payouts", "No Background Checks"],
+    desc: "Pedal across traffic corridors and bike paths delivering restaurant takeout, urgent pharmacy medicine, and sealed corporate courier satchels between private firms and SPRF City Hall.",
     responsibilities: [
-      "Agilidade no trânsito sem atropelar pedestres.",
-      "Pode continuar trabalhando mesmo com status [Potencial Criminoso] ou [Fugitivo]!",
-      "Sem chefe, sem metas impostas: recebe o dinheiro imediatamente após a corrida."
+      "Navigate dense city traffic smoothly without striking pedestrians.",
+      "Continue working without interruption even with [Suspect] or [Fugitive] judicial statuses!",
+      "No boss, no production quotas: earnings hit your wallet the instant delivery confirmation clears."
     ],
-    promotionNotes: "Comprar bicicleta esportiva na Spoke Cycles para acelerar entregas.",
-    dialogQuote: "Mais uma entrega de remédios expressa da farmácia central para o condomínio de casas. Pagamento caiu na hora no aplicativo!",
-    dialogSpeaker: "Entregador de Bike",
+    promotionNotes: "Purchase high-performance road bikes at Spoke Cycles to shave travel times and multiply deliveries.",
+    dialogQuote: "Another express prescription delivery dropped off from the downtown pharmacy to the gated suburban estate. Fare deposited instantly in my app balance!",
+    dialogSpeaker: "Bike Courier",
     dialogImage: "assets/img/player_home.png"
   },
   {
     id: "ride_driver",
     branch: "freelance",
-    branchName: "Serviços Terceirizados",
+    branchName: "Freelance & City Services",
     level: 2,
-    name: "Motorista de Aplicativo (Carro)",
-    salary: "Pago por corrida (com passageiros)",
-    hours: "Livre · Noites e fins de semana",
+    name: "Rideshare Driver (Personal Car)",
+    salary: "Paid per completed trip (Fares + Tips)",
+    hours: "100% Flexible · Nights & Weekends",
     cues: ["arcade", "danger"],
-    cuesLabels: ["Eventos Raros & Calotes", "Bloqueio Judicial"],
-    desc: "Dirige seu próprio veículo transportando cidadãos de SPRF. Encara dezenas de eventos raros inspirados na vida real, desde caloteiros até passageiros enigmáticos ligados à invasão!",
+    cuesLabels: ["Rare Encounters & Fare Dodgers", "Judicial App Lockout"],
+    desc: "Drive your personal vehicle transporting citizens across SPRF. Navigate dozens of emergent slice-of-life events, from smooth-talking fare dodgers to enigmatic passengers murmuring about nocturnal anomalies across the sky!",
     responsibilities: [
-      "Conduzir passageiros em segurança até o destino.",
-      "Eventos raros canônicos: O passageiro que pede o PIX e promete pagar amanhã (alguns nunca pagam!); passageira nervosa da TV Maresol atrasada pro jornal ao vivo; 5 passageiros para 4 lugares (arrisca blitz policial!).",
-      "Se for classificado como [Procurado] pela Justiça, o aplicativo é bloqueado imediatamente!"
+      "Transport passengers safely to requested destinations across town.",
+      "Canonical emergent encounters: The passenger asking for your digital handle promising to pay tomorrow (some vanish forever!); an anxious TV Maresol anchor running late for a live broadcast; 5 passengers squeezing into a 4-seater (risking police checkpoints!).",
+      "If your judicial status is flagged as [Wanted], rideshare dispatch freezes your account immediately!"
     ],
-    promotionNotes: "Comprar sedãs de luxo na Motorama ou Eastside Auto para atrair clientes de alta renda.",
-    dialogQuote: "Moço, me passa seu PIX que eu pago assim que chegar em casa, prometo! (Spoiler: ele pode sumir e nunca transferir o dinheiro).",
-    dialogSpeaker: "Passageiro Suspeito",
+    promotionNotes: "Upgrade to luxury sedans at Motorama or Eastside Auto to unlock high-bracket clientele and airport transfers.",
+    dialogQuote: "Hey driver, give me your digital transfer handle and I'll send the fare the moment I get upstairs, I swear! (Spoiler: they might vanish into the night and never pay).",
+    dialogSpeaker: "Suspicious Passenger",
     dialogImage: "assets/img/crash_scene.png"
   }
 ];
 
-// --- RENDERIZAÇÃO DA ÁRVORE INTERATIVA ---
+// --- INTERACTIVE CAREER TREE RENDERING ---
 function renderCareerTree(filter = 'all', cueFilter = 'all') {
   const container = document.getElementById('treeHierarchyContainer');
   if (!container) return;
 
   container.innerHTML = '';
 
-  // Filtra profissões
+  // Filter positions
   const filtered = CAREERS_DATABASE.filter(item => {
     const matchBranch = (filter === 'all' || item.branch === filter);
     const matchCue = (cueFilter === 'all' || item.cues.includes(cueFilter));
@@ -579,14 +579,14 @@ function renderCareerTree(filter = 'all', cueFilter = 'all') {
   if (filtered.length === 0) {
     container.innerHTML = `
       <div class="callout-banner" style="text-align: center;">
-        <h4>Nenhuma profissão encontrada para este filtro combinado.</h4>
-        <p>Experimente alternar os ramos ou clicar em "Ver Todas as Carreiras".</p>
+        <h4>No positions found for this filter combination.</h4>
+        <p>Try switching sectors or clicking "All Sectors".</p>
       </div>
     `;
     return;
   }
 
-  // Agrupa por níveis (1 a 5)
+  // Group by levels (1 to 5)
   const levels = [1, 2, 3, 4, 5];
   levels.forEach(lvl => {
     const inLevel = filtered.filter(i => i.level === lvl);
@@ -615,19 +615,19 @@ function renderCareerTree(filter = 'all', cueFilter = 'all') {
       // Visual cues badges
       let cuePillsHtml = '';
       if (job.cues.includes('bonus')) {
-        cuePillsHtml += `<span class="cue-pill pill-bonus">⭐ BÔNUS ESPECIAL</span>`;
+        cuePillsHtml += `<span class="cue-pill pill-bonus">⭐ SPECIAL BONUS</span>`;
       }
       if (job.cues.includes('crime')) {
-        cuePillsHtml += `<span class="cue-pill pill-crime">⚖️ ESQUEMA ILÍCITO</span>`;
+        cuePillsHtml += `<span class="cue-pill pill-crime">⚖️ ILLICIT SCHEME</span>`;
       }
       if (job.cues.includes('danger')) {
-        cuePillsHtml += `<span class="cue-pill pill-danger">🚨 RISCO DE PRISÃO</span>`;
+        cuePillsHtml += `<span class="cue-pill pill-danger">🚨 POLICE RAID RISK</span>`;
       }
       if (job.cues.includes('diploma')) {
-        cuePillsHtml += `<span class="cue-pill pill-diploma">🎓 DIPLOMA OBRIGATÓRIO</span>`;
+        cuePillsHtml += `<span class="cue-pill pill-diploma">🎓 DEGREE REQUIRED</span>`;
       }
       if (job.cues.includes('executive')) {
-        cuePillsHtml += `<span class="cue-pill pill-executive">👔 REGIME EXECUTIVO</span>`;
+        cuePillsHtml += `<span class="cue-pill pill-executive">👔 EXECUTIVE SCHEDULE</span>`;
       }
 
       node.innerHTML = `
@@ -662,16 +662,16 @@ function renderCareerTree(filter = 'all', cueFilter = 'all') {
 
 function getLevelTitle(lvl) {
   switch(lvl) {
-    case 1: return "Porta de Entrada · Operacional";
-    case 2: return "Linha de Frente Técnica & Vendas";
-    case 3: return "Supervisão, Campo e Especialistas";
-    case 4: return "Gerência Alta & Executivos";
-    case 5: return "Diretoria Geral & Donos de Rede";
+    case 1: return "Entry-Level · Operational Foundations";
+    case 2: return "Frontline Technical & Sales";
+    case 3: return "Supervision, Field & Specialists";
+    case 4: return "Senior Management & Executives";
+    case 5: return "General Directorate & Chain Owners";
     default: return "";
   }
 }
 
-// Exibe os detalhes da carreira no painel inferior
+// Display career details in the lower X-ray panel
 function showCareerDetails(job) {
   const panel = document.getElementById('careerDetailPanel');
   if (!panel) return;
@@ -691,35 +691,35 @@ function showCareerDetails(job) {
 
     <div class="panel-stats-grid">
       <div class="panel-stat-card">
-        <span class="panel-stat-label">Remuneração Semanal</span>
+        <span class="panel-stat-label">Weekly Compensation</span>
         <span class="panel-stat-val salary-highlight">${job.salary}</span>
       </div>
       <div class="panel-stat-card">
-        <span class="panel-stat-label">Schedule de Trabalho</span>
+        <span class="panel-stat-label">Work Schedule</span>
         <span class="panel-stat-val" style="font-size: 15px;">${job.hours}</span>
       </div>
       <div class="panel-stat-card">
-        <span class="panel-stat-label">Requisito para Ingresso</span>
-        <span class="panel-stat-val" style="font-size: 15px;">${job.cues.includes('diploma') ? 'Diploma Universitário' : 'Promoção por Performance'}</span>
+        <span class="panel-stat-label">Entry Requirement</span>
+        <span class="panel-stat-val" style="font-size: 15px;">${job.cues.includes('diploma') ? 'University Degree Required' : 'Performance Promotion'}</span>
       </div>
     </div>
 
     <div class="block">
-      <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">📋 Rotina Operacional e Responsabilidades</h4>
+      <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">📋 Operational Routine & Canonical Responsibilities</h4>
       <ul style="padding-left: 20px; line-height: 1.6; color: #cbd5e1; display: grid; gap: 6px;">
         ${respItems}
       </ul>
     </div>
 
     <div class="block">
-      <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">🚀 Progressão e Oportunidades</h4>
+      <h4 style="color: #fff; font-size: 18px; margin-bottom: 8px;">🚀 Career Progression & Opportunities</h4>
       <p style="color: var(--text-muted); font-size: 15px;">${job.promotionNotes}</p>
     </div>
 
-    <!-- Cápsula de Diálogo e Captura Canônica -->
+    <!-- Dialog Capsule & Canonical In-Game Capture -->
     <div class="dialog-capsule ${job.cues.includes('danger') ? 'capsule-police' : 'capsule-office'}" style="margin-top: 10px;">
       <div class="dialog-avatar">
-        <img src="${job.dialogImage}" alt="Registro do Jogo">
+        <img src="${job.dialogImage}" alt="In-Game Record">
         <span class="status-indicator"></span>
       </div>
       <div class="dialog-body">
@@ -728,15 +728,15 @@ function showCareerDetails(job) {
             <span class="speaker-name">${job.dialogSpeaker}</span>
             <span class="speaker-role">${job.branchName}</span>
           </div>
-          <span class="dialog-time">REGISTRO CANÔNICO #EX-${job.id.toUpperCase()}</span>
+          <span class="dialog-time">CANONICAL RECORD #EX-${job.id.toUpperCase()}</span>
         </div>
         <div class="dialog-bubble">
           <p class="speech-text">"${job.dialogQuote}"</p>
           <div class="dialog-media" style="margin-top: 12px; cursor: pointer;">
             <img src="${job.dialogImage}" alt="Gameplay ${job.name}">
             <div class="media-caption">
-              <span>Captura Real do Jogo · ${job.name}</span>
-              <span class="media-badge">INTERATIVO</span>
+              <span>Real In-Game Capture · ${job.name}</span>
+              <span class="media-badge">INTERACTIVE</span>
             </div>
           </div>
         </div>
@@ -744,11 +744,11 @@ function showCareerDetails(job) {
     </div>
   `;
 
-  // Scroll suave até o painel
+  // Smooth scroll into panel
   panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-// Inicialização dos Filtros na Página
+// Initialize Filters on DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
   let currentBranch = 'all';
   let currentCue = 'all';
@@ -773,10 +773,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Render inicial
+  // Initial render
   renderCareerTree();
 
-  // Seleciona a primeira profissão de exemplo
+  // Select first canonical job
   if (CAREERS_DATABASE.length > 0) {
     showCareerDetails(CAREERS_DATABASE[0]);
   }
