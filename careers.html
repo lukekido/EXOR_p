@@ -74,8 +74,8 @@
       <h1 class="section-title">The Canonical Career Tree</h1>
       <p class="section-subtitle">
         Working is not a pause between missions: <strong>the work IS the game</strong>. 
-        Navigate through the branches of the metropolis, filter by <em>visual cues</em> for special perks, 
-        uncover kickback schemes, permanent modifiers, and university degree prerequisites.
+        Organized by autonomous profession trees: explore the 10 ranks of Lunar Industrial Sensors, 7 positions of the Metropolitan Pharmacy Chain, 7 culinary ranks of the Restaurant Sector, Autonomous Gigs, and Supermarket Retail. 
+        Each branch features distinct visual sequences, promotion choices, degree requirements, and lifetime career modifiers.
       </p>
     </section>
 
@@ -144,32 +144,35 @@
     <div class="career-tree-container">
       <div class="tree-controls">
         <div class="tree-filter-group">
-          <span style="font-family: var(--font-mono); font-size: 12px; color: #fff; text-transform: uppercase;">Sector:</span>
-          <button class="filter-btn branch-filter-btn active" data-branch="all">🏢 All Sectors</button>
-          <button class="filter-btn branch-filter-btn" data-branch="office">🔬 Industrial Sensors (Office)</button>
-          <button class="filter-btn branch-filter-btn" data-branch="pharmacy">💊 Pharmacy Chain</button>
-          <button class="filter-btn branch-filter-btn" data-branch="restaurant">🍽️ Restaurants & Dining</button>
-          <button class="filter-btn branch-filter-btn" data-branch="freelance">🧹 Freelance & City Services</button>
+          <span class="tree-filter-label">Profession Tree:</span>
+          <button class="filter-btn branch-filter-btn active" data-branch="all">🏢 All Professions</button>
+          <button class="filter-btn branch-filter-btn" data-branch="office">🔬 Lunar Sensors (10)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="pharmacy">💊 Pharmacy Chain (7)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="restaurant">🍽️ Restaurants (7)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="freelance">🛵 Autonomous Gigs (4)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="supermarket">🛒 Supermarket (1)</button>
         </div>
 
         <div class="tree-filter-group">
-          <span style="font-family: var(--font-mono); font-size: 12px; color: #fff; text-transform: uppercase;">Visual Cues:</span>
-          <button class="filter-btn cue-filter-btn active" data-cue="all">All</button>
+          <span class="tree-filter-label">Visual Cues:</span>
+          <button class="filter-btn cue-filter-btn active" data-cue="all">All Cues</button>
           <button class="filter-btn cue-filter-btn" data-cue="bonus">⭐ Salary Bonus</button>
-          <button class="filter-btn cue-filter-btn" data-cue="crime">⚖️ Kickback Scheme</button>
-          <button class="filter-btn cue-filter-btn" data-cue="danger">🚨 Police Raid Risk</button>
+          <button class="filter-btn cue-filter-btn" data-cue="crime">⚖️ Illicit Scheme</button>
+          <button class="filter-btn cue-filter-btn" data-cue="danger">🚨 Police Sting Risk</button>
           <button class="filter-btn cue-filter-btn" data-cue="diploma">🎓 Degree Required</button>
           <button class="filter-btn cue-filter-btn" data-cue="executive">👔 Executive (2h/day)</button>
+          <button class="filter-btn cue-filter-btn" data-cue="direct_hire">🚪 Direct Hire</button>
         </div>
       </div>
 
       <!-- CUES LEGEND -->
       <div class="visual-cue-legend">
-        <span class="cue-item"><span class="cue-dot bonus"></span> Salary Bonus (+20%, +50%, Commissions)</span>
-        <span class="cue-item"><span class="cue-dot crime"></span> Illicit Activity / Kickbacks</span>
-        <span class="cue-item"><span class="cue-dot danger"></span> Police Raid Risk (In Flagrante)</span>
+        <span class="cue-item"><span class="cue-dot bonus"></span> Salary Bonus / Commission</span>
+        <span class="cue-item"><span class="cue-dot crime"></span> Illicit Kickback Scheme</span>
+        <span class="cue-item"><span class="cue-dot danger"></span> Police Sting Risk (4% Informant Trap)</span>
         <span class="cue-item"><span class="cue-dot diploma"></span> University Degree Required</span>
-        <span class="cue-item"><span class="cue-dot executive"></span> Reduced Hours (2h/day executive schedule)</span>
+        <span class="cue-item"><span class="cue-dot executive"></span> Executive Hours (2h/day schedule)</span>
+        <span class="cue-item"><span class="cue-dot direct_hire"></span> Direct Senior Hire Available</span>
       </div>
 
       <!-- DYNAMIC HIERARCHY TREE (RENDERED VIA tree_en.js) -->

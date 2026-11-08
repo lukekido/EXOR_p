@@ -1,6 +1,6 @@
 /* ==========================================================================
-   EXORDIUM // ÁRVORE INTERATIVA DE PROFISSÕES & CARREIRAS
-   Visual Cues, Nós de Progressão, Ramificações e Opções Especiais
+   EXORDIUM // ÁRVORE INTERATIVA DE PROFISSÕES & CARREIRAS (GESTALT ENGINE)
+   Divisão canônica por profissões, sequências de progressão e leitura visual
    ========================================================================== */
 
 .career-tree-container {
@@ -10,16 +10,14 @@
   margin: 30px 0;
 }
 
-/* Barra de Filtros & Visual Cues */
+/* Barra de Filtros & Navegação de Ramos */
 .tree-controls {
   background: var(--bg-surface);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
   padding: 18px 24px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
   gap: 16px;
 }
 
@@ -30,6 +28,15 @@
   gap: 8px;
 }
 
+.tree-filter-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  min-width: 90px;
+}
+
 .filter-btn {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border-subtle);
@@ -37,7 +44,7 @@
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 600;
-  padding: 8px 16px;
+  padding: 7px 14px;
   border-radius: var(--radius-pill);
   cursor: pointer;
   transition: all 0.2s ease;
@@ -63,10 +70,14 @@
 .visual-cue-legend {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--text-muted);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
 }
 
 .cue-item {
@@ -76,8 +87,8 @@
 }
 
 .cue-dot {
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   display: inline-block;
 }
@@ -87,67 +98,170 @@
 .cue-dot.danger { background: var(--accent-crimson); box-shadow: 0 0 8px rgba(239, 68, 68, 0.6); }
 .cue-dot.diploma { background: var(--accent-cyan); box-shadow: 0 0 8px rgba(6, 182, 212, 0.6); }
 .cue-dot.executive { background: #38bdf8; box-shadow: 0 0 8px rgba(56, 189, 248, 0.6); }
+.cue-dot.direct_hire { background: #10b981; box-shadow: 0 0 8px rgba(16, 185, 129, 0.6); }
 
-/* Árvore / Grid Hierárquico */
-.tree-hierarchy-wrapper {
+/* ==========================================================================
+   BOARDS DE PROFISSÃO (GESTALT REGION & PROXIMITY)
+   ========================================================================== */
+
+.profession-board {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 28px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
   position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  transition: all 0.25s ease;
 }
 
-.tree-level-row {
+.profession-board:hover {
+  border-color: rgba(20, 184, 166, 0.3);
+}
+
+/* Borda luminosa no topo por profissão */
+.profession-board::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 3px;
+  background: var(--brand-teal);
+}
+
+.profession-board.board-office::before { background: var(--brand-teal); }
+.profession-board.board-pharmacy::before { background: #06b6d4; }
+.profession-board.board-restaurant::before { background: var(--accent-amber); }
+.profession-board.board-freelance::before { background: #8b5cf6; }
+.profession-board.board-supermarket::before { background: #10b981; }
+
+.board-header {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+}
+
+.board-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   gap: 12px;
-  position: relative;
 }
 
-.level-header {
+.board-title-group {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-.level-badge {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 4px 10px;
-  border-radius: var(--radius-sm);
-  background: rgba(20, 184, 166, 0.12);
-  color: var(--brand-teal);
-  border: 1px solid rgba(20, 184, 166, 0.3);
+.board-icon {
+  font-size: 28px;
+  line-height: 1;
 }
 
-.level-title {
+.board-title {
   font-family: var(--font-display);
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.board-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
-.level-nodes {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+.board-subtitle {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
-/* O Nó da Profissão */
-.tree-node {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
+.board-rules-banner {
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid var(--brand-teal);
+  padding: 10px 16px;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 13px;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ==========================================================================
+   FLUXO GESTALT DAS TRILHAS (CONTINUITY & SEQUENCE)
+   ========================================================================== */
+
+.board-tracks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.flow-track-block {
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: var(--radius-md);
   padding: 18px 20px;
   display: flex;
   flex-direction: column;
+  gap: 14px;
+}
+
+.track-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 8px;
+}
+
+.track-block-title {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.track-nodes-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* ==========================================================================
+   CARDS DE NÓ DA PROFISSÃO
+   ========================================================================== */
+
+.tree-node {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 12px;
   cursor: pointer;
   position: relative;
-  transition: all 0.25s ease;
+  transition: all 0.22s ease;
   overflow: hidden;
 }
 
@@ -162,56 +276,35 @@
 .tree-node:hover {
   background: var(--bg-card-hover);
   border-color: var(--border-active);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4), var(--shadow-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.45);
 }
 
 .tree-node.selected {
   border-color: var(--brand-teal);
   background: rgba(20, 184, 166, 0.08);
-  box-shadow: 0 0 25px rgba(20, 184, 166, 0.3);
+  box-shadow: 0 0 25px rgba(20, 184, 166, 0.35);
 }
 
 .tree-node.selected::before {
   background: var(--brand-teal);
 }
 
-/* Estilos de Visual Cue em Nós Especiais */
-.tree-node[data-cue*="bonus"] {
-  border-color: rgba(251, 191, 36, 0.3);
-}
-.tree-node[data-cue*="bonus"]::before {
-  background: var(--accent-gold);
-}
+/* Cues Especiais */
+.tree-node[data-cue*="bonus"] { border-color: rgba(251, 191, 36, 0.25); }
+.tree-node[data-cue*="bonus"]::before { background: var(--accent-gold); }
 
-.tree-node[data-cue*="crime"] {
-  border-color: rgba(168, 85, 247, 0.3);
-}
-.tree-node[data-cue*="crime"]::before {
-  background: var(--accent-purple);
-}
+.tree-node[data-cue*="crime"] { border-color: rgba(168, 85, 247, 0.25); }
+.tree-node[data-cue*="crime"]::before { background: var(--accent-purple); }
 
-.tree-node[data-cue*="danger"] {
-  border-color: rgba(239, 68, 68, 0.35);
-  box-shadow: inset 0 0 15px rgba(239, 68, 68, 0.05);
-}
-.tree-node[data-cue*="danger"]::before {
-  background: var(--accent-crimson);
-}
+.tree-node[data-cue*="danger"] { border-color: rgba(239, 68, 68, 0.3); }
+.tree-node[data-cue*="danger"]::before { background: var(--accent-crimson); }
 
-.tree-node[data-cue*="diploma"] {
-  border-color: rgba(6, 182, 212, 0.3);
-}
-.tree-node[data-cue*="diploma"]::before {
-  background: var(--accent-cyan);
-}
+.tree-node[data-cue*="diploma"] { border-color: rgba(6, 182, 212, 0.25); }
+.tree-node[data-cue*="diploma"]::before { background: var(--accent-cyan); }
 
-.tree-node[data-cue*="executive"] {
-  border-color: rgba(56, 189, 248, 0.4);
-}
-.tree-node[data-cue*="executive"]::before {
-  background: #38bdf8;
-}
+.tree-node[data-cue*="executive"] { border-color: rgba(56, 189, 248, 0.3); }
+.tree-node[data-cue*="executive"]::before { background: #38bdf8; }
 
 .node-header {
   display: flex;
@@ -220,82 +313,114 @@
   gap: 10px;
 }
 
-.node-role-name {
-  font-family: var(--font-display);
-  font-size: 18px;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.2;
-}
-
-.node-branch-tag {
+.node-level-chip {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--text-muted);
+  font-weight: 700;
   text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+}
+
+.node-role-name {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-top: 4px;
+}
+
+/* Indicador de Sequência (Gestalt Continuity) */
+.node-sequence-badge {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(20, 184, 166, 0.08);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+  color: #5eead4;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  line-height: 1.3;
+}
+
+.node-sequence-badge.is-start {
+  background: rgba(16, 185, 129, 0.12);
+  border-color: rgba(16, 185, 129, 0.35);
+  color: #34d399;
+}
+
+.node-sequence-badge.is-choice {
+  background: rgba(251, 191, 36, 0.1);
+  border-color: rgba(251, 191, 36, 0.3);
+  color: #fde047;
+}
+
+.node-sequence-badge.is-summit {
+  background: rgba(168, 85, 247, 0.12);
+  border-color: rgba(168, 85, 247, 0.35);
+  color: #d8b4fe;
 }
 
 .node-cues-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
 }
 
 .cue-pill {
   font-family: var(--font-mono);
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
-  padding: 2px 7px;
+  padding: 2px 6px;
   border-radius: var(--radius-sm);
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 3px;
 }
 
 .pill-bonus {
-  background: rgba(251, 191, 36, 0.18);
+  background: rgba(251, 191, 36, 0.15);
   color: #fde047;
-  border: 1px solid rgba(251, 191, 36, 0.4);
-  animation: pulse-glow-gold 3s infinite alternate;
-}
-
-@keyframes pulse-glow-gold {
-  0% { box-shadow: 0 0 4px rgba(251, 191, 36, 0.2); }
-  100% { box-shadow: 0 0 12px rgba(251, 191, 36, 0.5); }
+  border: 1px solid rgba(251, 191, 36, 0.35);
 }
 
 .pill-crime {
-  background: rgba(168, 85, 247, 0.18);
+  background: rgba(168, 85, 247, 0.15);
   color: #d8b4fe;
-  border: 1px solid rgba(168, 85, 247, 0.4);
+  border: 1px solid rgba(168, 85, 247, 0.35);
 }
 
 .pill-danger {
-  background: rgba(239, 68, 68, 0.18);
+  background: rgba(239, 68, 68, 0.15);
   color: #fca5a5;
-  border: 1px solid rgba(239, 68, 68, 0.4);
-  animation: pulse-alert 2s infinite;
-}
-
-@keyframes pulse-alert {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  border: 1px solid rgba(239, 68, 68, 0.35);
 }
 
 .pill-diploma {
-  background: rgba(6, 182, 212, 0.18);
+  background: rgba(6, 182, 212, 0.15);
   color: #67e8f9;
-  border: 1px solid rgba(6, 182, 212, 0.4);
+  border: 1px solid rgba(6, 182, 212, 0.35);
 }
 
 .pill-executive {
-  background: rgba(56, 189, 248, 0.18);
+  background: rgba(56, 189, 248, 0.15);
   color: #7dd3fc;
-  border: 1px solid rgba(56, 189, 248, 0.4);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.pill-direct {
+  background: rgba(16, 185, 129, 0.15);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.35);
 }
 
 .node-desc {
-  font-size: 14px;
+  font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.45;
 }
@@ -307,7 +432,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   padding-top: 10px;
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 12px;
 }
 
 .node-salary {
@@ -319,7 +444,10 @@
   color: var(--text-muted);
 }
 
-/* Painel de Detalhes da Profissão Selecionada (Drawer / Raio-X) */
+/* ==========================================================================
+   PAINEL DE DETALHES DA PROFISSÃO SELECIONADA (RAIO-X)
+   ========================================================================== */
+
 .career-detail-panel {
   background: var(--bg-surface);
   border: 1px solid var(--border-active);

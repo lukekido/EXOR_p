@@ -71,9 +71,9 @@
       <div class="eyebrow">Progressão Social, Empregos & Economia Viva</div>
       <h1 class="section-title">A Árvore Canônica de Profissões</h1>
       <p class="section-subtitle">
-        Trabalhar não é uma pausa no jogo: <strong>o trabalho é o jogo</strong>. 
-        Navegue pelos ramos da metrópole, filtre por <em>visual cues</em> de opções especiais, 
-        descubra esquemas de corrupção, bônus permanentes e requisitos de diploma universitário.
+        Trabalhar não é uma pausa entre missões: <strong>o trabalho É o jogo</strong>. 
+        Estruturada por ramos profissionais autônomos: explore os 10 cargos da Lunar Sensores Industriais, os 7 postos da Rede de Drogarias, os 7 degraus gastronômicos dos Restaurantes, os Bicos Autônomos e o Varejo de Supermercados. 
+        Cada ramo conta com sequências visuais claras, escolhas de promoção, exigência de diplomas e modificadores salariais vitalícios.
       </p>
     </section>
 
@@ -143,36 +143,38 @@
     <div class="career-tree-container">
       <div class="tree-controls">
         <div class="tree-filter-group">
-          <span style="font-family: var(--font-mono); font-size: 12px; color: #fff; text-transform: uppercase;">Setor:</span>
-          <button class="filter-btn branch-filter-btn active" data-branch="all">🏢 Todos os Ramos</button>
-          <button class="filter-btn branch-filter-btn" data-branch="office">🔬 Sensores (Escritório)</button>
-          <button class="filter-btn branch-filter-btn" data-branch="pharmacy">💊 Rede Farmacêutica</button>
-          <button class="filter-btn branch-filter-btn" data-branch="restaurant">🍽️ Restaurantes</button>
-          <button class="filter-btn branch-filter-btn" data-branch="freelance">🧹 Autônomos & Limpeza</button>
+          <span class="tree-filter-label">Árvore Profissional:</span>
+          <button class="filter-btn branch-filter-btn active" data-branch="all">🏢 Todas as Profissões</button>
+          <button class="filter-btn branch-filter-btn" data-branch="office">🔬 Sensores Lunar (10)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="pharmacy">💊 Rede de Farmácias (7)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="restaurant">🍽️ Restaurantes (7)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="freelance">🛵 Bicos Autônomos (4)</button>
+          <button class="filter-btn branch-filter-btn" data-branch="supermarket">🛒 Supermercado (1)</button>
         </div>
 
         <div class="tree-filter-group">
-          <span style="font-family: var(--font-mono); font-size: 12px; color: #fff; text-transform: uppercase;">Visual Cues:</span>
-          <button class="filter-btn cue-filter-btn active" data-cue="all">Todos</button>
+          <span class="tree-filter-label">Pistas Visuais:</span>
+          <button class="filter-btn cue-filter-btn active" data-cue="all">Todas as Pistas</button>
           <button class="filter-btn cue-filter-btn" data-cue="bonus">⭐ Bônus Salarial</button>
-          <button class="filter-btn cue-filter-btn" data-cue="crime">⚖️ Esquema / Caixa 2</button>
-          <button class="filter-btn cue-filter-btn" data-cue="danger">🚨 Risco Prisão</button>
-          <button class="filter-btn cue-filter-btn" data-cue="diploma">🎓 Exige Diploma</button>
-          <button class="filter-btn cue-filter-btn" data-cue="executive">👔 Executivo (2h/dia)</button>
+          <button class="filter-btn cue-filter-btn" data-cue="crime">⚖️ Esquema Ilícito</button>
+          <button class="filter-btn cue-filter-btn" data-cue="danger">🚨 Risco de Prisão (X9)</button>
+          <button class="filter-btn cue-filter-btn" data-cue="diploma">🎓 Diploma Exigido</button>
+          <button class="filter-btn cue-filter-btn" data-cue="executive">👔 Regime Executivo (2h/dia)</button>
+          <button class="filter-btn cue-filter-btn" data-cue="direct_hire">🚪 Admissão Direta</button>
         </div>
       </div>
 
-      <!-- LEGENDA DE CUES -->
+      <!-- LEGENDA DE PISTAS VISUAIS -->
       <div class="visual-cue-legend">
-        <span class="cue-item"><span class="cue-dot bonus"></span> Bônus Salarial (+20%, +50%, Comissões)</span>
-        <span class="cue-item"><span class="cue-dot crime"></span> Atividade Ilícita / Caixa 2</span>
-        <span class="cue-item"><span class="cue-dot danger"></span> Risco de Flagrante Policial</span>
-        <span class="cue-item"><span class="cue-dot diploma"></span> Requisito de Formação Superior</span>
-        <span class="cue-item"><span class="cue-dot executive"></span> Carga Horária Reduzida (2h/dia)</span>
+        <span class="cue-item"><span class="cue-dot bonus"></span> Bônus Salarial / Comissão</span>
+        <span class="cue-item"><span class="cue-dot crime"></span> Esquema de Desvio / Caixa 2</span>
+        <span class="cue-item"><span class="cue-dot danger"></span> Risco de Flagrante (Armadilha X9)</span>
+        <span class="cue-item"><span class="cue-dot diploma"></span> Diploma Universitário Obrigatório</span>
+        <span class="cue-item"><span class="cue-dot executive"></span> Carga Horária Executiva (2h/dia)</span>
+        <span class="cue-item"><span class="cue-dot direct_hire"></span> Contratação Direta Permitida</span>
       </div>
 
-      <!-- GRADE HIERÁRQUICA DINÂMICA (RENDERIZADA VIA tree.js) -->
-      <div id="treeHierarchyContainer" class="tree-hierarchy-wrapper">
+treeHierarchyContainer" class="tree-hierarchy-wrapper">
         <!-- Render dinâmico injetado aqui -->
       </div>
 
