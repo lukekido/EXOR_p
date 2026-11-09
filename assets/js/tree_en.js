@@ -375,7 +375,7 @@ const CAREERS_DATABASE = [
       "Risk: Internal IT monitors encrypted packets, and corporate buyers might be a compliance trap orchestrated by the Director."
     ],
     "promotionNotes": "Direct automatic promotion track to Chief Financial Officer (CFO).",
-    "dialogQuote": "The rival firm offered $15,000 in untraceable cash to leak schematics for our high-temp thermal probe. If executive compliance intercepts this, it's straight to a state prison cube.",
+    "dialogQuote": "The rival firm offered $15,000 in untraceable cash to leak schematics for our high-temp thermal probe. If executive compliance intercepts this, it's straight to maximum-security prison.",
     "dialogSpeaker": "Market Intelligence Analyst",
     "dialogImage": "assets/img/job_office_elevator.png"
   },
