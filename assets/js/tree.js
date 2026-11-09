@@ -58,7 +58,7 @@ const CAREER_SECTORS = [
     "brandTag": "Varejo Farmacêutico // 7 Unidades na Cidade",
     "icon": "💊",
     "subtitle": "7 Cargos Canônicos · Níveis 1 a 5 · Cargos Superiores Cobrem os Inferiores",
-    "ruleNotice": "A equipe da drogaria acumula e cobre todas as responsabilidades subordinadas em horários de pico. Ramifique para Gerência ou gradue-se em Farmácia para o bônus permanente de +50%.",
+    "ruleNotice": "A equipe da drogaria acumula e cobre todas as responsabilidades subordinadas em horários de pico. Ramifique para Gerência ou gradue-se em Farmácia para o desbloquear o bônus salarial permanente de híbrido.",
     "tracks": [
       {
         "id": "counter",
@@ -158,7 +158,7 @@ const CAREER_SECTORS = [
   },
   {
     "id": "supermarket",
-    "name": "Rede Municipal de Supermercados (Super Takai)",
+    "name": "Super Takai - Rede de Supermercados",
     "brandTag": "スーパータカイ Supermarkets // 3 Filiais na Cidade",
     "icon": "🛒",
     "subtitle": "Reposição de Varejo · 3 Filiais em SPRF",
@@ -241,7 +241,7 @@ const CAREERS_DATABASE = [
     "branchName": "Lunar — Sensores Industriais",
     "level": 2,
     "name": "Inside Sales (Vendas Internas)",
-    "salary": "$ 2.000 / sem + comissão de 3%",
+    "salary": "$ 2.000 / sem + Comissão de Vendas",
     "hours": "Seg-Sex · 08:00 às 17:00",
     "sequenceType": "choice",
     "sequenceLabel": "🔀 Escolha a partir do Auxiliar",
@@ -257,7 +257,7 @@ const CAREERS_DATABASE = [
       "Cruzar especificações de catálogo (PT-100 a PT-400, sondas térmicas TH-10 a TH-50).",
       "Evitar 'oversell' e nunca vender sensor fora da faixa técnica solicitada.",
       "Risco canônico: Vender sensor incompatível que derrete a 80 °C gera processo judicial e demissão imediata!",
-      "Negociar faixas de desconto (0% a 20%) para fechar antes da 3ª recusa."
+      "Negociar margens de desconto escalonadas para fechar pedidos antes da 3ª recusa."
     ],
     "promotionNotes": "Permite escolher ramificação entre Vendas Externas (A Campo) ou Gerente Comercial de Vendas.",
     "dialogQuote": "O cliente quer pagar $900 numa sonda que aguente 80 °C. Se eu empurrar a de 45 °C baratinha, ela vai derreter na caldeira dele...",
@@ -281,7 +281,7 @@ const CAREERS_DATABASE = [
     "cuesLabels": [
       "Orçamento Vira Bônus"
     ],
-    "desc": "Atua como ouvidoria de primeira instância. Analisa reclamações graves, concede compensações de 10% a 200% do valor do produto e aprova garantias especiais.",
+    "desc": "Atua como ouvidoria de primeira instância. Analisa reclamações graves, concede compensações proporcionais à gravidade do caso e aprova garantias especiais.",
     "responsibilities": [
       "Gerenciar o orçamento semanal de indenizações e acordos de conciliação.",
       "Decisão estratégica: O dinheiro que sobra da verba no final da semana é convertido integralmente em performance e prestígio pessoal!",
@@ -307,15 +307,15 @@ const CAREERS_DATABASE = [
       "bonus"
     ],
     "cuesLabels": [
-      "Desbloqueia Modificador +20%"
+      "Desbloqueia Modificador Permanente"
     ],
-    "desc": "Visitas técnicas a indústrias e clientes corporativos em SPRF. Quem passa por aqui conquista o cobiçado modificador permanente 'Eu vi, eu fui e eu conquistei' (+20% em todas as remunerações comerciais).",
+    "desc": "Visitas técnicas a indústrias e clientes corporativos em SPRF. Quem passa por aqui conquista o cobiçado modificador permanente de Lábia Comercial em todas as remunerações de vendas.",
     "responsibilities": [
       "Prospectar polos fabris e fechar contratos de alto volume para a cidade.",
-      "Garante a conquista do modificador permanente de Lábia Comercial (+20% vitalício em salários de vendas!)."
+      "Garante a conquista do modificador permanente de Lábia Comercial (vantagem salarial vitalícia em funções comerciais)."
     ],
     "promotionNotes": "Promoção para Gerente de Vendas com bônus permanente mantido, ou salto para Vice-Diretor Executivo.",
-    "dialogQuote": "Esse contrato de sensores para o polo industrial garantiu 20% a mais de comissão no meu bolso para sempre!",
+    "dialogQuote": "Esse contrato de sensores para o polo industrial garantiu um bônus vitalício de comissão no meu bolso para sempre!",
     "dialogSpeaker": "Representante Comercial",
     "dialogImage": "assets/img/downtown.png"
   },
@@ -338,12 +338,12 @@ const CAREERS_DATABASE = [
       "Esquema Caixa 2",
       "Risco de Prisão (X9)"
     ],
-    "desc": "Analisa métricas e monitora e-mails de vendedores. Pode extorquir esquemas de desvio ('Caixa 2') recebendo 50% todo dia, mas corre 4% de risco de cair na armadilha do Diretor com 4 policiais!",
+    "desc": "Analisa métricas e monitora e-mails de vendedores. Pode entrar em esquemas de comissões paralelas, mas corre o perigo de cair em uma emboscada armada pela Diretoria com policiais!",
     "responsibilities": [
       "Pode bater o ponto e circular pela cidade se responder aos chamados corporativos.",
       "Pode demitir vendedores por justa causa.",
-      "Esquema secreto: Entrar no desvio de vendas e lucrar 50% diário das fraudes.",
-      "Evento canônico X9 (4% de chance): O vendedor é informante do Diretor; a polícia dá voz de prisão imediata por corrupção corporativa!"
+      "Esquema secreto: Participar de desvios ilícitos e lucrar com comissões paralelas.",
+      "Operação Flagrante com Informante: Se o vendedor estiver colaborando com a Diretoria, a polícia dá voz de prisão imediata por corrupção corporativa!"
     ],
     "promotionNotes": "Promoção direta para Vice-Diretor Executivo da empresa.",
     "dialogQuote": "Você achou que eu ia te demitir? Quem disse que você será demitido? Policiais, podem entrar!",
@@ -604,7 +604,7 @@ const CAREERS_DATABASE = [
       "Procedimentos clínicos na sala privativa (injeções, furos, testes).",
       "Pode realizar qualquer tarefa de balconista e supervisor."
     ],
-    "promotionNotes": "Pode se fundir com o cargo de Gerente para formar o 'Farmacêutico-Gerente' (+50% permanente!).",
+    "promotionNotes": "Pode se fundir com o cargo de Gerente para formar o 'Farmacêutico-Gerente' (bônus salarial permanente no topo da carreira).",
     "dialogQuote": "A aplicação do antibiótico injetável está pronta na sala 2. Já conferi a prescrição com o médico.",
     "dialogSpeaker": "Dra. Farmacêutica",
     "dialogImage": "assets/img/job_pharmacy_rx.png"
@@ -615,10 +615,10 @@ const CAREERS_DATABASE = [
     "branchName": "Rede Farmacêutica",
     "level": 4,
     "name": "Farmacêutico-Gerente (Híbrido)",
-    "salary": "$ 7.500 / sem + PLR (+50% Permanente!)",
+    "salary": "$ 7.500 / sem + PLR (Bônus Permanente!)",
     "hours": "Sem horário fixo · Autonomia Total",
     "sequenceType": "auto",
-    "sequenceLabel": "⭐ Híbrido Supremo (+50% Vitalício)",
+    "sequenceLabel": "⭐ Híbrido Supremo",
     "leadsTo": "Gerente Regional de Farmácias",
     "cues": [
       "diploma",
@@ -626,13 +626,13 @@ const CAREERS_DATABASE = [
       "direct_hire"
     ],
     "cuesLabels": [
-      "Bônus Permanente +50%",
+      "Bônus Permanente Vitalício",
       "Clínica & Gestão Dupla"
     ],
-    "desc": "A combinação perfeita aprovada no cânone. O gerente que se forma em Farmácia (ou o farmacêutico promovido a gerente) ganha +50% no salário base permanentemente!",
+    "desc": "A combinação perfeita aprovada no cânone. O gerente que se forma em Farmácia (ou o farmacêutico promovido a gerente) ganha um bônus permanente no salário base para toda a vida!",
     "responsibilities": [
       "Substitui o farmacêutico em ausências e assume qualquer posto da loja.",
-      "Bônus permanente de 50% mantido mesmo ao trocar de rede farmacêutica.",
+      "Bônus permanente mantido mesmo ao trocar de rede farmacêutica.",
       "Comanda contratações, demissões e a responsabilidade técnica do estabelecimento."
     ],
     "promotionNotes": "Promoção direta para Gerente Regional.",
@@ -817,7 +817,7 @@ const CAREERS_DATABASE = [
     "branchName": "Restaurantes & Gastronomia",
     "level": 3,
     "name": "Chef Executivo",
-    "salary": "$ 8.000 / semana (Dobro do Gerente + 50%!)",
+    "salary": "$ 8.000 / semana (Dobro do Gerente + Bônus Máximo)",
     "hours": "Qua-Dom · 09:30 às 15:00",
     "sequenceType": "choice",
     "sequenceLabel": "🎓 Diploma em Gastronomia Obrigatório",
@@ -829,10 +829,10 @@ const CAREERS_DATABASE = [
     ],
     "cuesLabels": [
       "Diploma em Gastronomia",
-      "Salário Dobro do Gerente + 50%",
+      "Salário Dobro do Gerente + Bônus Máximo",
       "Admissão Direta"
     ],
-    "desc": "A autoridade máxima da culinária. Prepara carnes, peixes e finaliza o empratamento artístico. Ganha o dobro do gerente mais 50% de bônus permanente!",
+    "desc": "A autoridade máxima da culinária. Prepara carnes, peixes e finaliza o empratamento artístico. Ganha o dobro do gerente mais um prestigioso bônus permanente!",
     "responsibilities": [
       "Obrigatório ter graduação em Gastronomia.",
       "Ponto perfeito de carnes, aves e frutos do mar.",
@@ -881,7 +881,7 @@ const CAREERS_DATABASE = [
     "level": 1,
     "name": "Entregador Ciclista (App de Entregas)",
     "salary": "Pago por corrida (imediato)",
-    "hours": "100% Livre · Ligue o app quando quiser",
+    "hours": "Livre · Ligue o app quando quiser",
     "sequenceType": "start",
     "sequenceLabel": "🛵 Bico Autônomo",
     "leadsTo": "Autônomo (Compre bikes na Spoke Cycles)",
@@ -910,7 +910,7 @@ const CAREERS_DATABASE = [
     "level": 1,
     "name": "Motorista de Aplicativo (Carro)",
     "salary": "Pago por corrida (com passageiros)",
-    "hours": "100% Livre · Noites e fins de semana",
+    "hours": "Livre · Noites e fins de semana",
     "sequenceType": "start",
     "sequenceLabel": "🚗 Bico Autônomo",
     "leadsTo": "Autônomo (Compre carros nas Concessionárias)",
@@ -934,62 +934,33 @@ const CAREERS_DATABASE = [
     "dialogImage": "assets/img/crash_scene.png"
   },
   {
-    "id": "cleaner_spotless",
+    "id": "cleaner_commercial",
     "branch": "freelance",
-    "branchName": "Serviços Terceirizados & Aplicativos",
+    "branchName": "Trabalhos Autônomos & Serviços Urbanos",
     "level": 1,
-    "name": "Faxineiro Comercial — Spotless Ltda.",
-    "salary": "$ 1.500 / semana + Bônus de Streak",
-    "hours": "Qualquer hora das 24h nos dias escalados",
+    "name": "Profissional de Limpeza Comercial",
+    "salary": "$ 1.450 / semana + Bônus de Sequência",
+    "hours": "24/7 Qualquer Horário em Dias Úteis · Total Liberdade",
     "sequenceType": "start",
-    "sequenceLabel": "🧹 Limpeza Comercial (Rigorosa)",
-    "leadsTo": "5 Estrelas Desbloqueia Mansões",
+    "sequenceLabel": "🧹 Limpeza Comercial",
+    "leadsTo": "Sequência de 5 Estrelas Libera Mansões de Luxo",
     "cues": [
       "bonus"
     ],
     "cuesLabels": [
-      "Bônus +$200 por Streak",
+      "Bônus de Sequência Impecável",
       "Sistema de 5 Estrelas"
     ],
-    "desc": "Contratado pela Spotless Ltda. para higienizar escritórios, lojas, farmácias e salões de restaurantes. Fiscalização rígida, maior remuneração e multas mais severas por piso molhado.",
+    "desc": "Contratado para higienizar escritórios, boutiques, farmácias e salões de restaurante em SPRF. Duas agências rivais — a Spotless Ltd. e a Clean Family Services — vivem em pé de guerra disputando quem tem a melhor reputação, mas ambas pagam dinheiro vivo para quem mantiver os pisos da cidade impecáveis.",
     "responsibilities": [
-      "Passar rodo no chão molhado: se demorar para secar, clientes reclamam e descontam do pagamento!",
-      "Regar plantas murchas (ficam verde-vivo e radiantes quando cuidadas).",
-      "Bônus de $ 200 a cada 5 dias perfeitos seguidos.",
-      "Com 5 estrelas e estrela roxa, libera contratos para limpar mansões de luxo nos condomínios fechados!"
+      "Passar o rodo e secar pisos molhados: se a umidade persistir, os clientes reclamam e descontam do pagamento!",
+      "Regar plantas decorativas murchas (elas recuperam o verde vivo e florescem sob seus cuidados).",
+      "Receba bônus em dinheiro ao acumular dias consecutivos de serviço impecável.",
+      "Alcançar 5 estrelas mais a Estrela Roxa desbloqueia contratos de alto padrão para higienizar mansões luxuosas em condomínios fechados!"
     ],
-    "promotionNotes": "Futura expansão para Limpeza Hospitalar (+40% de salário base).",
-    "dialogQuote": "O piso já está seco com o rodo e todas as plantas da recepção estão verdinhas. Mais um dia perfeito para subir pras 5 estrelas!",
-    "dialogSpeaker": "Faxineiro Spotless",
-    "dialogImage": "assets/img/job_cleaning_plants.png"
-  },
-  {
-    "id": "cleaner_family",
-    "branch": "freelance",
-    "branchName": "Serviços Terceirizados & Aplicativos",
-    "level": 1,
-    "name": "Faxineiro Comercial — Clean Family Services",
-    "salary": "$ 1.400 / semana + Bônus de Streak",
-    "hours": "Qualquer hora das 24h nos dias escalados",
-    "sequenceType": "start",
-    "sequenceLabel": "🧹 Limpeza Comercial (Tolerante)",
-    "leadsTo": "Ambiente de Trabalho Forgivente",
-    "cues": [
-      "bonus"
-    ],
-    "cuesLabels": [
-      "Multas Mais Suaves",
-      "Ritmo Flexível"
-    ],
-    "desc": "Agência familiar de limpeza. Paga ligeiramente menos que a Spotless, mas perdoa mais erros e aplica penalidades mais suaves em reclamações de clientes.",
-    "responsibilities": [
-      "Higienizar pontos comerciais contratados em qualquer horário das 24h do dia.",
-      "Tirar pó dos móveis e molhar folhagens decorativas.",
-      "Curva de penalidade muito mais tolerante com tempo de secagem do chão."
-    ],
-    "promotionNotes": "Ganhe gorjetas constantes e streaks de bônus com menor pressão fiscalizatória.",
-    "dialogQuote": "A Clean Family nos dá a flexibilidade de limpar no nosso próprio tempo. Terminei a boutique e vou pro próximo contrato!",
-    "dialogSpeaker": "Faxineiro Clean Family",
+    "promotionNotes": "Qualifique-se para contratos residenciais de alto padrão e sanitização institucional pela metrópole.",
+    "dialogQuote": "Piso seco no rodo e todas as palmeiras do saguão regadas e verdejantes. Não importa se a ordem veio da Spotless ou da Clean Family, o chão não sabe quem assinou a fatura!",
+    "dialogSpeaker": "Profissional de Limpeza Comercial",
     "dialogImage": "assets/img/job_cleaning_plants.png"
   },
   {
@@ -1124,7 +1095,7 @@ function renderCareerTree(sectorFilter = 'all', cueFilter = 'all') {
         node.innerHTML = `
           <div>
             <div class="node-header">
-              <span class="node-level-chip">Nível ${job.level}</span>
+              <span class="node-level-chip">${job.branch === 'freelance' ? 'Autônomo' : (job.branch === 'supermarket' ? 'Varejo' : `Nível ${job.level}`)}</span>
               <div class="node-cues-row">${cuePillsHtml}</div>
             </div>
             <div class="node-role-name">${job.name}</div>
@@ -1177,7 +1148,7 @@ function showCareerDetails(job) {
   panel.innerHTML = `
     <div class="panel-header-badge">
       <div>
-        <div class="eyebrow">${job.branchName} · Nível ${job.level}</div>
+        <div class="eyebrow">${job.branchName} · ${job.branch === 'freelance' ? 'Autônomo' : (job.branch === 'supermarket' ? 'Varejo' : `Nível ${job.level}`)}</div>
         <h3 class="panel-title">${job.name}</h3>
       </div>
       <div class="node-cues-row">

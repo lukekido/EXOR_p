@@ -58,7 +58,7 @@ const CAREER_SECTORS = [
     "brandTag": "Health Retail // 7 City Locations",
     "icon": "💊",
     "subtitle": "7 Canonical Ranks · Levels 1 to 5 · Higher Positions Perform Lower Work",
-    "ruleNotice": "Dispensary staff cover all subordinate responsibilities during busy shifts. Branch into Store Management or earn a Pharmacy Degree to unlock Clinical Services and the permanent +50% hybrid bonus.",
+    "ruleNotice": "Dispensary staff cover all subordinate responsibilities during busy shifts. Branch into Store Management or earn a Pharmacy Degree to unlock Clinical Services and the permanent permanent hybrid salary bonus.",
     "tracks": [
       {
         "id": "counter",
@@ -133,12 +133,12 @@ const CAREER_SECTORS = [
     "name": "Autonomous Gigs & City Services",
     "brandTag": "Self-Employed & Contract Work // 24/7 Freedom",
     "icon": "🛵",
-    "subtitle": "4 Autonomous & Contract Roles · 100% Schedule Autonomy",
-    "ruleNotice": "Work on your own terms. Couriers pedal deliveries even with wanted status, drivers navigate emergent passenger encounters, and commercial cleaners earn 5-star streak bonuses across two distinct contracting agencies.",
+    "subtitle": "3 Autonomous & Contract Roles · Schedule Autonomy",
+    "ruleNotice": "Work on your own terms. Couriers pedal deliveries even with wanted status, drivers navigate emergent passenger encounters, and commercial cleaners earn streak bonuses across competing city contracting agencies.",
     "tracks": [
       {
         "id": "apps",
-        "title": "App Mobility & Delivery Services · Level 1",
+        "title": "App Mobility & Delivery Services · Autonomous",
         "description": "Instant payouts per job. Road cycling deliveries or late-night rideshare driving.",
         "positionIds": [
           "courier",
@@ -147,18 +147,17 @@ const CAREER_SECTORS = [
       },
       {
         "id": "cleaning",
-        "title": "Commercial Sanitization Contracts · Level 1",
+        "title": "Commercial Sanitization Contracts · City Service",
         "description": "Clean businesses across the city. Squeegee floors, water indoor plants, and unlock luxury mansion jobs.",
         "positionIds": [
-          "cleaner_spotless",
-          "cleaner_family"
+          "cleaner_commercial"
         ]
       }
     ]
   },
   {
     "id": "supermarket",
-    "name": "Municipal Supermarket Chain (Super Takai)",
+    "name": "Super Takai - Supermarket Chain",
     "brandTag": "スーパータカイ Supermarkets // 3 City Branches",
     "icon": "🛒",
     "subtitle": "Retail Restocking · 3 Branches in SPRF",
@@ -166,7 +165,7 @@ const CAREER_SECTORS = [
     "tracks": [
       {
         "id": "retail",
-        "title": "Store Restocking Operations · Level 1",
+        "title": "Store Restocking Operations · Retail",
         "description": "Morning and afternoon restocking shifts before the city's shoppers arrive.",
         "positionIds": [
           "stock_clerk"
@@ -241,7 +240,7 @@ const CAREERS_DATABASE = [
     "branchName": "Lunar — Industrial Sensors",
     "level": 2,
     "name": "Inside Sales Representative",
-    "salary": "$ 2,000 / wk + 3% Commission",
+    "salary": "$ 2,000 / week + Sales Commission",
     "hours": "Mon-Fri · 08:00 to 17:00",
     "sequenceType": "choice",
     "sequenceLabel": "🔀 Choice from Assistant",
@@ -257,7 +256,7 @@ const CAREERS_DATABASE = [
       "Cross-reference catalog specifications (PT-100 through PT-400 probes, TH-10 through TH-50 thermal sensors).",
       "Avoid overselling and never supply a sensor outside requested technical parameters.",
       "Canonical hazard: Supplying an incompatible sensor that melts at 80 °C triggers corporate lawsuits and immediate termination!",
-      "Counteroffer discount tiers (0% to 20%) to close orders before a third customer refusal."
+      "Negotiate tiered counteroffer discounts to close orders before a third customer refusal."
     ],
     "promotionNotes": "Unlocks career branching into Field Sales Specialist (Road) or Commercial Sales Manager.",
     "dialogQuote": "The client wants to pay $900 for a thermal probe rated for 80 °C. If I push that cheap 45 °C unit to make a quick sale, it'll melt into sludge inside his boiler...",
@@ -281,7 +280,7 @@ const CAREERS_DATABASE = [
     "cuesLabels": [
       "Surplus Converts to Bonus"
     ],
-    "desc": "Acts as the company's first-instance dispute ombudsman. Inspect severe client escalations, authorize conciliation settlements from 10% to 200% of product value, and approve exceptional warranties.",
+    "desc": "Acts as the company's first-instance dispute ombudsman. Inspect severe client escalations, authorize conciliation settlements proportionate to claim severity, and approve exceptional warranties.",
     "responsibilities": [
       "Manage the weekly resolution and customer conciliation budget.",
       "Strategic payoff: Whatever budget remains unspent by Friday afternoon converts directly into personal performance and prestige!",
@@ -307,15 +306,15 @@ const CAREERS_DATABASE = [
       "bonus"
     ],
     "cuesLabels": [
-      "Unlocks +20% Permanent Bonus"
+      "Unlocks Permanent Bonus"
     ],
-    "desc": "Field visits to manufacturing plants across SPRF. Advancing through this path permanently unlocks the coveted +20% lifetime salary modifier 'I came, I saw, I conquered' across all commercial positions.",
+    "desc": "Field visits to manufacturing plants across SPRF. Advancing through this path permanently unlocks the coveted Commercial Persuasion salary modifier across all commercial positions.",
     "responsibilities": [
       "Prospect industrial manufacturing complexes and secure high-volume municipal sensor contracts.",
-      "Permanently grants the Commercial Persuasion modifier (+20% salary boost across all commercial roles!)."
+      "Permanently grants the Commercial Persuasion modifier (lasting salary boost across all commercial roles)."
     ],
-    "promotionNotes": "Promote to Sales Manager retaining the +20% permanent modifier, or springboard straight to Executive Vice Director.",
-    "dialogQuote": "Closing this bulk sensor contract for the industrial district locked in a permanent 20% commission bonus in my pocket for the rest of my career!",
+    "promotionNotes": "Promote to Sales Manager retaining the permanent commercial modifier, or springboard straight to Executive Vice Director.",
+    "dialogQuote": "Closing this bulk sensor contract for the industrial district locked in a permanent commercial commission bonus for the rest of my career!",
     "dialogSpeaker": "Commercial Representative",
     "dialogImage": "assets/img/downtown.png"
   },
@@ -335,15 +334,15 @@ const CAREERS_DATABASE = [
       "danger"
     ],
     "cuesLabels": [
-      "50% Kickback Scheme",
-      "4% Police Sting Risk"
+      "Illicit Kickback Scheme",
+      "Police Sting Risk"
     ],
-    "desc": "Analyze sales metrics and monitor staff communication logs. You can extort corrupt sales reps for a 50% daily cut of diverted commissions—but run a 4% chance of walking into the General Director's police sting!",
+    "desc": "Analyze sales metrics and monitor staff communication logs. You can enter illicit kickback schemes with corrupt sales reps—but risk walking into a director-backed police sting!",
     "responsibilities": [
       "Clock in and roam freely across the city as long as critical calls are answered.",
       "Fire underperforming reps with immediate cause.",
-      "Secret scheme: Tap into fraudulent commission diversions to siphon 50% daily kickbacks.",
-      "Canonical Informant Event (4% probability): The rep is wired as an undercover director plant; police officers handcuff you on the spot for corporate extortion!"
+      "Secret scheme: Tap into fraudulent commission diversions to siphon daily illicit cuts.",
+      "Internal Affairs Informant Event: If the rep is wired as an undercover director plant, police officers place you under immediate arrest for corporate extortion!"
     ],
     "promotionNotes": "Promotion path to Executive Vice Director.",
     "dialogQuote": "You thought I was just going to fire you? Who said anything about a pink slip? Officers, step right in!",
@@ -604,7 +603,7 @@ const CAREERS_DATABASE = [
       "Perform clinical procedures in the private consultation suite (injections, tests, piercing).",
       "Authorized to perform any clerk or supervisory duty on the store floor."
     ],
-    "promotionNotes": "Can merge with Store Manager into the elite 'Pharmacist-Manager' hybrid role (+50% permanent salary bonus!).",
+    "promotionNotes": "Can merge with Store Manager into the elite 'Pharmacist-Manager' hybrid role (permanent apex salary bonus).",
     "dialogQuote": "The injectable antibiotic dosage is prepped in clinic room 2. I've cross-referenced the prescription with the prescribing physician.",
     "dialogSpeaker": "Dr. Sarah · Licensed Pharmacist",
     "dialogImage": "assets/img/job_pharmacy_rx.png"
@@ -615,10 +614,10 @@ const CAREERS_DATABASE = [
     "branchName": "Pharmacy Chain",
     "level": 4,
     "name": "Pharmacist-Manager (Hybrid Role)",
-    "salary": "$ 7,500 / wk + Profit Sharing (+50% Lifetime!)",
+    "salary": "$ 7,500 / wk + Profit Sharing (Permanent Bonus!)",
     "hours": "Autonomous Schedule · Total Store Sovereignty",
     "sequenceType": "auto",
-    "sequenceLabel": "⭐ Apex Hybrid (+50% Lifetime)",
+    "sequenceLabel": "⭐ Apex Commercial Hybrid",
     "leadsTo": "Regional Pharmacy Director",
     "cues": [
       "diploma",
@@ -626,13 +625,13 @@ const CAREERS_DATABASE = [
       "direct_hire"
     ],
     "cuesLabels": [
-      "+50% Permanent Lifetime Bonus",
+      "Permanent Lifetime Bonus",
       "Clinical & Executive Dual Role"
     ],
-    "desc": "The apex commercial hybrid approved in game canon. A store manager who earns a pharmacy degree (or a pharmacist promoted to manager) secures a permanent +50% base salary bonus for life!",
+    "desc": "The apex commercial hybrid approved in game canon. A store manager who earns a pharmacy degree (or a pharmacist promoted to manager) secures a permanent base salary bonus for life!",
     "responsibilities": [
       "Cover for pharmacists during absences while retaining executive command of the store.",
-      "Permanent 50% salary boost remains intact even if you move to a rival pharmacy chain.",
+      "Permanent lifetime salary boost remains intact even if you move to a rival pharmacy chain.",
       "Commands hiring, firing, payroll audits, and regulatory clinical compliance."
     ],
     "promotionNotes": "Direct promotion track to Regional Pharmacy Director.",
@@ -817,7 +816,7 @@ const CAREERS_DATABASE = [
     "branchName": "Restaurants & Dining",
     "level": 3,
     "name": "Executive Chef",
-    "salary": "$ 8,000 / week (Double Manager Pay + 50% Bonus!)",
+    "salary": "$ 8,000 / week (Double Manager Pay + Apex Bonus)",
     "hours": "Wed-Sun · 09:30 to 15:00",
     "sequenceType": "choice",
     "sequenceLabel": "🎓 Culinary Degree Required",
@@ -829,10 +828,10 @@ const CAREERS_DATABASE = [
     ],
     "cuesLabels": [
       "Culinary Degree Required",
-      "Double Manager Salary + 50%",
+      "Double Manager Salary + Apex Bonus",
       "Direct Hire"
     ],
-    "desc": "The undisputed gastronomic ruler of the kitchen. Sear steaks, pan-roast seafood, and craft artisanal plate presentations. Earns double a general manager's salary plus a 50% permanent bonus!",
+    "desc": "The undisputed gastronomic ruler of the kitchen. Sear steaks, pan-roast seafood, and craft artisanal plate presentations. Earns double a general manager's salary plus a prestigious permanent bonus!",
     "responsibilities": [
       "Mandatory requirement: University Degree in Culinary Arts.",
       "Execute precise temperature finishes for prime steaks, poultry, and seafood.",
@@ -881,7 +880,7 @@ const CAREERS_DATABASE = [
     "level": 1,
     "name": "Bicycle Delivery Courier (Delivery App)",
     "salary": "Paid per delivery (Instant cashout)",
-    "hours": "100% Flexible · Turn on app anytime",
+    "hours": "Flexible · Turn on app anytime",
     "sequenceType": "start",
     "sequenceLabel": "🛵 Autonomous Gig",
     "leadsTo": "Autonomous (Upgrade bikes at Spoke Cycles)",
@@ -910,7 +909,7 @@ const CAREERS_DATABASE = [
     "level": 1,
     "name": "Rideshare Driver (Personal Car)",
     "salary": "Paid per completed trip (Fares + Tips)",
-    "hours": "100% Flexible · Nights & Weekends",
+    "hours": "Flexible · Nights & Weekends",
     "sequenceType": "start",
     "sequenceLabel": "🚗 Autonomous Gig",
     "leadsTo": "Autonomous (Upgrade cars at Dealerships)",
@@ -934,62 +933,33 @@ const CAREERS_DATABASE = [
     "dialogImage": "assets/img/crash_scene.png"
   },
   {
-    "id": "cleaner_spotless",
+    "id": "cleaner_commercial",
     "branch": "freelance",
     "branchName": "Autonomous Gigs & City Services",
     "level": 1,
-    "name": "Commercial Cleaner — Spotless Ltd.",
-    "salary": "$ 1,500 / week + Streak Bonuses",
+    "name": "Commercial Cleaning Contractor",
+    "salary": "$ 1,450 / week + Streak Bonuses",
     "hours": "24/7 Any Time on Workdays · Total Freedom",
     "sequenceType": "start",
-    "sequenceLabel": "🧹 Commercial Cleaning (Strict)",
+    "sequenceLabel": "🧹 Commercial Cleaning",
     "leadsTo": "5-Star Streak Unlocks Mansion Contracts",
     "cues": [
       "bonus"
     ],
     "cuesLabels": [
-      "+$200 Perfect Streak Bonus",
+      "Flawless Streak Bonus",
       "5-Star Rating System"
     ],
-    "desc": "Contracted by Spotless Ltd. to sanitize offices, boutiques, pharmacies, and restaurant dining rooms. Strict inspections, higher pay, and heavier penalties for delayed floor drying.",
+    "desc": "Contracted to sanitize offices, boutiques, pharmacies, and restaurant dining rooms across SPRF. Two rival agencies — Spotless Ltd. and Clean Family Services — constantly bicker over who has the cleaner track record, but both pay cold cash to anyone who keeps the city's floors gleaming.",
     "responsibilities": [
       "Squeegee wet floors: if moisture lingers too long, clients complain and dock payment!",
       "Water wilted indoor plants (they turn vibrant green and blossom under your care).",
-      "Earn a $200 cash bonus for every 5 consecutive flawless work days.",
+      "Earn a cash bonus for consecutive flawless work days.",
       "Reaching 5 stars plus the Purple Star unlocks high-paying contracts to clean luxury mansions in gated suburbs!"
     ],
-    "promotionNotes": "Future expansion into Hospital Sanitization Specialist (+40% base wage boost).",
-    "dialogQuote": "Floor squeegeed dry and all lobby palms watered and shining green. Another flawless shift toward securing that 5th star!",
-    "dialogSpeaker": "Spotless Ltd. Cleaner",
-    "dialogImage": "assets/img/job_cleaning_plants.png"
-  },
-  {
-    "id": "cleaner_family",
-    "branch": "freelance",
-    "branchName": "Autonomous Gigs & City Services",
-    "level": 1,
-    "name": "Commercial Cleaner — Clean Family Services",
-    "salary": "$ 1,400 / week + Streak Bonuses",
-    "hours": "24/7 Any Time on Workdays · Total Freedom",
-    "sequenceType": "start",
-    "sequenceLabel": "🧹 Commercial Cleaning (Lenient)",
-    "leadsTo": "Forgiving Work Environment",
-    "cues": [
-      "bonus"
-    ],
-    "cuesLabels": [
-      "Lenient Penalties",
-      "Flexible Pace"
-    ],
-    "desc": "Small, family-owned cleaning agency. Pays slightly less than Spotless Ltd., but is far more lenient and forgiving with client complaints.",
-    "responsibilities": [
-      "Sanitize commercial client locations at any hour of the day or night.",
-      "Wipe dust from furniture and water decorative vegetation.",
-      "Gentler penalty curve when clients complain about drying floors."
-    ],
-    "promotionNotes": "Earn steady tips and streak bonuses without the harsh oversight of larger corporate contractors.",
-    "dialogQuote": "Clean Family gives us the flexibility to take our time. Finished the boutique and off to the next contract!",
-    "dialogSpeaker": "Clean Family Cleaner",
+    "promotionNotes": "Qualify for luxury residential contracts and institutional sanitization across the metropolis.",
+    "dialogQuote": "Floor squeegeed dry and all lobby palms watered and shining green. Whether the contract came from Spotless or Clean Family, the floor doesn't care who signed the invoice!",
+    "dialogSpeaker": "Commercial Cleaning Contractor",
     "dialogImage": "assets/img/job_cleaning_plants.png"
   },
   {
@@ -1131,7 +1101,7 @@ function renderCareerTree(sectorFilter = 'all', cueFilter = 'all') {
         node.innerHTML = `
           <div>
             <div class="node-header">
-              <span class="node-level-chip">Level ${job.level}</span>
+              <span class="node-level-chip">${job.branch === 'freelance' ? 'Autonomous' : (job.branch === 'supermarket' ? 'Retail' : `Level ${job.level}`)}</span>
               <div class="node-cues-row">${cuePillsHtml}</div>
             </div>
             <div class="node-role-name">${job.name}</div>
@@ -1184,7 +1154,7 @@ function showCareerDetails(job) {
   panel.innerHTML = `
     <div class="panel-header-badge">
       <div>
-        <div class="eyebrow">${job.branchName} · Level ${job.level}</div>
+        <div class="eyebrow">${job.branchName} · ${job.branch === 'freelance' ? 'Autonomous' : (job.branch === 'supermarket' ? 'Retail' : `Level ${job.level}`)}</div>
         <h3 class="panel-title">${job.name}</h3>
       </div>
       <div class="node-cues-row">
