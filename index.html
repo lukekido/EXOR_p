@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EXORDIUM // The Living Metropolis & The Cosmic Mystery</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/galaxy.css">
   <link rel="stylesheet" href="assets/css/dialogs.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,6 +67,15 @@
   <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
 
   <main class="container">
+
+    <!-- SYSTEMS GALAXY HEADER (drawn by assets/js/galaxy.js) -->
+    <section class="galaxy-hero" data-lang="en" aria-label="EXORDIUM: the systems of the city of SPRF">
+      <canvas class="galaxy-canvas" aria-hidden="true"></canvas>
+      <p class="galaxy-sr">EXORDIUM: the systems of the city of SPRF</p>
+      <div class="galaxy-tip" role="tooltip" hidden></div>
+      <p class="galaxy-hint">Hover a system to name it · click to visit</p>
+    </section>
+    <nav class="galaxy-chips" aria-label="Systems of the game"></nav>
 
     <!-- HERO SECTION -->
     <section style="margin-bottom: 50px;">
@@ -143,7 +153,7 @@
     <section style="margin-bottom: 50px;">
       <div class="section-header">
         <div class="eyebrow">Canonical Foundation</div>
-        <h2 class="section-title">The 4 Pillars of EXORDIUM</h2>
+        <h2 id="pillars" class="section-title">The 4 Pillars of EXORDIUM</h2>
         <p class="section-subtitle">
           The foundational principles shaping the living simulation and systemic rules of SPRF.
         </p>
@@ -192,7 +202,7 @@
     <section style="margin-bottom: 50px;">
       <div class="section-header">
         <div class="eyebrow">Micro-Stories & Content Capsules</div>
-        <h2 class="section-title">SPRF: The City Speaks to You</h2>
+        <h2 id="city" class="section-title">SPRF: The City Speaks to You</h2>
         <p class="section-subtitle">
           Instant glimpses into daily life across the metropolis. Click on any screenshot to expand into high-resolution view.
         </p>
@@ -399,6 +409,7 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/galaxy.js"></script>
 
   <!-- Mobile Bottom Dock Navigation -->
   <nav class="mobile-bottom-dock" aria-label="Quick Mobile Navigation">

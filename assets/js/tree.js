@@ -1039,92 +1039,66 @@ function renderCareerTree(sectorFilter = 'all', cueFilter = 'all') {
       </div>
     `;
 
-    const tracksContainer = document.createElement('div');
-    tracksContainer.className = 'board-tracks-container';
+    // The posts drawn as a tree (rows: the ladder, columns: the departments, lines: who goes where).
+    // The card of each post is built here; career_graph.js lays them out and draws the lines.
+    const makeNode = job => {
+      const node = document.createElement('div');
+      node.className = 'tree-node';
+      node.setAttribute('data-id', job.id);
+      node.setAttribute('data-cue', job.cues.join(' '));
 
-    sec.tracks.forEach(track => {
-      const trackJobs = visibleJobs.filter(j => track.positionIds.includes(j.id));
-      if (trackJobs.length === 0) return;
+      let cuePillsHtml = '';
+      if (job.cues.includes('bonus')) {
+        cuePillsHtml += `<span class="cue-pill pill-bonus">⭐ BÔNUS</span>`;
+      }
+      if (job.cues.includes('crime')) {
+        cuePillsHtml += `<span class="cue-pill pill-crime">⚖️ ESQUEMA</span>`;
+      }
+      if (job.cues.includes('danger')) {
+        cuePillsHtml += `<span class="cue-pill pill-danger">🚨 RISCO POLICIAL</span>`;
+      }
+      if (job.cues.includes('diploma')) {
+        cuePillsHtml += `<span class="cue-pill pill-diploma">🎓 DIPLOMA</span>`;
+      }
+      if (job.cues.includes('executive')) {
+        cuePillsHtml += `<span class="cue-pill pill-executive">👔 EXECUTIVO</span>`;
+      }
+      if (job.cues.includes('direct_hire')) {
+        cuePillsHtml += `<span class="cue-pill pill-direct">🚪 ADMISSÃO DIRETA</span>`;
+      }
 
-      const trackBlock = document.createElement('div');
-      trackBlock.className = 'flow-track-block';
+      let seqClass = '';
+      if (job.sequenceType === 'start') seqClass = 'is-start';
+      else if (job.sequenceType === 'choice') seqClass = 'is-choice';
+      else if (job.sequenceType === 'summit') seqClass = 'is-summit';
 
-      trackBlock.innerHTML = `
-        <div class="track-block-header">
-          <span class="track-block-title">
-            <span style="color: var(--brand-teal);">◆</span> ${track.title}
-          </span>
-          <span style="font-size: 11.5px; color: var(--text-muted);">${track.description}</span>
+      node.innerHTML = `
+        <div>
+          <div class="node-header">
+            <span class="node-level-chip">${job.branch === 'freelance' ? 'Autônomo' : (job.branch === 'supermarket' ? 'Varejo' : `Nível ${job.level}`)}</span>
+            <div class="node-cues-row">${cuePillsHtml}</div>
+          </div>
+          <div class="node-role-name">${job.name}</div>
+          <div style="margin: 8px 0;">
+            <span class="node-sequence-badge ${seqClass}">${job.sequenceLabel}</span>
+          </div>
+          <p class="node-desc">${job.desc.substring(0, 115)}...</p>
+        </div>
+        <div class="node-footer">
+          <span class="node-salary">${job.salary}</span>
+          <span class="node-hours">${job.hours.split('·')[0]}</span>
         </div>
       `;
 
-      const nodesRow = document.createElement('div');
-      nodesRow.className = 'track-nodes-row';
-
-      trackJobs.forEach(job => {
-        const node = document.createElement('div');
-        node.className = 'tree-node';
-        node.setAttribute('data-id', job.id);
-        node.setAttribute('data-cue', job.cues.join(' '));
-
-        let cuePillsHtml = '';
-        if (job.cues.includes('bonus')) {
-          cuePillsHtml += `<span class="cue-pill pill-bonus">⭐ BÔNUS</span>`;
-        }
-        if (job.cues.includes('crime')) {
-          cuePillsHtml += `<span class="cue-pill pill-crime">⚖️ ESQUEMA</span>`;
-        }
-        if (job.cues.includes('danger')) {
-          cuePillsHtml += `<span class="cue-pill pill-danger">🚨 RISCO POLICIAL</span>`;
-        }
-        if (job.cues.includes('diploma')) {
-          cuePillsHtml += `<span class="cue-pill pill-diploma">🎓 DIPLOMA</span>`;
-        }
-        if (job.cues.includes('executive')) {
-          cuePillsHtml += `<span class="cue-pill pill-executive">👔 EXECUTIVO</span>`;
-        }
-        if (job.cues.includes('direct_hire')) {
-          cuePillsHtml += `<span class="cue-pill pill-direct">🚪 ADMISSÃO DIRETA</span>`;
-        }
-
-        let seqClass = '';
-        if (job.sequenceType === 'start') seqClass = 'is-start';
-        else if (job.sequenceType === 'choice') seqClass = 'is-choice';
-        else if (job.sequenceType === 'summit') seqClass = 'is-summit';
-
-        node.innerHTML = `
-          <div>
-            <div class="node-header">
-              <span class="node-level-chip">${job.branch === 'freelance' ? 'Autônomo' : (job.branch === 'supermarket' ? 'Varejo' : `Nível ${job.level}`)}</span>
-              <div class="node-cues-row">${cuePillsHtml}</div>
-            </div>
-            <div class="node-role-name">${job.name}</div>
-            <div style="margin: 8px 0;">
-              <span class="node-sequence-badge ${seqClass}">${job.sequenceLabel}</span>
-            </div>
-            <p class="node-desc">${job.desc.substring(0, 115)}...</p>
-          </div>
-          <div class="node-footer">
-            <span class="node-salary">${job.salary}</span>
-            <span class="node-hours">${job.hours.split('·')[0]}</span>
-          </div>
-        `;
-
-        node.addEventListener('click', () => {
-          document.querySelectorAll('.tree-node').forEach(n => n.classList.remove('selected'));
-          node.classList.add('selected');
-          showCareerDetails(job);
-          if (typeof SFX !== 'undefined') SFX.select();
-        });
-
-        nodesRow.appendChild(node);
+      node.addEventListener('click', () => {
+        document.querySelectorAll('.tree-node').forEach(n => n.classList.remove('selected'));
+        node.classList.add('selected');
+        showCareerDetails(job);
+        if (typeof SFX !== 'undefined') SFX.select();
       });
-
-      trackBlock.appendChild(nodesRow);
-      tracksContainer.appendChild(trackBlock);
-    });
-
-    board.appendChild(tracksContainer);
+      return node;
+    };
+    CareerGraph.render(board, sec, visibleJobs, makeNode, 'pt');
     container.appendChild(board);
   });
 

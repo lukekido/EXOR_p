@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EXORDIUM // A Metrópole Viva & O Mistério Cósmico</title>
   <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/galaxy.css">
   <link rel="stylesheet" href="../assets/css/dialogs.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +65,15 @@
   <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
 
   <main class="container">
+
+    <!-- SYSTEMS GALAXY HEADER (drawn by assets/js/galaxy.js) -->
+    <section class="galaxy-hero" data-lang="pt" aria-label="EXORDIUM: os sistemas da cidade de SPRF">
+      <canvas class="galaxy-canvas" aria-hidden="true"></canvas>
+      <p class="galaxy-sr">EXORDIUM: os sistemas da cidade de SPRF</p>
+      <div class="galaxy-tip" role="tooltip" hidden></div>
+      <p class="galaxy-hint">Passe o mouse num sistema · clique para visitar</p>
+    </section>
+    <nav class="galaxy-chips" aria-label="Sistemas do jogo"></nav>
 
     <!-- HERO PRINCIPAL VANGUARDISTA -->
     <section style="margin-bottom: 50px;">
@@ -141,7 +151,7 @@
     <section style="margin-bottom: 50px;">
       <div class="section-header">
         <div class="eyebrow">Fundação Canônica</div>
-        <h2 class="section-title">Os 4 Pilares de EXORDIUM</h2>
+        <h2 id="pillars" class="section-title">Os 4 Pilares de EXORDIUM</h2>
         <p class="section-subtitle">
           Os princípios fundamentais que moldam a simulação viva e as regras sistêmicas de SPRF.
         </p>
@@ -190,7 +200,7 @@
     <section style="margin-bottom: 50px;">
       <div class="section-header">
         <div class="eyebrow">Micro-Histórias & Cápsulas de Conteúdo</div>
-        <h2 class="section-title">SPRF: A Cidade Fala com Você</h2>
+        <h2 id="city" class="section-title">SPRF: A Cidade Fala com Você</h2>
         <p class="section-subtitle">
           Relances instantâneos da vida na metrópole. Clique nas capturas integradas para expandir.
         </p>
@@ -391,6 +401,7 @@
   </div>
 
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/galaxy.js"></script>
   <!-- Dock de Navegação Inferior para Mobile -->
   <nav class="mobile-bottom-dock" aria-label="Navegação Rápida Mobile">
     <a href="index.html" class="dock-item active">

@@ -1,0 +1,101 @@
+/* ==========================================================================
+   EXORDIUM // SYSTEMS GALAXY (home page header) — drawn by assets/js/galaxy.js
+   ========================================================================== */
+
+.galaxy-hero {
+  position: relative;
+  height: clamp(420px, 68vh, 640px);
+  margin: -20px 0 18px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(20, 184, 166, 0.10), transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(168, 85, 247, 0.06), transparent 50%),
+    #050808;
+  border: 1px solid var(--border-subtle);
+}
+
+.galaxy-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  touch-action: manipulation;
+}
+
+.galaxy-sr {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.galaxy-tip {
+  position: absolute;
+  left: 0; top: 0;
+  max-width: 260px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 4px;
+  background: rgba(8, 14, 14, 0.94);
+  border: 1px solid var(--border-active);
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+  font-size: 13px;
+  line-height: 1.35;
+  color: #cbd5e1;
+  pointer-events: none;
+  z-index: 2;
+}
+.galaxy-tip[hidden] { display: none; }
+.galaxy-tip strong { font-family: var(--font-display); font-size: 15px; }
+.galaxy-tip em { color: var(--text-muted); font-size: 12px; }
+.galaxy-tip-go { font-family: var(--font-mono); font-size: 11.5px; color: #5eead4; }
+
+.galaxy-hint {
+  position: absolute;
+  left: 0; right: 0; bottom: 12px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(143, 165, 160, 0.75);
+  pointer-events: none;
+}
+
+.galaxy-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 0 46px;
+}
+
+.galaxy-chip {
+  --chip: var(--brand-teal);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: var(--radius-pill);
+  border: 1px solid color-mix(in srgb, var(--chip) 35%, transparent);
+  background: color-mix(in srgb, var(--chip) 8%, transparent);
+  color: #e2f3ef;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+a.galaxy-chip:hover,
+a.galaxy-chip:focus-visible {
+  background: color-mix(in srgb, var(--chip) 20%, transparent);
+  border-color: var(--chip);
+  outline: none;
+}
+span.galaxy-chip { opacity: 0.7; }
+
+@media (max-width: 640px) {
+  .galaxy-hero { height: 440px; margin-top: -24px; }
+  .galaxy-chip { font-size: 12px; padding: 4px 9px; }
+  .galaxy-hint { font-size: 10px; }
+}

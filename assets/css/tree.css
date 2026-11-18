@@ -535,3 +535,124 @@
 .panel-stat-val.salary-highlight {
   color: #34d399;
 }
+
+/* ==========================================================================
+   CAREER TREES (assets/js/career_graph.js): each board's posts as a real tree
+   ========================================================================== */
+
+.career-graph { margin-top: 6px; }
+
+.career-graph-heads {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  padding: 0 36px;
+  margin-bottom: 10px;
+}
+.career-graph-heads div {
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5eead4;
+  border-bottom: 1px dashed var(--border-subtle);
+  padding-bottom: 6px;
+}
+
+.career-graph-grid {
+  position: relative;
+  display: grid;
+  column-gap: 28px;
+  row-gap: 54px;               /* room for the lines and their labels */
+  padding: 4px 36px 8px;       /* room for the detours on the sides */
+}
+
+.career-graph-cell {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+.career-graph-cell .tree-node {
+  width: 100%;
+  max-width: 330px;
+  gap: 8px;
+  padding: 14px 16px;
+}
+.career-graph-cell.is-span .tree-node { max-width: 360px; }
+.career-graph-cell .tree-node:hover { transform: none; }
+.career-graph-cell .node-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 13px;
+  margin: 0;
+}
+
+.career-graph-lines {
+  position: absolute;
+  left: 0; top: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cg-line { fill: none; stroke-width: 2; }
+.cg-auto   { stroke: #14b8a6; }
+.cg-choice { stroke: #5eead4; stroke-dasharray: 7 5; }
+.cg-degree { stroke: #06b6d4; stroke-dasharray: 2 4; stroke-linecap: round; stroke-width: 2.4; }
+.cg-cross  { stroke: #f59e0b; stroke-dasharray: 9 5; }
+.cg-merit  { stroke: #a855f7; }
+.cg-forbid { stroke: #ef4444; stroke-dasharray: 3 4; stroke-width: 1.5; opacity: 0.8; }
+path.cg-head.cg-auto   { fill: #14b8a6; stroke: none; }
+path.cg-head.cg-choice { fill: #5eead4; stroke: none; }
+path.cg-head.cg-degree { fill: #06b6d4; stroke: none; }
+path.cg-head.cg-cross  { fill: #f59e0b; stroke: none; }
+path.cg-head.cg-merit  { fill: #a855f7; stroke: none; }
+
+.cg-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: 600;
+  stroke: none;
+  fill: #cffaf2;
+}
+text.cg-cross  { fill: #fcd34d; }
+text.cg-degree { fill: #a5f3fc; }
+text.cg-merit  { fill: #e9d5ff; }
+text.cg-forbid { fill: #fca5a5; }
+.cg-label-bg { fill: #0b1312; stroke-width: 1; stroke-dasharray: none; }
+
+.career-graph-note {
+  margin: 14px 4px 0;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.career-graph-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: -6px 0 22px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+.cg-key { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Phones: the tree keeps its shape, the cards keep only what fits */
+@media (max-width: 640px) {
+  .career-graph-heads { gap: 10px; padding: 0 8px; }
+  .career-graph-heads div { font-size: 10px; }
+  .career-graph-grid { column-gap: 10px; row-gap: 46px; padding: 4px 8px 8px; }
+  .career-graph-cell .tree-node { padding: 10px; }
+  .career-graph-cell .node-desc,
+  .career-graph-cell .node-hours,
+  .career-graph-cell .node-cues-row { display: none; }
+  .career-graph-cell .node-role-name { font-size: 14px; }
+  .career-graph-cell .node-sequence-badge { font-size: 10px; }
+  .career-graph-cell .node-salary { font-size: 11.5px; }
+  .cg-label { font-size: 9px; }
+}
