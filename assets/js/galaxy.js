@@ -205,7 +205,7 @@
     const fo = hero.querySelector('.galaxy-focus'), fr = fo ? fo.getBoundingClientRect() : null;
     const fx = fr ? fr.left - r.left : 0, fy = fr ? fr.top - r.top : 0, fw = fr ? fr.width : W, fh = fr ? fr.height : H;
     CX = fx + fw / 2; CY = fy + fh / 2;
-    U = Math.min(fw * (W < 900 ? 0.44 : 0.46), fh * 0.74);
+    U = Math.min(fw * (W < 1100 ? 0.44 : 0.46), fh * 0.74);
     canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
     canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);

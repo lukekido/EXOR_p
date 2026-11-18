@@ -125,16 +125,16 @@ span.galaxy-chip { opacity: 0.7; }
   pointer-events: none;
 }
 .hero-copy-wrap { position: relative; width: 100%; padding-top: 0; padding-bottom: 0; }
-.hero-copy { max-width: 540px; }
+.hero-copy { max-width: 460px; }
 .hero-copy > * { pointer-events: auto; }
 .hero-copy .hero-title { margin-top: 10px; font-size: clamp(30px, 3.2vw, 52px); line-height: 1.08; }
 .hero-copy .hero-lead { margin-top: 14px; }
 /* marks where the galaxy and the logo live (read by galaxy.js): the right ~74% of the stage */
-.galaxy-focus { position: absolute; top: 0; bottom: 0; left: 26%; right: 0; pointer-events: none; visibility: hidden; }
+.galaxy-focus { position: absolute; top: 0; bottom: 0; left: 34%; right: 0; pointer-events: none; visibility: hidden; }
 .hero-after { padding-top: 16px; }
 
 /* phones and tablets in portrait: text across the top of the stage, the galaxy below it, still full-bleed */
-@media (max-width: 899px) {
+@media (max-width: 1099px) {
   .galaxy-hero { height: auto; padding-top: 6px; }
   .hero-overlay { position: relative; align-items: flex-start; padding-top: 20px; }
   .hero-overlay::before { background: linear-gradient(180deg, rgba(5, 8, 8, 0.85) 0%, rgba(5, 8, 8, 0.55) 70%, rgba(5, 8, 8, 0) 100%); }
