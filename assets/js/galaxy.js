@@ -55,11 +55,11 @@
     { icon: '🚑', cat: 'rescue', orbit: 1,
       en: ['SAMU 192', 'Ambulances, paramedics on foot and the witnesses of every accident.'],
       pt: ['SAMU 192', 'Ambulâncias, socorristas a pé e as testemunhas de cada acidente.'],
-      href: ['penalties.html#impact', 'penalidades.html#samu'] },
+      href: ['penalties.html#samu', 'penalidades.html#samu'] },
     { icon: '🏥', cat: 'rescue', orbit: 1,
       en: ['Hospital & health units', 'The hospital has its own people, beds and a bill at the end.'],
       pt: ['Hospital e unidades de saúde', 'O hospital tem gente própria, leitos e uma conta no fim.'],
-      href: ['penalties.html#impact', 'penalidades.html#samu'] },
+      href: ['penalties.html#samu', 'penalidades.html#samu'] },
     { icon: '🚦', cat: 'rescue', orbit: 1,
       en: ['Traffic & law', 'Lanes, lights and stop signs; break the law and the police escalate.'],
       pt: ['Trânsito e lei', 'Faixas, semáforos e placas de pare; quebre a lei e a polícia escala.'],
@@ -236,35 +236,35 @@
     ctx.globalAlpha = 1;
   }
 
+  // The centre emblem is the rendered 3D logo (alpha PNG). The path is
+  // resolved from the page, so it works from / and from /pt/.
+  const logoImg = new Image();
+  let logoReady = false;
+  logoImg.onload = () => { logoReady = true; };
+  logoImg.src = (lang === 'pt' ? '../' : '') + 'assets/img/project_exor_logo_1200.png';
+
   function drawLogo() {
     const k = Math.min(W / 760, 1.25);
     const size = Math.max(28, 52 * k);
     // halo
     const g = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, size * 3.4);
-    g.addColorStop(0, 'rgba(20,184,166,0.30)'); g.addColorStop(0.45, 'rgba(20,184,166,0.08)'); g.addColorStop(1, 'rgba(20,184,166,0)');
+    g.addColorStop(0, 'rgba(20,184,166,0.22)'); g.addColorStop(0.45, 'rgba(20,184,166,0.06)'); g.addColorStop(1, 'rgba(20,184,166,0)');
     ctx.fillStyle = g;
     ctx.fillRect(W / 2 - size * 3.4, H / 2 - size * 3.4, size * 6.8, size * 6.8);
-    // the emblem: a ring around the word, tilted like the orbits
+    // the logo, drawn as it is (aspect kept), fitted to the width on phones
+    if (logoReady) {
+      const lw = Math.min(W * 0.86, size * 8.2);
+      const lh = lw * logoImg.naturalHeight / logoImg.naturalWidth;
+      ctx.drawImage(logoImg, W / 2 - lw / 2, H / 2 - lh / 2, lw, lh);
+    }
+    // tagline under it
     ctx.save();
-    ctx.translate(W / 2, H / 2); ctx.rotate(-0.16);
-    ctx.beginPath(); ctx.ellipse(0, 0, size * 3.1, size * 1.05, 0, 0, Math.PI * 2);
-    ctx.strokeStyle = 'rgba(94,234,212,0.55)'; ctx.lineWidth = 1.5; ctx.stroke();
-    ctx.restore();
-    // the word
-    ctx.save();
-    ctx.font = '900 ' + Math.round(size) + 'px Archivo, "Arial Black", sans-serif';
     ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    if ('letterSpacing' in ctx) ctx.letterSpacing = Math.round(size * 0.06) + 'px';
-    const tg = ctx.createLinearGradient(0, H / 2 - size / 2, 0, H / 2 + size / 2);
-    tg.addColorStop(0, '#ffffff'); tg.addColorStop(1, '#5eead4');
-    ctx.shadowColor = 'rgba(20,184,166,0.65)'; ctx.shadowBlur = 24;
-    ctx.fillStyle = tg;
-    ctx.fillText('EXORDIUM', W / 2, H / 2);
-    ctx.shadowBlur = 0;
     ctx.font = '600 ' + Math.round(Math.max(9, 12 * k)) + 'px "IBM Plex Mono", Consolas, monospace';
     if ('letterSpacing' in ctx) ctx.letterSpacing = '3px';
     ctx.fillStyle = 'rgba(200,240,232,0.75)';
-    ctx.fillText(lang === 'pt' ? 'A VIDA COMUM É O JOGO' : 'EVERYDAY LIFE IS THE GAME', W / 2, H / 2 + size * 0.85);
+    const lh2 = Math.min(W * 0.86, size * 8.2) * 620 / 1810;
+    ctx.fillText(lang === 'pt' ? 'A VIDA COMUM É O JOGO' : 'EVERYDAY LIFE IS THE GAME', W / 2, H / 2 + lh2 / 2 + 30);
     ctx.restore();
   }
 

@@ -968,3 +968,16 @@ footer.site-footer {
   background: var(--brand-teal);
   color: #041210;
 }
+
+
+/* Header logo: the rendered 3D "project EXOR" mark (alpha PNG/WebP) */
+.brand-badge .brand-logo {
+  display: block;
+  height: 44px;
+  width: auto;
+  max-width: 100%;
+}
+.brand-badge picture { display: block; line-height: 0; }
+@media (max-width: 768px) {
+  .brand-badge .brand-logo { height: 34px; }
+}

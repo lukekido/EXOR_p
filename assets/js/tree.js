@@ -204,7 +204,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Observa a dinâmica dos colegas e ganha a chance de escolher migrar para Suporte Técnico (Inbox) ou Vendas Internas (Spec & Deal).",
     "dialogQuote": "A impressora travou de novo e o diretor quer o café na mesa dele antes da reunião das 2:30. Corre!",
     "dialogSpeaker": "Ana · Colega de Escritório",
-    "dialogImage": "assets/img/closing_day_printer.png"
+    "dialogImage": "../assets/img/closing_day_printer.png"
   },
   {
     "id": "service_desk",
@@ -233,7 +233,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção automática por bom desempenho para Supervisor de Qualidade e Atendimento.",
     "dialogQuote": "O cliente mergulhou o transmissor PT-200 no tanque, mas ele só é IP65! Se aprovar a garantia, a empresa perde $420 do nosso orçamento departamental!",
     "dialogSpeaker": "Ben · Analista de Suporte",
-    "dialogImage": "assets/img/job_inbox.png"
+    "dialogImage": "../assets/img/job_inbox.png"
   },
   {
     "id": "inside_sales",
@@ -262,7 +262,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Permite escolher ramificação entre Vendas Externas (A Campo) ou Gerente Comercial de Vendas.",
     "dialogQuote": "O cliente quer pagar $900 numa sonda que aguente 80 °C. Se eu empurrar a de 45 °C baratinha, ela vai derreter na caldeira dele...",
     "dialogSpeaker": "Vendedor Interno",
-    "dialogImage": "assets/img/job_deal.png"
+    "dialogImage": "../assets/img/job_deal.png"
   },
   {
     "id": "quality_supervisor",
@@ -290,7 +290,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Caminho direto e automático para Analista de Inteligência Competitiva.",
     "dialogQuote": "Sobraram $ 1.200 na minha verba de conciliação esta sexta-feira. Isso vai direto pra minha avaliação de promoção executiva!",
     "dialogSpeaker": "Supervisor de Atendimento",
-    "dialogImage": "assets/img/job_office_elevator.png"
+    "dialogImage": "../assets/img/job_office_elevator.png"
   },
   {
     "id": "external_sales",
@@ -317,7 +317,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção para Gerente de Vendas com bônus permanente mantido, ou salto para Vice-Diretor Executivo.",
     "dialogQuote": "Esse contrato de sensores para o polo industrial garantiu um bônus vitalício de comissão no meu bolso para sempre!",
     "dialogSpeaker": "Representante Comercial",
-    "dialogImage": "assets/img/downtown.png"
+    "dialogImage": "../assets/img/downtown.png"
   },
   {
     "id": "sales_manager",
@@ -348,7 +348,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção direta para Vice-Diretor Executivo da empresa.",
     "dialogQuote": "Você achou que eu ia te demitir? Quem disse que você será demitido? Policiais, podem entrar!",
     "dialogSpeaker": "Diretor da Empresa · Flagrante",
-    "dialogImage": "assets/img/job_hire_dialog.png"
+    "dialogImage": "../assets/img/job_hire_dialog.png"
   },
   {
     "id": "analyst",
@@ -378,7 +378,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção direta para Diretor Financeiro (CFO).",
     "dialogQuote": "A concorrente me ofereceu $ 15.000 para vazar o esquema elétrico da nova sonda térmica. Se a diretoria descobrir, é cadeia na certa.",
     "dialogSpeaker": "Analista de Mercado",
-    "dialogImage": "assets/img/job_office_elevator.png"
+    "dialogImage": "../assets/img/job_office_elevator.png"
   },
   {
     "id": "vice_director",
@@ -406,7 +406,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Caminho mais rápido e direto para Diretor Geral (CEO).",
     "dialogQuote": "Duas horinhas de reunião na segunda, quarta e sexta. O resto da semana é livre para aproveitar a vida em SPRF.",
     "dialogSpeaker": "Vice-Diretor",
-    "dialogImage": "assets/img/job_director_press.png"
+    "dialogImage": "../assets/img/job_director_press.png"
   },
   {
     "id": "cfo",
@@ -434,7 +434,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Caminho árduo por mérito financeiro para Diretor Geral (CEO).",
     "dialogQuote": "Os números do trimestre bateram recorde, mas o Conselho ainda exige 4 vezes mais que o vice para me dar a presidência.",
     "dialogSpeaker": "CFO · Diretor Financeiro",
-    "dialogImage": "assets/img/closing_day_boss.png"
+    "dialogImage": "../assets/img/closing_day_boss.png"
   },
   {
     "id": "ceo",
@@ -464,7 +464,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Nenhum cargo acima na corporação. Prestígio máximo em SPRF.",
     "dialogQuote": "Senhores jornalistas da TV Maresol: o derretimento do sensor foi um evento pontual de sobrecarga exógena sob auditoria estrita!",
     "dialogSpeaker": "CEO da Empresa · Coletiva",
-    "dialogImage": "assets/img/job_director_press.png"
+    "dialogImage": "../assets/img/job_director_press.png"
   },
   {
     "id": "attendant_1",
@@ -491,7 +491,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção automática para Atendente 2.",
     "dialogQuote": "Preciso remarcar todas as vitaminas do corredor 3 antes do supervisor abrir o segundo caixa.",
     "dialogSpeaker": "Atendente 1",
-    "dialogImage": "assets/img/job_pharmacy_shelf.png"
+    "dialogImage": "../assets/img/job_pharmacy_shelf.png"
   },
   {
     "id": "attendant_2",
@@ -518,7 +518,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção automática para Supervisor de Drogaria.",
     "dialogQuote": "Essa receita de clonazepam está sem o carimbo legível do médico do Hospital Regional. Não posso liberar!",
     "dialogSpeaker": "Atendente 2",
-    "dialogImage": "assets/img/job_pharmacy_rx.png"
+    "dialogImage": "../assets/img/job_pharmacy_rx.png"
   },
   {
     "id": "pharmacy_supervisor",
@@ -546,7 +546,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Pode seguir a trilha de Gerente de Loja ou, com diploma universitário, assumir como Farmacêutico Responsável.",
     "dialogQuote": "O cofre atingiu o teto de segurança de $ 20.000. Já protocolei o chamado para o carro-forte passar aqui às 18h.",
     "dialogSpeaker": "Supervisor de Loja",
-    "dialogImage": "assets/img/job_pharmacy_shelf.png"
+    "dialogImage": "../assets/img/job_pharmacy_shelf.png"
   },
   {
     "id": "pharmacy_manager",
@@ -576,7 +576,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção para Gerente Regional da Rede.",
     "dialogQuote": "A fila do caixa 1 está dobrando a gôndola de perfumaria! Se a satisfação cair, a nossa PLR despenca na sexta.",
     "dialogSpeaker": "Gerente de Drogaria",
-    "dialogImage": "assets/img/job_hire_dialog.png"
+    "dialogImage": "../assets/img/job_hire_dialog.png"
   },
   {
     "id": "pharmacist",
@@ -607,7 +607,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Pode se fundir com o cargo de Gerente para formar o 'Farmacêutico-Gerente' (bônus salarial permanente no topo da carreira).",
     "dialogQuote": "A aplicação do antibiótico injetável está pronta na sala 2. Já conferi a prescrição com o médico.",
     "dialogSpeaker": "Dra. Farmacêutica",
-    "dialogImage": "assets/img/job_pharmacy_rx.png"
+    "dialogImage": "../assets/img/job_pharmacy_rx.png"
   },
   {
     "id": "manager_pharmacist",
@@ -638,7 +638,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção direta para Gerente Regional.",
     "dialogQuote": "Assumir a gerência e o CRF técnico da filial me garantiu $ 7.500 semanais fixos mais a participação nos lucros da rede inteira!",
     "dialogSpeaker": "Farmacêutico-Gerente",
-    "dialogImage": "assets/img/job_pharmacy_rx.png"
+    "dialogImage": "../assets/img/job_pharmacy_rx.png"
   },
   {
     "id": "regional_manager",
@@ -667,7 +667,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "O ápice da carreira farmacêutica no jogo.",
     "dialogQuote": "A loja do centro está sem o farmacêutico em horário de pico e com jaleco fora de padrão. Notificação emitida e desconto na gerência!",
     "dialogSpeaker": "Gerente Regional",
-    "dialogImage": "assets/img/downtown.png"
+    "dialogImage": "../assets/img/downtown.png"
   },
   {
     "id": "dining_helper",
@@ -695,7 +695,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção automática para Garçom/Caixa.",
     "dialogQuote": "Tem mesa nova sentando no salão 2! Se faltar guardanapo na mesa deles, o chefe corta meu bônus!",
     "dialogSpeaker": "Auxiliar de Salão",
-    "dialogImage": "assets/img/job_restaurant_buffet.png"
+    "dialogImage": "../assets/img/job_restaurant_buffet.png"
   },
   {
     "id": "kitchen_helper",
@@ -723,7 +723,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Pode ser promovido a Cozinheiro de Linha ou migrar para Garçom/Caixa no salão.",
     "dialogQuote": "O chef pediu 10 kg de batatas descascadas para o almoço do meio-dia. Não posso atrasar o fogo!",
     "dialogSpeaker": "Auxiliar de Cozinha",
-    "dialogImage": "assets/img/job_restaurant_buffet.png"
+    "dialogImage": "../assets/img/job_restaurant_buffet.png"
   },
   {
     "id": "waiter",
@@ -751,7 +751,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção para Gerente de Restaurante (Atenção: garçom nunca vira cozinheiro!).",
     "dialogQuote": "Mesa 4 pediu um tinto seco da adega e o salmão grelhado do chef. Indo buscar a garrafa na temperatura certa!",
     "dialogSpeaker": "Garçom À La Carte",
-    "dialogImage": "assets/img/job_restaurant_fancy.png"
+    "dialogImage": "../assets/img/job_restaurant_fancy.png"
   },
   {
     "id": "cook",
@@ -779,7 +779,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Com diploma de Gastronomia, é promovido a Chef de Cozinha.",
     "dialogQuote": "O risoto e o purê trufado estão prontos na janela, chef! Só faltam os cortes de carne para finalizar.",
     "dialogSpeaker": "Cozinheiro",
-    "dialogImage": "assets/img/job_restaurant_buffet.png"
+    "dialogImage": "../assets/img/job_restaurant_buffet.png"
   },
   {
     "id": "restaurant_manager",
@@ -809,7 +809,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Promoção para Gestor de Franquia / Proprietário.",
     "dialogQuote": "A remessa de hortifrúti chegou na porta dos fundos. Todas as mesas estão montadas para o menu degustação da noite!",
     "dialogSpeaker": "Gerente de Restaurante",
-    "dialogImage": "assets/img/job_restaurant_fancy.png"
+    "dialogImage": "../assets/img/job_restaurant_fancy.png"
   },
   {
     "id": "chef",
@@ -842,7 +842,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Pode comprar a franquia e se tornar Gestor de Franquia / Dono.",
     "dialogQuote": "Prato finalizado com corte nobre e emulsão de ervas. Garçom, mesa 2 imediatamente enquanto está quente!",
     "dialogSpeaker": "Chef Executivo",
-    "dialogImage": "assets/img/job_restaurant_fancy.png"
+    "dialogImage": "../assets/img/job_restaurant_fancy.png"
   },
   {
     "id": "franchise_manager",
@@ -872,7 +872,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Patrão e investidor autônomo na economia viva da cidade.",
     "dialogQuote": "Todas as contas e fornecedores quitados esta sexta. O saldo líquido de $ 32.000 já foi transferido pra minha conta corrente!",
     "dialogSpeaker": "Gestor da Franquia",
-    "dialogImage": "assets/img/condo_alphaville.png"
+    "dialogImage": "../assets/img/condo_alphaville.png"
   },
   {
     "id": "courier",
@@ -901,7 +901,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Comprar bicicleta esportiva na Spoke Cycles para acelerar entregas.",
     "dialogQuote": "Mais uma entrega de remédios expressa da farmácia central para o condomínio de casas. Pagamento caiu na hora no aplicativo!",
     "dialogSpeaker": "Entregador de Bike",
-    "dialogImage": "assets/img/player_home.png"
+    "dialogImage": "../assets/img/player_home.png"
   },
   {
     "id": "driver",
@@ -931,7 +931,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Comprar sedãs de luxo na Motorama, Central Motors ou Eastside Auto para atrair clientes de alta renda.",
     "dialogQuote": "Moço, me passa seu PIX que eu pago assim que chegar em casa, prometo! (Spoiler: ele pode sumir e nunca transferir o dinheiro).",
     "dialogSpeaker": "Passageiro Suspeito",
-    "dialogImage": "assets/img/crash_scene.png"
+    "dialogImage": "../assets/img/crash_scene.png"
   },
   {
     "id": "cleaner_commercial",
@@ -961,7 +961,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Qualifique-se para contratos residenciais de alto padrão e sanitização institucional pela metrópole.",
     "dialogQuote": "Piso seco no rodo e todas as palmeiras do saguão regadas e verdejantes. Não importa se a ordem veio da Spotless ou da Clean Family, o chão não sabe quem assinou a fatura!",
     "dialogSpeaker": "Profissional de Limpeza Comercial",
-    "dialogImage": "assets/img/job_cleaning_plants.png"
+    "dialogImage": "../assets/img/job_cleaning_plants.png"
   },
   {
     "id": "stock_clerk",
@@ -990,7 +990,7 @@ const CAREERS_DATABASE = [
     "promotionNotes": "Emprego matinal vital que deixa o fim de tarde e a noite completamente livres.",
     "dialogQuote": "Todas as 7 fileiras de gôndolas foram abastecidas antes das portas abrirem para os clientes da manhã!",
     "dialogSpeaker": "Repositor Super Takai",
-    "dialogImage": "assets/img/job_pharmacy_shelf.png"
+    "dialogImage": "../assets/img/job_pharmacy_shelf.png"
   }
 ];
 
