@@ -252,7 +252,7 @@
     ctx.fillStyle = g;
     ctx.fillRect(W / 2 - size * 3.4, H / 2 - size * 3.4, size * 6.8, size * 6.8);
     // the logo, drawn as it is (aspect kept), fitted to the width on phones
-    if (logoReady) {
+    if (logoReady && !hero.classList.contains('logo3d-live')) {
       const lw = Math.min(W * 0.86, size * 8.2);
       const lh = lw * logoImg.naturalHeight / logoImg.naturalWidth;
       ctx.drawImage(logoImg, W / 2 - lw / 2, H / 2 - lh / 2, lw, lh);

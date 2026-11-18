@@ -99,3 +99,10 @@ span.galaxy-chip { opacity: 0.7; }
   .galaxy-chip { font-size: 12px; padding: 4px 9px; }
   .galaxy-hint { font-size: 10px; }
 }
+
+/* live 3D logo (assets/js/logo3d.js): sits under the galaxy canvas */
+.galaxy-logo3d {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
