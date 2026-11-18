@@ -68,25 +68,29 @@
   <main class="container">
 
     <!-- SYSTEMS GALAXY HEADER (drawn by assets/js/galaxy.js) -->
-    <section class="galaxy-hero" data-lang="en" aria-label="EXORDIUM: the systems of the city of SPRF">
-      <canvas class="galaxy-canvas" aria-hidden="true"></canvas>
-      <p class="galaxy-sr">EXORDIUM: the systems of the city of SPRF</p>
-      <div class="galaxy-tip" role="tooltip" hidden></div>
-      <p class="galaxy-hint">Hover a system to name it · click to visit</p>
-    </section>
+    <!-- HERO: text on the left, the galaxy on the right (stacked on narrow screens) -->
+    <div class="hero-split">
+      <div class="hero-copy">
+        <div class="eyebrow">Canonical Project · Urban Architecture & Living Simulation</div>
+        <h1 class="section-title hero-title">
+        EVERYDAY LIFE IS THE GAME.<br>
+        <span style="color: var(--brand-teal);">THE EXTRAORDINARY LIES WITHIN THE ORDINARY.</span>
+      </h1>
+        <p class="section-subtitle hero-lead">
+        In <strong>SPRF</strong> (Springfield, South Kansas), you wake from a nightmare, while anomalous forces whisper through the world, hinting that something is quietly looming over the metropolis.
+      </p>
+      </div>
+      <section class="galaxy-hero" data-lang="en" aria-label="EXORDIUM: the systems of the city of SPRF">
+        <canvas class="galaxy-canvas" aria-hidden="true"></canvas>
+        <p class="galaxy-sr">EXORDIUM: the systems of the city of SPRF</p>
+        <div class="galaxy-tip" role="tooltip" hidden></div>
+        <p class="galaxy-hint">Hover a system to name it · click to visit</p>
+      </section>
+    </div>
     <nav class="galaxy-chips" aria-label="Systems of the game"></nav>
 
     <!-- HERO SECTION -->
     <section style="margin-bottom: 50px;">
-      <div class="eyebrow">Canonical Project · Urban Architecture & Living Simulation</div>
-      <h1 class="section-title" style="margin-top: 10px; font-size: clamp(34px, 5.5vw, 56px);">
-        EVERYDAY LIFE IS THE GAME.<br>
-        <span style="color: var(--brand-teal);">THE EXTRAORDINARY LIES WITHIN THE ORDINARY.</span>
-      </h1>
-      <p class="section-subtitle" style="margin-top: 14px;">
-        In <strong>SPRF</strong> (Springfield, South Kansas), you wake from a nightmare, while anomalous forces whisper through the world, hinting that something is quietly looming over the metropolis.
-      </p>
-
       <!-- OFFICIAL TRAILER EMBED -->
       <div class="trailer-container">
         <div class="trailer-video-wrap">
