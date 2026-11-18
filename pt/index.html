@@ -63,12 +63,13 @@
   </div>
   <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
 
-  <main class="container">
-
-    <!-- SYSTEMS GALAXY HEADER (drawn by assets/js/galaxy.js) -->
-    <!-- HERO: text on the left, the galaxy on the right (stacked on narrow screens) -->
-    <div class="hero-split">
-      <div class="hero-copy">
+  <!-- HERO STAGE: full-bleed galaxy (assets/js/galaxy.js) with the text laid over it -->
+  <section class="galaxy-hero" data-lang="pt" aria-label="EXORDIUM: os sistemas da cidade de SPRF">
+        <canvas class="galaxy-canvas" aria-hidden="true"></canvas>
+        <p class="galaxy-sr">EXORDIUM: os sistemas da cidade de SPRF</p>
+        <div class="galaxy-tip" role="tooltip" hidden></div>
+      
+    <div class="hero-overlay"><div class="container hero-copy-wrap"><div class="hero-copy">
         <div class="eyebrow">Projeto Canônico · Arquitetura Urbana & Simulação Viva</div>
         <h1 class="section-title hero-title">
         A VIDA COTIDIANA É O JOGO.<br>
@@ -77,14 +78,12 @@
         <p class="section-subtitle hero-lead">
         Em <strong>SPRF</strong> (Springfield, South Kansas), você acorda de um pesadelo, enquanto forças anômalas sussurram pelo mundo, sugerindo que algo silenciosamente paira sobre a metrópole.
       </p>
-      </div>
-      <section class="galaxy-hero" data-lang="pt" aria-label="EXORDIUM: os sistemas da cidade de SPRF">
-        <canvas class="galaxy-canvas" aria-hidden="true"></canvas>
-        <p class="galaxy-sr">EXORDIUM: os sistemas da cidade de SPRF</p>
-        <div class="galaxy-tip" role="tooltip" hidden></div>
-        <p class="galaxy-hint">Passe o mouse num sistema · clique para visitar</p>
-      </section>
-    </div>
+    </div></div></div>
+    <div class="galaxy-focus" aria-hidden="true"></div>
+  </section>
+
+  <main class="container hero-after">
+    <p class="galaxy-hint">Passe o mouse num sistema · clique para visitar</p>
     <nav class="galaxy-chips" aria-label="Sistemas do jogo"></nav>
 
     <!-- HERO PRINCIPAL VANGUARDISTA -->

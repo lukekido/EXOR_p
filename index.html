@@ -65,12 +65,13 @@
   </div>
   <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
 
-  <main class="container">
-
-    <!-- SYSTEMS GALAXY HEADER (drawn by assets/js/galaxy.js) -->
-    <!-- HERO: text on the left, the galaxy on the right (stacked on narrow screens) -->
-    <div class="hero-split">
-      <div class="hero-copy">
+  <!-- HERO STAGE: full-bleed galaxy (assets/js/galaxy.js) with the text laid over it -->
+  <section class="galaxy-hero" data-lang="en" aria-label="EXORDIUM: the systems of the city of SPRF">
+        <canvas class="galaxy-canvas" aria-hidden="true"></canvas>
+        <p class="galaxy-sr">EXORDIUM: the systems of the city of SPRF</p>
+        <div class="galaxy-tip" role="tooltip" hidden></div>
+      
+    <div class="hero-overlay"><div class="container hero-copy-wrap"><div class="hero-copy">
         <div class="eyebrow">Canonical Project · Urban Architecture & Living Simulation</div>
         <h1 class="section-title hero-title">
         EVERYDAY LIFE IS THE GAME.<br>
@@ -79,14 +80,12 @@
         <p class="section-subtitle hero-lead">
         In <strong>SPRF</strong> (Springfield, South Kansas), you wake from a nightmare, while anomalous forces whisper through the world, hinting that something is quietly looming over the metropolis.
       </p>
-      </div>
-      <section class="galaxy-hero" data-lang="en" aria-label="EXORDIUM: the systems of the city of SPRF">
-        <canvas class="galaxy-canvas" aria-hidden="true"></canvas>
-        <p class="galaxy-sr">EXORDIUM: the systems of the city of SPRF</p>
-        <div class="galaxy-tip" role="tooltip" hidden></div>
-        <p class="galaxy-hint">Hover a system to name it · click to visit</p>
-      </section>
-    </div>
+    </div></div></div>
+    <div class="galaxy-focus" aria-hidden="true"></div>
+  </section>
+
+  <main class="container hero-after">
+    <p class="galaxy-hint">Hover a system to name it · click to visit</p>
     <nav class="galaxy-chips" aria-label="Systems of the game"></nav>
 
     <!-- HERO SECTION -->

@@ -187,7 +187,9 @@
   const PITCH0 = 0.95;
   let yaw = 0, pitch = PITCH0, vyaw = 0;
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
-  const logoW = () => W * (W < 520 ? 0.44 : 0.38);     // the logo is ~40% of the galaxy's width (kept in sync with logo3d.js)
+  let CX = 0, CY = 0;                                   // centre of the galaxy and the logo (inside .galaxy-focus)
+  const logoW = () => U * (W < 520 ? 1.0 : 0.9);       // the logo spans ~40% of the galaxy's width (kept in sync with logo3d.js)
+  hero.galaxyFrame = () => ({ cx: CX, cy: CY, lw: logoW(), W: W, H: H });
 
   // The PNG logo is only the fallback (while the 3D one loads, without WebGL, reduced motion).
   const logoImg = new Image();
@@ -199,10 +201,15 @@
     const r = hero.getBoundingClientRect();
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = Math.max(1, r.width); H = Math.max(1, r.height);
-    U = Math.min(W * 0.44, H * 0.74);
+    // the galaxy lives in the .galaxy-focus box (right of the text on wide screens, below it on narrow ones)
+    const fo = hero.querySelector('.galaxy-focus'), fr = fo ? fo.getBoundingClientRect() : null;
+    const fx = fr ? fr.left - r.left : 0, fy = fr ? fr.top - r.top : 0, fw = fr ? fr.width : W, fh = fr ? fr.height : H;
+    CX = fx + fw / 2; CY = fy + fh / 2;
+    U = Math.min(fw * (W < 900 ? 0.44 : 0.46), fh * 0.74);
     canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
     canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    hero.dispatchEvent(new Event('galaxy-layout'));   // logo3d.js re-frames the 3D logo
     draw();
   }
 
@@ -213,7 +220,7 @@
     const x1 = x * cy + z * sy, z1 = -x * sy + z * cy;
     const y2 = y * cp - z1 * sp, z2 = y * sp + z1 * cp;
     const f = 1 / (1 - z2 / (U * 3.4));
-    return [W / 2 + x1 * f, H / 2 - y2 * f, clamp(z2 / (U * 2.2) + 0.5, 0, 1), f];
+    return [CX + x1 * f, CY - y2 * f, clamp(z2 / (U * 2.2) + 0.5, 0, 1), f];
   }
   function orbitPt(o, ang) {
     const x = Math.cos(ang) * o.r * U, z = Math.sin(ang) * o.r * U;
@@ -352,10 +359,10 @@
   function drawLogo() {
     if (hero.classList.contains('logo3d-live') || !logoReady) return;
     const lw = logoW(), lh = lw * logoImg.naturalHeight / logoImg.naturalWidth;
-    const g = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, lw * 0.8);
+    const g = ctx.createRadialGradient(CX, CY, 0, CX, CY, lw * 0.8);
     g.addColorStop(0, 'rgba(20,184,166,0.22)'); g.addColorStop(0.45, 'rgba(20,184,166,0.06)'); g.addColorStop(1, 'rgba(20,184,166,0)');
-    ctx.fillStyle = g; ctx.fillRect(W / 2 - lw, H / 2 - lw, lw * 2, lw * 2);
-    ctx.drawImage(logoImg, W / 2 - lw / 2, H / 2 - lh / 2, lw, lh);
+    ctx.fillStyle = g; ctx.fillRect(CX - lw, CY - lw, lw * 2, lw * 2);
+    ctx.drawImage(logoImg, CX - lw / 2, CY - lh / 2, lw, lh);
   }
 
   let lastPos = [];
@@ -439,7 +446,7 @@
   function inLogo(ev) {
     const r = canvas.getBoundingClientRect();
     const lw = logoW(), lh = lw * 620 / 1810;
-    return Math.abs(ev.clientX - r.left - W / 2) < lw * 0.55 && Math.abs(ev.clientY - r.top - H / 2) < Math.max(lh * 0.8, 40);
+    return Math.abs(ev.clientX - r.left - CX) < lw * 0.55 && Math.abs(ev.clientY - r.top - CY) < Math.max(lh * 0.8, 40);
   }
 
   function go(i) {
@@ -518,7 +525,7 @@
   }
 
   // Hint text, with "tap" instead of "hover" on touch screens.
-  const hint = hero.querySelector('.galaxy-hint');
+  const hint = document.querySelector('.galaxy-hint');
   if (hint) {
     const touch = window.matchMedia('(hover: none)').matches;
     hint.textContent = lang === 'pt'

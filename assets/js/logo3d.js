@@ -49,22 +49,25 @@ async function start() {
   camera.position.set(0, 0, size.z / 2 + dist);
   camera.lookAt(0, 0, 0);
 
-  // placement mirrors galaxy.js's drawLogo() so the 3D mark sits where the PNG sat
+  // The canvas covers the whole stage (so the logo is never clipped, whatever its angle). The camera
+  // frames the logo exactly where galaxy.js puts the galaxy's centre, via an off-axis view offset.
   function layout() {
-    const r = hero.getBoundingClientRect(); const W = r.width, H = r.height;
-    const lw = W * (W < 520 ? 0.44 : 0.38), lh = lw * 620 / 1810;   // same as galaxy.js
-    const pad = 1.18;
-    canvas.style.width = lw * pad + 'px'; canvas.style.height = lh * pad + 'px';
-    canvas.style.left = (W - lw * pad) / 2 + 'px'; canvas.style.top = (H - lh * pad) / 2 + 'px';
+    const r = hero.getBoundingClientRect(); const W = Math.max(1, r.width), H = Math.max(1, r.height);
+    const f = hero.galaxyFrame ? hero.galaxyFrame() : { cx: W / 2, cy: H / 2, lw: W * 0.38 };
+    const lw = f.lw, lh = lw * 620 / 1810, pad = 1.18;
+    const fw = lw * pad, fh = lh * pad;
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     renderer.setPixelRatio(dpr);
-    renderer.setSize(lw * pad, lh * pad, false);
-    camera.aspect = 1810 / 620; camera.updateProjectionMatrix();
-    camera.zoom = 1 / pad; camera.updateProjectionMatrix();
+    renderer.setSize(W, H, false);
+    camera.aspect = 1810 / 620;
+    camera.zoom = 1 / pad;
+    camera.setViewOffset(fw, fh, fw / 2 - f.cx, fh / 2 - f.cy, W, H);
+    camera.updateProjectionMatrix();
     renderer.render(scene, camera);   // setSize clears the canvas
   }
   hero.insertBefore(canvas, hero.firstChild);
   layout();
+  hero.addEventListener('galaxy-layout', layout);
   if ('ResizeObserver' in window) new ResizeObserver(layout).observe(hero);
 
   // gentle sway, plus the visitor's drag (galaxy.js sends "logodrag"): the logo turns a little
@@ -97,7 +100,7 @@ async function start() {
   hero.classList.add('logo3d-live');       // galaxy.js stops painting the PNG
   hero.dispatchEvent(new Event('logo3d-ready'));
   kick();
-  window.__logo3d = { pivot, renderer, scene, camera };
+  window.__logo3d = { pivot, renderer, scene, camera, layout };
   reduce.addEventListener && reduce.addEventListener('change', () => { if (reduce.matches) { hero.classList.remove('logo3d-live'); canvas.remove(); running = false; } });
 }
 start().catch(e => { console.warn('3D logo unavailable, keeping the PNG:', e); hero && hero.classList.remove('logo3d-live'); });
